@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng điểm 3 môn </title>
+</head>
+<body>
+<label> Điểm trung binh</label>
+<input id="name" value="value"><br>
+
+<button type="button" onclick="ab()">click me</button>
+<script>
+    function ab() {
+        let a = prompt("nhập điểm toán");
+        a = parseInt(a);
+        let b = prompt("nhập điểm lí");
+        b = parseInt(b);
+        let c = prompt("nhập điểm hóa");
+        c = parseInt(c);
+        let total = a + b + c;
+        let avg = total / 3;
+        document.getElementById("name").value = avg;
+        c = parseInt(c);
+    }
+</script>
+</body>
+</html>

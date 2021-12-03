@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<form>
+<label>Số tiền phải thanh toán:</label>
+<input id="vnd" type="number" size="5"> Dolla<br>
+<div style="margin-top: 10px">
+<input id="tien" type="number" name="money" value="value"> dolla<br>
+<input id="nguoi" type="number" name="số người" value="value"> người<br></div>
+<button type="button " onclick="abc()">click me</button>
+<button type="reset">reset</button>
+</form>
+</body>
+
+<script>
+    function abc() {
+        let a = document.getElementById("tien").value
+        let b = document.getElementById("nguoi").value
+        let pay = a / b
+        document.getElementById("vnd").value = pay
+
+
+    }
+</script>
+</html>
