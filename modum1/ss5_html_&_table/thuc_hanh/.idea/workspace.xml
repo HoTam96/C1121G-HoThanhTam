@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d59fc465-b048-4fd2-aaea-34108ab74014" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../ss4_git_va_html/thuc_hanh/KhaiBaoVaSuDungBien.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss4_git_va_html/thuc_hanh/SuDungThuatToan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss4_git_va_html/thuc_hanh/su_dung_thuat_toan_nhung_js.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss4_git_va_html/thuc_hanh/sữa 2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss4_git_va_html/thuc_hanh/sữa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4_git_va_html/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss4_git_va_html/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4_git_va_html/bai_tap/DangKiHocVien.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4_git_va_html/bai_tap/SUDungTheHtmlCoBan.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4_git_va_html/bai_tap/Simple Form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4_git_va_html/bai_tap/TaoBangCoBan.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4_git_va_html/bai_tap/TaoFormDonGian.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4_git_va_html/bai_tap/TaoFormLaySurveyKhachHang.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4_git_va_html/bai_tap/TaogGiaoDienForm DangKiNguoiDung.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5_Javascrip/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5_Javascrip/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5_Javascrip/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5_Javascrip/.idea/ss5_Javascrip.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5_Javascrip/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5_Javascrip/bai_tap/BaiTapLiThuyetBai1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5_Javascrip/bai_tap/BaiTapLiThuyetBai2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5_Javascrip/thuc_hanh/HiemThiDauRaBai2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5_Javascrip/thuc_hanh/HienThiDauRaBai1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5_Javascrip/thuc_hanh/HienThiDauRaBai3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5_Javascrip/thuc_hanh/HienThiDauRaBai4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5_Javascrip/thuc_hanh/NhungJsBaiTap1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5_Javascrip/thuc_hanh/NhungJsBaiTap2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5_Javascrip/thuc_hanh/NhungJsBaiTap3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5_Javascrip/thuc_hanh/nhung_js_bai3.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="21rF2JxiD8Ww0us5DpGa5luAOta" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d59fc465-b048-4fd2-aaea-34108ab74014" name="Default Changelist" comment="" />
+      <created>1638691090792</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638691090792</updated>
+      <workItem from="1638691092001" duration="21000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="462" y="106" key="FileChooserDialogImpl" timestamp="1638691109401">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="462" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1638691109401" />
+  </component>
+</project>

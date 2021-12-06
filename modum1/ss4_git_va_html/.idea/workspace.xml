@@ -19,13 +19,30 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8692c5c6-d3b7-464d-8993-ad613982c361" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/thuc_hanh/sdsadsad.html" afterDir="false" />
+    <list default="true" id="be0df69b-d635-44e2-b1fb-37c5e46c7b24" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap/DangKiHocVien.html" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/DangKiHocVien.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap/Simple Form.html" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/Simple Form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap/TaoFormDonGian.html" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/TaoFormDonGian.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap/TaoFormLaySurveyKhachHang.html" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/TaoFormLaySurveyKhachHang.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/DangKiHocVien.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/SUDungTheHtmlCoBan.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/Simple Form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/TaoBangCoBan.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/TaoFormDonGian.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/TaoFormLaySurveyKhachHang.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/TaogGiaoDienForm DangKiNguoiDung.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_Javascrip/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_Javascrip/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_Javascrip/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_Javascrip/.idea/ss5_Javascrip.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_Javascrip/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_Javascrip/bai_tap/BaiTapLiThuyetBai1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_Javascrip/bai_tap/BaiTapLiThuyetBai2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_Javascrip/thuc_hanh/HiemThiDauRaBai2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_Javascrip/thuc_hanh/HienThiDauRaBai1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_Javascrip/thuc_hanh/HienThiDauRaBai3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_Javascrip/thuc_hanh/HienThiDauRaBai4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_Javascrip/thuc_hanh/NhungJsBaiTap1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_Javascrip/thuc_hanh/NhungJsBaiTap2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_Javascrip/thuc_hanh/NhungJsBaiTap3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_Javascrip/thuc_hanh/nhung_js_bai3.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +60,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="21fo5diesicZ22rYVV4Dve4qCld" />
+  <component name="ProjectId" id="21r3gxmcOD0ucYd9LPkJdUtuf57" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -66,18 +83,14 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8692c5c6-d3b7-464d-8993-ad613982c361" name="Default Changelist" comment="" />
-      <created>1638341320288</created>
+      <changelist id="be0df69b-d635-44e2-b1fb-37c5e46c7b24" name="Default Changelist" comment="" />
+      <created>1638685494267</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1638341320288</updated>
-      <workItem from="1638341321498" duration="8370000" />
-      <workItem from="1638368929203" duration="11319000" />
-      <workItem from="1638407663212" duration="3418000" />
-      <workItem from="1638425293682" duration="28250000" />
-      <workItem from="1638467303541" duration="2858000" />
-      <workItem from="1638494718332" duration="23782000" />
-      <workItem from="1638529542894" duration="8123000" />
+      <updated>1638685494267</updated>
+      <workItem from="1638685498196" duration="5233000" />
+      <workItem from="1638691114422" duration="1454000" />
+      <workItem from="1638705749347" duration="81000" />
     </task>
     <servers />
   </component>
@@ -97,21 +110,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1638501461678">
+    <state x="462" y="106" key="FileChooserDialogImpl" timestamp="1638705826062">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1638501461678" />
-    <state x="462" y="106" key="FileChooserDialogImpl" timestamp="1638529195049">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="462" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1638529195049" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1638537312922">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1638537312922" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1638531952283">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1638531952283" />
+    <state x="462" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1638705826062" />
   </component>
 </project>
