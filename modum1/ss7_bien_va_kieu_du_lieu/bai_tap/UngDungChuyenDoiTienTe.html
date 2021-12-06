@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p style="margin-top: 100px">amount</p>
+<input style="margin-bottom: 20px" id="soLuong" type="number" width="10px">
+<label>From Curren</label><br>
+<select id="loaiTien">
+    <option value="vnd">VND</option>
+    <option value="dolla">dolla</option>
+</select>
+<select id="tien">
+    <option value="vnd">VND</option>
+    <option value="dolla">dolla</option>
+</select><br>
+<button type="button" onclick="chuyenDoi()">convert</button>
+<p id="abcd"></p>
+<script>
+    function chuyenDoi() {
+        let amount = document.getElementById("soLuong").value
+        let tienVietNam = document.getElementById("loaiTien").value
+        let tienDolla = document.getElementById("tien").value
+        let from = amount * 23000;
+        let to = amount / 23000;
+        if (tienVietNam === "vnd" && tienDolla === "dolla") {
+            document.getElementById("abcd").innerHTML = "kết quả là: " + to
+        } else if (tienVietNam === "dolla" && tienDolla === "vnd") {
+            document.getElementById("abcd").innerHTML = "kết quả là: " + from
+        } else {
+            document.getElementById("abcd").innerHTML =  "kết quả là: "+ amount
+        }
+
+
+    }
+</script>
+</body>
+</html>

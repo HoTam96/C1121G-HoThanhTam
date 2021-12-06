@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>biến kiểu dữ liệu và toán tử</title>
+</head>
+<body>
+<form>
+<label>Nhập điểm môn vật lý:<input style="margin-left: 20px" id="vatLy" type="number" value="value"></label><br>
+<label>Nhập điểm môn hóa học:<input style="margin-left: 5px" id="hoaHoc" type="number" value="value"></label><br>
+<label>Nhập điểm môn sinh học:<input style="margin-left: 2px" id="sinhHoc" type="number" value="value"></label><br>
+<button type="button" onclick="tinhDiem()">click me</button>
+<input type="reset" value="đặt lại">
+</form>
+<p id="tongDiem"></p><br>
+<p id="diemTrungBinh"></p>
+
+<script>
+function tinhDiem() {
+    let vatly = document.getElementById("vatLy").value
+    vatly = parseInt(vatly)
+    let hoaHoc = document.getElementById("hoaHoc").value
+    hoaHoc = parseInt(hoaHoc)
+    let sinhHoc = document.getElementById("sinhHoc").value
+    sinhHoc = parseInt(sinhHoc)
+    let sum = vatly + hoaHoc + sinhHoc
+    let avg = sum/3
+    alert("tổng điểm 3 môn là: "+sum)
+    alert("trung bình 3 môn là: "+ avg)
+document.getElementById("tongDiem").innerHTML="tổng điểm 3 môn là: " + sum
+document.getElementById("diemTrungBinh").innerHTML= "trung bình 3 môn là: " + avg
+}
+
+
+</script>
+</body>
+</html>

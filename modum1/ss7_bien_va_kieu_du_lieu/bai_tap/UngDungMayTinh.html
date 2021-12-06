@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>CACULATOR</h3>
+<input id="nhap1"value="value">
+<input id="nhap2" value="value">
+<button type="button" onclick="cong()" >addition(+)</button>
+<button type="button" onclick="tru()">subtraction(-)</button>
+<button type="button" onclick="nhan()" id="nhan">Multiplcation(x)</button>
+<button type="button" onclick="chia()" id="chia">divíion</button>
+<p id="ketqua"></p>
+<script>
+function cong() {
+    let nhap1 = parseInt(document.getElementById("nhap1").value)
+    let nhap2 = parseInt(document.getElementById("nhap2").value)
+    let cong = nhap1 + nhap2
+    document.getElementById("ketqua").innerHTML = "kết quả là: " + cong;
+}
+    function tru() {
+        let nhap1 = parseInt(document.getElementById("nhap1").value)
+        let nhap2 = parseInt(document.getElementById("nhap2").value)
+        let tru = nhap1-nhap2
+        document.getElementById("ketqua").innerHTML= "kết quả là: "+tru;
+
+}
+function nhan() {
+    let nhap1 = parseInt(document.getElementById("nhap1").value)
+    let nhap2 = parseInt(document.getElementById("nhap2").value)
+    let nhan = nhap1*nhap2
+    document.getElementById("ketqua").innerHTML= "kết quả là: "+nhan;
+}
+function chia() {
+    let nhap1 = parseInt(document.getElementById("nhap1").value)
+    let nhap2 = parseInt(document.getElementById("nhap2").value)
+    let chia = nhap1/nhap2
+    document.getElementById("ketqua").innerHTML= "kết quả là: "+chia;
+}
+</script>
+</body>
+</html>
