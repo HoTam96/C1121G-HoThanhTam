@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let amout = parseFloat(prompt("nhập số điện kw/h"))
+    // let gia1 = amout * 1678
+    // let gia2 = amout * 2014
+    // let gia3 = amout * 2536
+    if (amout < 0){
+        alert("nhập sai")
+    }
+    else if (amout <= 50) {
+        alert("tiền điện phải trả là: " +
+            amout * 1687)
+    }
+    else if (amout < 100)
+    {
+        let ketqua = 50 * 1687 + (amout - 50) * 2014
+        alert("tiền điện phải trả là: " + ketqua)
+    }
+    else
+    if (amout >= 100) {
+        let ketQua1 = 50 * 1687 + 49 * 2.014 + (amout - 99) * 2536
+        alert("tiền điện phải trả là: " + ketQua1)
+
+    }
+
+</script>
+</body>
+</html>

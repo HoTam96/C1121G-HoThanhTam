@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <table border="1">
+        <tr>
+            <td colspan="4">
+                <input id="hienthi" type="text" disabled>
+            </td>
+
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="kichChuot(this value)"></td>
+            <td><input type="button" value="2" onclick="kichChuot(this.value)"></td>
+            <td><input type="button" value="3" onclick="kichChuot(this.value)"></td>
+            <td><input type="button" value="+" onclick="kichChuot(this.value)"></td>
+
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="kichChuot(this.value)"></td>
+            <td><input type="button" value="5" onclick="kichChuot(this.value)"></td>
+            <td><input type="button" value="6" onclick="kichChuot(this.value)"></td>
+            <td><input type="button" value="-" onclick="kichChuot(this.value)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="kichChuot(this.value)"></td>
+            <td><input type="button" value="8" onclick="kichChuot(this.value)"></td>
+            <td><input type="button" value="9" onclick="kichChuot(this.value)"></td>
+            <td><input type="button" value="*" onclick="kichChuot(this.value)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="=" onclick="tinhToan()"></td>
+            <td><input type="reset" value="EC"></td>
+            <td><input type="button" value="0" onclick="kichChuot(this.value)"></td>
+            <td><input type="button" value="/" onclick="kichChuot(this.value)"></td>
+        </tr>
+    </table>
+</form>
+<script>
+    function kichChuot(obj) {
+            document.getElementById("hienthi").value += obj
+        }
+
+        function tinhToan() {
+                let bieuthuc = document.getElementById("hienthi").value;
+            let ketqua = eval(bieuthuc);
+                document.getElementById("hienthi").value=ketqua;
+
+            }
+
+
+</script>
+</body>
+</html>

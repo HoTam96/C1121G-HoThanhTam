@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("nhập giá trị a"))
+    let b = parseInt(prompt("nhập giá trị b"))
+    let c = parseInt(prompt("nhập giá trị c"))
+    let denta = (b * b - 4 * a * c)
+    let canbac2 = Math.sqrt(denta)
+    canbac2 = Math.round(canbac2 * 100) / 100
+    if (a !== 0) {
+        if (denta === 0) {
+            alert("nghiệm của phương trình là: x1=x2= " + -b / 2 * a)
+        } else if (denta > 0) {
+            alert("nghiệm của phương trinhg là: x1=" + (-b + canbac2) / (2 * a))
+            alert("nghiệm của phương trinhg là: x2=" + (-b - canbac2) / (2 * a))
+        } else {
+            alert("phương trình vô nghiệm")
+        }
+    } else {
+        alert("phương trình có một nghiệm duy nhất x= " + -c / b)
+    }
+
+</script>
+</body>
+</html>

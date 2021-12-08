@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>SU kiện bà phím</title>
 </head>
-<body onload="docready()">
+<body>
 <img id="nobita" src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png"
      style="position:absolute; left: 0;top: 0;"  width="200px"
      height="200px">
@@ -49,9 +49,9 @@
     }
 
     function docready() {
-        window.addEventListener("keydown", moveSelection);// hoi thay cho keydown
-
+         window.addEventListener("keydown", moveSelection);// hoi thay cho keydown
     }
+    docready();
 
 </script>
 

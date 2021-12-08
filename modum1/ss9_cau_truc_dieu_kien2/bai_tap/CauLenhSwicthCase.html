@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input id="value1" type="number">
+    <input type="button" onclick="thang()" value="tính số ngày"><br>
+    <p id="ketQua"></p><br>
+</form>
+<script>
+    function thang() {
+        let thang = parseInt(document.getElementById("value1").value)
+        switch (thang) {
+            case 1 :
+                document.getElementById("ketQua").innerHTML = "tháng 1 có 31 ngày"
+                break;
+            case 2 :
+                document.getElementById("ketQua").innerHTML = "tháng 2 có 28 hoặc 29 ngày"
+                break;
+            case 3 :
+                document.getElementById("ketQua").innerHTML = "tháng 3 có 31 ngày"
+                break;
+            case 4 :
+                document.getElementById("ketQua").innerHTML = "tháng 4 có 30 ngày"
+                break;
+            case 5 :
+                document.getElementById("ketQua").innerHTML = "tháng 5 có 31 ngày"
+                break;
+            case 6 :
+                document.getElementById("ketQua").innerHTML = "tháng 6 có 30 ngày"
+                break;
+            case 7 :
+                document.getElementById("ketQua").innerHTML = "tháng 7 có 31 ngày"
+                break;
+            case 8 :
+                document.getElementById("ketQua").innerHTML = "tháng 8 có 31 ngày"
+                break;
+            case 9 :
+                document.getElementById("ketQua").innerHTML = "tháng 9 có 30 ngày"
+                break;
+            case 10 :
+                document.getElementById("ketQua").innerHTML = "tháng 10 có 31 ngày"
+                break;
+            case 11 :
+                document.getElementById("ketQua").innerHTML = "tháng 11 có 30 ngày"
+                break;
+            case 12 :
+                document.getElementById("ketQua").innerHTML = "tháng 12 có 31 ngày"
+                break;
+            default:
+                document.getElementById("ketQua").innerHTML = "error"
+
+        }
+    }
+</script>
+
+</body>
+</html>

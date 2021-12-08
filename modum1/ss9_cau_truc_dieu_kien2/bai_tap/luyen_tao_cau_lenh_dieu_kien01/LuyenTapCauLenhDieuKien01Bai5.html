@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let kiemTra = prompt("nhập điểm kiểm tra")
+    let giuaki = prompt("nhập điểm thi giua ki")
+    let cuoiKi = prompt("nhập điểm thi cuối ki")
+    let diemKiemTra = kiemTra*0.2
+    let diemGiuaKi = giuaki*0.4
+    let diemCuoiKi = cuoiKi*0.6
+    let sum = diemKiemTra+diemGiuaKi+diemCuoiKi
+    if (sum>=8){
+        alert("học sinh giỏi")
+    }
+    else if (sum>=6.5){
+        alert("học sinh khá")
+    }
+    else if (sum>=5){
+        alert("học sinh trung binh")
+    }
+    else {alert("học sinh yếu")}
+
+
+</script>
+</body>
+</html>
