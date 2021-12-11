@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+ let t = parseInt(prompt("nhập giá trị nhiệt độ"))
+    do {
+        t = parseInt(prompt("nhập giá trị nhiệt độ"))
+        if (!isNaN(t)){
+            break;
+        }
+        else {alert("bạn cần nhâp đúng giá trị")}
+    }
+    while (isNaN(t))
+    if (t>20&&t<100){
+        alert("nhiệt độ hôm nay là "+t)
+    }
+    while (t>=100 || t<=20){
+        t=parseInt(prompt("nhập lại nhiệt độ"));
+        if(t<=20){alert("bạn cần tăng nhiệt độ")}
+        else {alert("bạn cần giảm nhiệt độ")}
+    }
+
+
+</script>
+</body>
+</html>

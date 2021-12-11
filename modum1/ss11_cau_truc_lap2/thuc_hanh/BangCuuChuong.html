@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bảng cưu chương</title>
+</head>
+<body>
+
+<script>
+
+let bangCuuChuong ="<table  border='1' cellpadding='9' cellspacing='0' style='text-align: center'  >"
+    for(let i=1; i<10;i++){
+        bangCuuChuong+="<tr>"
+        for(let j=2; j<10;++j){
+            bangCuuChuong+="<td>"+ j+"x"+i + "="+i*j +"</td>"
+        }
+        bangCuuChuong+="</tr>"
+    }
+    bangCuuChuong+="</table>"
+document.write(bangCuuChuong)
+
+
+</script>
+
+
+</body>
+</html>

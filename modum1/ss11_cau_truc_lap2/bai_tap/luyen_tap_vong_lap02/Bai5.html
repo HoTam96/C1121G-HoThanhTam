@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tienGui
+  let laiSuat
+    let thangGui
+    let tienLai = 0
+    let tongTien =0
+    do {
+        tienGui = parseInt(prompt("nhập số tiền cần gửi"));
+        laiSuat = parseInt(prompt("nhập lãi suất mong muốn"));
+        thangGui = parseInt(prompt("nhập số tháng gửi"))
+        if (!isNaN(tienGui)&&!isNaN(laiSuat)&&!isNaN(thangGui)){
+            break;
+        } else {
+            alert("bạn cần nhập chữ số")
+        }
+    } while (isNaN(tienGui)||isNaN(laiSuat)||isNaN(thangGui))
+    for (let i =0; i<=thangGui; i++){
+        tienLai+=tienGui*laiSuat/100;
+        tienGui+=tienGui*laiSuat/100;
+    }
+    alert(tienGui)
+    alert(tienLai)
+
+
+
+
+</script>
+</body>
+</html>

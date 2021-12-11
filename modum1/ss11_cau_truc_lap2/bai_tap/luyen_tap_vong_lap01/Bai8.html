@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GAME</title>
+</head>
+<body>
+<button type="button" onclick="choi()">Chơi</button>
+<script>
+
+    function choi() {
+        let min
+        let max
+        let random = Math.round(Math.random() * (max - min)) + min;
+        do {
+            min = parseInt(prompt("nhập vào giá nhỏ nhất cần dự đoán"));
+            max = parseInt(prompt("nhập vào giá lớn nhất cần đoán"));
+            if(!isNaN(min)&&!isNaN(max)){
+                break;
+            }
+            else {alert("bạn cần nhập đúng giá trị")}
+        }while (isNaN(min)||isNaN(max))
+
+        let count = 0;
+        do {
+            count++;
+            let yourNumber = parseInt(prompt("nhập số bạn dự đoán lần thứ " + count));
+            if (yourNumber == random) {
+                alert("bạn đã chiến thắng");
+                break;
+            } else if (yourNumber < random) {
+                alert("số nhập đang bé hơn kết quả. Yêu cầu nhập lại");
+            } else {
+                alert("số nhập đang lớn hơn kết quả. Yêu cầu nhập lại")
+            }
+            if (count == 3) {
+                alert("Bạn đã thua. vì đã đã hết 3 lần đoán")
+            }
+        } while (count < 3);
+
+    }
+</script>
+</body>
+</html>

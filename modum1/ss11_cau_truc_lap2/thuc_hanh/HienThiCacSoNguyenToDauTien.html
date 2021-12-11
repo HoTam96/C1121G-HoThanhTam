@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // +SNT số chỉ chia hết cho 1 và chính nó ( không chia hết bất kỳ số nào từ 1 dến chính nó)
+    // nếu chia cho bất kỳ số nào 1-chính nó => không phải là số nguyên tố
+    // => dùng vòng lặp để kt số đó cho từng số từ 2 đến n-1 (n số cần kiểm tra);
+
+    // in ra 20 SNT đầu tiên; ( không biết trước được dãy số tự nhiên chứa 20NT => while.
+
+    // b1: viết ct kiểm tra 1 số bất kỳ có phải là SNT?
+    // b2: in ra 20SNT đầu tiên
+    let numbers= prompt("nhập vào số lượng SNT cần in ra")
+    let count = 0; // đếm số lượng SNT
+    let n = 2; // khai báo biến N để kiểm xem n có phải là số nguyên tố hay không
+    let result = "";
+    while (count < numbers) {
+        let flag = true; // biến cờ giả định để đánh dấu mặc định n là SNT.
+        if (n < 2) {
+            flag = false;
+        } else {
+            for (let i = 2; i< n; i++) {
+                if (n % i === 0) {
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        if (flag) {
+            count++;
+            result +=n+","
+            // document.write(n+","); // in ra từng số NTT
+        }
+        n++;
+
+    }
+    document.write("Dãy số nguyên tô: " + result)
+
+
+</script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+</body>
+</html>
