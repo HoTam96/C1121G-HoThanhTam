@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="hinhAnh"></p>
+
+<img id="hinh1" src="kim1.png" height="170" width="814" onclick="kichChuot(1)"/>
+<img id="hinh2" src="tap2.png" height="170" width="815"onclick="kichChuot(2)"/>
+<img id="hinh3" src="trump3.png" height="157" width="808"onclick="kichChuot(3)"/>
+
+
+</body>
+<script>
+    let objhinh1 = document.getElementById("hinh1");
+    let objhinh2 = document.getElementById("hinh2");
+    let objhinh3 = document.getElementById("hinh3");
+
+    function kichChuot(obj) {
+        switch (obj) {
+            case 1:
+                if(objhinh1.getAttribute('src')==="kim1.png"){
+                    objhinh1.src="trump1.png"
+                }
+                else if (objhinh1.getAttribute('src')==='trump1.png'){
+                    objhinh1.src="tap1.png"
+                }
+                else {objhinh1.src="kim1.png"}
+break;
+            case 2:
+                if(objhinh1.getAttribute('src')==="kim1.png"){
+                    objhinh1.src="trump1.png"
+                }
+                else if (objhinh1.getAttribute('src')==='trump1.png'){
+                    objhinh1.src="tap1.png"
+                }
+                else {objhinh1.src="kim1.png"}
+                break;
+
+
+
+
+
+        }
+    }
+</script>
+
+</html>

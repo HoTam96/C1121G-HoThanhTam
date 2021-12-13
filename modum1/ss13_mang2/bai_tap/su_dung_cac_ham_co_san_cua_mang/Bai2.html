@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhapSo
+    do {
+        nhapSo = parseInt(prompt("nhập vào số "));
+        if (!isNaN(nhapSo) && Math.floor(nhapSo) == nhapSo && nhapSo >= 0) {
+            break;
+        } else {
+            alert("bạn cần nhập đúng kiểu số")
+        }
+    } while (isNaN(nhapSo))
+
+    let x = nhapSo.toString();
+    let ketQua = [x[0]]
+    for (let i = 1; i < x.length; i++) {
+        if (x[i - 1] % 2 == 0 && x[i] % 2 == 0) {
+            ketQua.push('-', x[i])
+        } else {
+            ketQua.push(x[i])
+        }
+    }
+    document.write(ketQua.join(" "));
+</script>
+</body>
+</html>
