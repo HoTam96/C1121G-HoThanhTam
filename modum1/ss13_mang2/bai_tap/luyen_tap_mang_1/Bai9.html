@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm
+    // 10 phần tử, gọi là mảng a và b. Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên.
+    //     Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.
+
+    let check
+    let test
+    let arr1 = new Array(10)
+    let arr2 = new Array(10)
+
+    do {
+        for (let i = 0; i < arr1.length; i++) {
+            arr1[i] = prompt("nhập số nguyên mảng 1lần"+i )
+            check=parseInt(arr1[i])==arr1[i]
+        }
+    } while (!check)
+
+    do {
+        for (let j = 0; j < arr2.length; j++) {
+            arr2[j] = prompt("nhập số nguyên mản 2lần "+j)
+            test=parseInt(arr2[j])==arr2[j]
+        }
+    } while (!test)
+let arr3=arr1.concat(arr2)
+    document.write(arr3)
+
+</script>
+</body>
+</html>

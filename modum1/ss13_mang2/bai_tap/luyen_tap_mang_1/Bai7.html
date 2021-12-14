@@ -1,0 +1,51 @@
+
+<!--    // - Viết chương trình khởi tạo/nhập vào một mảng số nguyên-->
+<!--    // gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình-->
+<!--    // kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng-->
+<!--    // đã cho xoá V khỏi mảng (Bản chất việc xoá ở đây tức là dịch phần-->
+<!--    // tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)-->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+    <script>
+        let arr = new Array(10);
+        let check;
+        for (let i = 0; i < arr.length; i++) {
+            do {
+                arr[i] = prompt('Nhập vào phần tử thứ ' + i);
+                check = parseInt(arr[i]) == arr[i];
+            } while (!check)
+        }
+        // document.write(arr);
+        let V = prompt('Nhập vào số nguyên V: ');
+        let index = 0;
+        let check1 = true;
+        for (let i = 0; i < arr.length; i++) {
+            if (V != arr[i]) {
+                check1 = false;
+            } else {
+                index = i;
+                check1 = true;
+                break;
+            }
+        }
+        let b = 0;
+        if (check1) {
+            for (let i = index; i < arr.length-1; i++) {
+                b = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = b;
+            }
+            arr.pop();
+            document.write(arr);
+        } else {
+            document.write('V ko thuộc mảng!')
+        }
+    </script>
+    </body>
+    </html>

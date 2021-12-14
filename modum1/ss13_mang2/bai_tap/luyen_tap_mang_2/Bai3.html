@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Viết một chương trình khai báo một mảng ký tự và kích thước của mảng.
+    //     Chương trình này đếm số ký tự số trong mảng.
+
+    let size = prompt("nhập độ dài của mảng")
+    let arr = new Array(parseInt(size))
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt("nhập kí tự mảng")
+    }
+
+    count = 0
+
+    for (let k = 0; k < arr.length; k++) {
+        if (arr[k] = !isNaN(arr[k]) && arr[k] != "") {
+            count = count + 1
+        }
+    }
+    document.write(count)
+
+
+    // let index
+    // let number = "0123456789"
+    // for (let j = 0; j < arr.length; j++) {
+    //     if (number.indexOf(arr[j])!=-1) {
+    //         index=j
+    //         document.write("sô "+ arr[j]+ " ở vị trí thứ "+index+"<br>")
+    //
+    // }}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = ['Blue', 'Red', 'Pink'];
+    let arr2 = ['Xanh', 'Đỏ', 'Hồng'];
+    let tuCanTim = prompt("Nhập từ cần tìm");
+    let check = false;
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] === tuCanTim) {
+            check = true;
+            document.write(arr2[i]);
+            break;
+        }
+    }
+    if (!check) {
+        document.write('Không tìm thấy!')
+    }
+</script>
+</body>
+</html>

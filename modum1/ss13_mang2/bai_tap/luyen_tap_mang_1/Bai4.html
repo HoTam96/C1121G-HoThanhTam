@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược
+    // các phần tử trong mảng đó.
+   let size
+    let check
+    do {
+        size=prompt("nhập độ dài của mảng")
+        check=parseInt(size)==size
+    }while(!check)
+    let arr = new  Array(parseInt(size))
+
+for (let i=0;i<arr.length;i++){
+    arr[i]=(prompt("nhập số nguyên thứ "+ i))
+
+}
+// mang.reverse();
+//     document.write(arr)
+    n=arr.length-1
+    for (let j=0;j<=n;j++){
+    let b=arr[j];
+    arr[j]=arr[n]
+    arr[n]=b;
+    n--
+    }
+document.write(arr)
+</script>
+</body>
+</html>

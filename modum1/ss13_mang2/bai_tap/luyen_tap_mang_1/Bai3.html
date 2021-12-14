@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let size
+    let check
+    do {
+        size = prompt("nhập độ dài của mảng")
+        check = parseInt(size) == size
+    } while (!check)
+    let array = new Array(parseInt(size))
+    for (let i = 0; i < array.length; i++) {
+        array[i] = parseInt(prompt("nhâp vào số nguyên lần thứ" + i))
+    }
+    alert(array)
+    let index
+    let max = parseInt(array[0])
+    let sum = parseInt(array[0])
+    let avg
+    for (let i = 1; i < array.length; i++) {
+        sum += parseInt(array[i]);
+        if (parseInt(max) < parseInt(array[i])) {
+            max = array[i]
+            index = i
+        }
+    }
+    avg = sum / array.length
+    document.write("giá trị lớn nhất trong dãy là: " + max + "<br>")
+    document.write("gia trị trung bình là:" + avg)
+
+</script>
+</body>
+</html>

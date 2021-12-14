@@ -6,8 +6,27 @@
 </head>
 <body>
 <script>
-let nhapChuoi = prompt("nhập chuổi kí tự")
-    
+    // Bài 3: Viết một chương trình nhập vào một chuỗi và chuyển các ký tự chữ thường trong
+    // chuỗi vừa nhập sang thành dạng chữ hoa. Ví dụ: nếu bạn nhập
+    // vào chuỗi 'The Quick Brown Fox' kết quả của chương trình là 'tHE qUICK bROWN fOX'.
+
+ let nhapGiaTri = prompt("nhập giá trị")
+    let upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+ let lower = "abcdefghijklmnopqrstuvwxyz"
+let result=[]
+for (let i=0;i<nhapGiaTri.length; i++){
+   if (upper.indexOf(nhapGiaTri[i])!=-1){
+result.push(nhapGiaTri[i].toLowerCase());
+   }
+   else if(lower.indexOf(nhapGiaTri[i])!=-1){
+       result.push(nhapGiaTri[i].toUpperCase())
+   }
+   else {
+       result.push(nhapGiaTri[i])
+   }
+}
+document.write(result.join(""))
+
 </script>
 </body>
 </html>
