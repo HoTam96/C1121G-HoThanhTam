@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+
+    let checker
+    let a
+    do {
+        a = prompt("nhập số cần tính")
+        if (checker = parseInt(a) == a && a >= 0) {
+            break;
+        }
+    } while (!checker)
+    let aaa = giaiThua(a)
+    document.write("ket quả là: " + aaa)
+
+    function giaiThua(number) {
+        let ketQua = 1
+        if (number == 0) {
+            alert("giai thừa của 0 là: " + number)
+        } else {
+            for (let i = 1; i <= number; i++) {
+                ketQua = ketQua * i
+            }
+        }
+        return ketQua;
+
+    }
+
+
+</script>
+</body>
+</html>

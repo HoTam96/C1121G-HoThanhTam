@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+    let soLieu = ""
+    let value
+    let check
+    do {
+        for (let i = 0; i < 3; i++) {
+            value = prompt("nhâp vào số nguyên thứ " + i)
+            check = parseInt(value) == value
+            soLieu += value
+        }
+    } while (!check)
+    let arr = soLieu.split("")
+    let data = soNguyen(arr)
+    document.write("giá trị nhỏ nhất là: " + data)
+
+    function soNguyen(number) {
+        // let ketQua=""
+        // if(number[0]<number[1]&&number[0]<number[2]){
+        //   ketQua=ketQua+number[0]
+        //     return ketQua
+        // }
+        // if (number[1]<number[2]){
+        //     ketQua=ketQua+number[1]
+        //     return ketQua
+        // }else {
+        //     ketQua=ketQua+number[2]
+        //     return ketQua
+        // }
+        let min = Math.min(...number)
+        return min
+
+
+    }
+
+
+</script>
+</body>
+</html>

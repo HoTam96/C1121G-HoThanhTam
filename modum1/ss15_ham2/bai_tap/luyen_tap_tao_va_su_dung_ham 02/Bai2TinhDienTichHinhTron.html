@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TÍNH DIỆN TÍCH HÌNH TRÒN</title>
+</head>
+<body>
+<script>
+    // Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+    let pi = 3.14
+    let r = prompt("nhập bán kính hình tròn")
+    let dienTich = area(r)
+    document.write("diện tích hình tròn là: " + dienTich)
+    document.write("<br>")
+    let chuVi = perimeter(r)
+    document.write("chu vi hình tròn là: " + chuVi)
+
+    function area(r) {
+        let ketQua = pi * r * r
+        return ketQua
+    }
+
+    function perimeter(r2) {
+        let hienThi = 2 * r * pi
+        return hienThi;
+    }
+
+</script>
+</body>
+</html>

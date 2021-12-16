@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không.
+    //     Nếu là nguyên dương trả về true, ngược lại trả về false.
+    let value = addnumber("2")
+    if (value == true) {
+        alert("true")
+    } else {
+        alert("false")
+    }
+
+    function addnumber(number) {
+        if (number % 1 == 0 && number > 0 && typeof (number) == "number") {
+            return true
+        } else {
+            return false
+        }
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm
+    // tra xem ký tự bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện
+    // của ký tự đó, nếu không trả về -1.
+
+    let arr = ["h", "o", "t", "h", "a", "n", "h", "t", "a", "m"]
+    // arr = arr.toString(arr)
+    let a = ["h"]
+    let result = test(a)
+    alert("số lần kí tự xuất hiện " + result)
+
+    function test(kiTu) {
+        let fag = true
+        let index = 0
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == kiTu) {
+                index += 1;
+                fag = true
+            } else {
+                fag = false
+
+            }
+        }
+
+        return index
+
+    }
+
+</script>
+</body>
+</html>

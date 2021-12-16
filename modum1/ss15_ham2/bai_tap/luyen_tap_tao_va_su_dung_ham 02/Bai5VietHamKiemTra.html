@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không.
+    //     Nếu là ký tự số hàm trả về true, ngược lại trả về false.
+
+
+    let data = prompt("nhập data")
+    let kiTu = check(data)
+    if (kiTu == true) {
+        alert(true);
+    } else {
+        alert(false);
+    }
+
+    function check(number) {
+        if (!isNaN(number)) {
+            return true;
+        } else {
+            return false
+        }
+    }
+
+
+</script>
+</body>
+</html>
