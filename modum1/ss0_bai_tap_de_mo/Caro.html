@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="display"></p>
+<script>
+
+    let data = new Array(10);
+    for (let i = 0; i < 10; i++) {
+        data[i] = new Array(10);
+        for (let j = 0; j < 10; j++) {
+            data[i][j] = "";
+        }
+
+    }
+    let checkPlayer1 = true;// người chời 1 đánh
+    display();
+
+    function display() {
+        let tableString = '<table border="1">';
+        for (let i = 0; i < 10; i++) {
+            tableString += '<tr>';
+            for (let j = 0; j < 10; j++) {
+                tableString += '<td width="25" height="25" onclick="play(' + i + ',' + j + ')">' + data[i][j] + '</td>';
+            }
+            tableString += '</tr>'
+        }
+        tableString += '</table>';
+        document.getElementById("display").innerHTML = tableString;
+    }
+    function play(x,y) {
+data[x][y]="x"
+
+    }
+</script>
+</body>
+</html>

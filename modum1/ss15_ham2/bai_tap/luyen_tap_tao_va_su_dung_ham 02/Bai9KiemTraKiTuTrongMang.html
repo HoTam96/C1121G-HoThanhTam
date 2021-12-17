@@ -12,26 +12,34 @@
 
     let arr = ["h", "o", "t", "h", "a", "n", "h", "t", "a", "m"]
     // arr = arr.toString(arr)
-    let a = ["h"]
+    let a = ["q"]
+
     let result = test(a)
-    alert("số lần kí tự xuất hiện " + result)
+
+        alert("số lần kí tự xuất hiện " + result)
+
+
 
     function test(kiTu) {
-        let fag = true
+        let check = false
         let index = 0
         for (let i = 0; i < arr.length; i++) {
             if (arr[i] == kiTu) {
-                index += 1;
-                fag = true
-            } else {
-                fag = false
-
+                index += 1
+                check= true
             }
+
+        }
+        if (check==true){
+            return index
+        }
+        else {
+            return -1
         }
 
-        return index
 
     }
+
 
 </script>
 </body>

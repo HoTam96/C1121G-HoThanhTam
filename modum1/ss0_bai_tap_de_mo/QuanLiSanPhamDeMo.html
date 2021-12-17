@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="product" placeholder="Nhập tên sản phẩm">
+<input type="button" value="Add New Product" onclick="addNewProduct()"><br>
+<span> Số lương: </span><span id="soLuong">12</span>
+<p id="ketQua"></p>
+
+
+<script>
+    // Khái niệm CRUD:
+    // C: Create , R: Read, U: update, D: delete => chức năng cơ bản khi tạo web
+    let listProduct = ["sam sung", "nokia", "iphone"];
+    display(listProduct);
+
+    function display(data) {
+        let tableString = '<table border="1" style="border-collapse: collapse">\n' +
+            '<tr>\n' +
+            '<th>STT</th>\n' +
+            '<th>Name</th>\n' +
+            '<th>Edit</th>\n' +
+            '<th>Delete</th>\n' +
+            '</tr>';
+        for (let i = 0; i < data.length; i++) {
+            tableString += ' <tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + data[i] + '</td>\n' +
+                '        <td><input type="button" value="Edit" onclick="editName(' + i + ')"></td>\n' +
+                '        <td><input type="button" value="Delete" onclick="deleteProduct(' + i + ')"></td>\n' +
+                '    </tr>';
+        }
+        tableString += "</table>";
+        document.getElementById("ketQua").innerHTML = tableString;
+        document.getElementById("soLuong").innerHTML = data.length;
+    }
+
+    function addNewProduct() {
+        let productName = document.getElementById("product").value
+        if (productName != "" && productName != null) {
+            listProduct.push(productName);// thêm phần tử vào cuối mảng.
+        } else {
+            alert("Cần nhập thông tin sản phẩm")
+        }
+        document.getElementById("product").value = "";
+        display(listProduct);
+    }
+
+    function editName(index) {
+        let editName = prompt("nhập vào tên sản phẩ cần sửa");
+        if (editName != "" && editName != null) {
+            listProduct[index] = editName;
+        }
+        display(listProduct);
+    }
+
+    function deleteProduct(index) {
+        let flag = confirm("Bạn có muốn xóa sản phẩm :" + listProduct[index]);
+        // OK: true; => cancle => false;
+        if (flag) {
+            listProduct.splice(index, 1);// index, vị trí xóa,1: xóa 1 phần tử:
+        } else {
+            alert("bạn đã hủy, không muốn xóa sản phẩm: " + listProduct[index]);
+        }
+        display(listProduct);
+    }
+</script>
+</body>
+</html>
