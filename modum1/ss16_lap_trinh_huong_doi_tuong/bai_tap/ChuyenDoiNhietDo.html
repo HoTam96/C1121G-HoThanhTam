@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(doC) {
+            this.doC = doC
+        }
+
+        getCSangF() {
+            return this.doC * 1.8 + 32
+        }
+
+        getCsangK() {
+            return this.doC + 273
+        }
+
+    }
+let a = parseInt(prompt("nhập nhiệt độ"))
+    let temperature = new Temperature(a);
+    let F = temperature.getCSangF();
+    let K = temperature.getCsangK();
+    document.write("dộ c sang độ F:" + F);
+    document.write("<br>")
+    document.write("dộ c sang độ k:" + K);
+
+</script>
+</body>
+</html>

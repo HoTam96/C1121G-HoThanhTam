@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<canvas id="myCanvas" width="900" height="900" style="border:1px solid #d3d3d3;">
+<body>
+<script>
+    // Xây dựng lớp mô tả hình chữ nhật
+    class Rectangle{
+        constructor(width,height,) {
+            this.width=width;
+            this.height = height;
+        }
+        getWidth(){
+            return this.width
+        }
+        getHeight(){
+            return this.height
+        }
+        getChuVi(){
+            let priniter = (this.width+this.height)*2
+            return priniter
+        }
+        getS(){
+            let s = this.width*this.height
+            return s
+             }
+    }
+    let rectangle = new Rectangle(400,100)
+let chieuDai = rectangle.getWidth();
+    let chieuRong = rectangle.getHeight();
+    let chuvi = rectangle.getChuVi();
+    let area = rectangle.getS();
+    alert("chiều rộng là: "+chieuRong+"chiều dài là: "+chieuDai)
+    alert("chu vi hình chữ nhật là: " +chuvi);
+    alert("diện tích hình chữ nhật là: " +area);
+
+    let canvas = document.getElementById("myCanvas")
+    if (canvas.getContext)
+    {
+        var ctx = canvas.getContext('2d');
+        ctx.fillStyle='#fa4b9a';    // color of fill
+        ctx.fillRect(10, 40, chieuDai, chieuRong); // create rectangle
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class CriCle{
+        constructor(radius,color) {
+            this.radius=radius;
+            this.color=color;
+
+        }
+        getRadius(){
+            return this.radius
+        }
+        getColor(){
+            return this.color
+        }
+        getArea(){
+            let s = Math.PI*this.radius*this.radius
+            return s
+        }
+    }
+
+    let hinhTron = new CriCle(4,'red')
+    let banKinh = hinhTron.getRadius();
+    let mauSac = hinhTron.getColor();
+let dienTich = hinhTron.getArea()
+    alert("diện tích hình tròn là: "+ dienTich+" bán kính là: "+banKinh+" có mau "+mauSac)
+
+</script>
+</body>
+</html>
