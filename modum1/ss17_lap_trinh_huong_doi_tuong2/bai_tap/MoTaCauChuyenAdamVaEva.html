@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor() {
+            this.weightApple = 10;
+
+        }
+
+        setWeightApple(weightApple) {
+            this.weightApple = weightApple
+        }
+
+        getWeightApple() {
+            return this.weightApple
+        }
+
+        decreaseApple() {
+            if (this.weightApple > 0) {
+                this.weightApple--
+            } else {
+                alert("da eat het tao")
+            }
+        }
+
+        isEmpty() {
+            if (this.weightApple === 0) {
+                return false
+            } else if (this.weightApple > 0) {
+                return true
+            }
+        }
+
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name
+            this.gender = gender
+            this.weight = weight
+        }
+
+        getName() {
+            return this.name
+        }
+
+        getGender() {
+            return this.gender
+        }
+
+        getWeight() {
+            return this.weight
+        }
+
+        say(text) {
+            alert(this.getName() + "nói: " + text)
+        }
+
+        eat(apple) {
+            apple.decreaseApple()
+            this.weight++
+
+        }
+
+    }
+
+    let apple = new Apple();
+    let adam = new Human("adam", "nam", 70);
+    let eva = new Human("eva", "nu", 40);
+    adam.eat(apple);
+    eva.eat(apple)
+
+    while (apple.isEmpty()) {
+        adam.say("hey! đánh nhau không")
+        eva.say("nhào vô!!!!")
+        adam.eat(apple)
+        eva.eat(apple)
+    }
+    document.write("cân nặng của adam là:" + adam.getWeight() + "<br>")
+    document.write("cân nặng của eva là: " + eva.getWeight() + "<br>")
+    document.write("khối lượng quả táo còn lại:" + apple.isEmpty())
+
+
+    //     getName() {
+    //         return this.name
+    //     }
+    //
+    //     getGender() {
+    //         return this.gender
+    //     }
+    //
+    //     getWeight() {
+    //         return this.weight
+    //     }
+    //
+    //     say(text) {
+    //         alert(this.getName() + " nói:" + text)
+    //     }
+    //
+    //     eat(apple) {
+    //        apple.decreaseApple();
+    //        this.weight++
+    //     }
+    // }
+    //
+    // let apple = new Apple()
+    // let adam = new Human("adam","nam",60)
+    // let eva = new Human("eva","nu",50)
+    // adam.eat(apple);
+    
+</script>
+</body>
+</html>

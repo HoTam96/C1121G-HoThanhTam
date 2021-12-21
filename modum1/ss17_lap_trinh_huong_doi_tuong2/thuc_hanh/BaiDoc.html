@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // class Mobile {
+    //     constructor(id, name) {
+    //         this.id = id;
+    //         this.name = name
+    //         this.message = ""
+    //     }
+    //
+    //     setMessage(message) {
+    //         this.message = message
+    //     }
+    //
+    //     getMessage() {
+    //         return this.message
+    //     }
+    //
+    //     sendMessage(message, mobile) {
+    //         mobile.setMessage(message);
+    //     }
+    //
+    // }
+    // let iphone = new Mobile(1,"iphone")
+    // let androi = new Mobile(2,"sam sum")
+    // iphone.sendMessage("hello tâm đây",androi)
+    // let messagee = androi.getMessage()
+    // document.write(messagee)
+
+    class Mobile {
+        constructor(id, name) {
+            this.id = id;
+            this.name = name;
+            this.message = ""
+        }
+
+        setMessage(message) {
+            this.message = message
+        }
+        // setMessage(message) {
+        //         this.message = message
+        //     }
+
+        getMessage() {
+            return this.message
+        }
+        //     getMessage() {
+        //         return this.message
+        //     }
+
+
+
+        sendMessage(message, mobile) {
+            mobile.setMessage(message)
+        }
+        //     sendMessage(message, mobile) {
+        //         mobile.setMessage(message);
+        //     }
+
+    }
+
+    let iphone = new Mobile(1, "iphone")
+    let androi = new Mobile(2, "sam sum")
+    iphone.sendMessage("hello anh tâm ", androi)
+    let messagee = androi.getMessage();
+    document.write(messagee)
+    // let iphone = new Mobile(1,"iphone")
+    // let androi = new Mobile(2,"sam sum")
+    // iphone.sendMessage("hello tâm đây",androi)
+    // let messagee = androi.getMessage()
+    // document.write(messagee)
+
+
+</script>
+</body>
+</html>
