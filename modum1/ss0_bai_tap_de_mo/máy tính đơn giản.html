@@ -2,9 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+
+<form>
+    <table border="1" style="width: 100px">
+        <tr>
+            <td colspan="4">
+                <input id="dislay" type="text" disabled>
+            </td>
+
+        </tr>
+        <tr>
+        <td><input size="100" type="button" value="1" onclick="tinhToan(this.value)"></td>
+        <td><input size="100" type="button" value="2" onclick="tinhToan(this.value)"></td>
+        <td><input size="100" type="button" value="3" onclick="tinhToan(this.value)"></td>
+        <td><input size="100" type="button" value="*" onclick="tinhToan(this.value)"></td>
+        </tr>
+        <tr>
+        <td><input size="100" type="button" value="4" onclick="tinhToan(this.value)"></td>
+        <td><input size="100" type="button" value="5" onclick="tinhToan(this.value)"></td>
+        <td><input size="100" type="button" value="6" onclick="tinhToan(this.value)"></td>
+        <td><input size="100" type="button" value="/" onclick="tinhToan(this.value)"></td>
+    </tr>
+        <tr>
+        <td><input size="40" type="button" value="7" onclick="tinhToan(this.value)"></td>
+        <td><input size="40" type="button" value="8" onclick="tinhToan(this.value)"></td>
+        <td><input size="40" type="button" value="9" onclick="tinhToan(this.value)"></td>
+        <td><input size="40" type="button" value="+" onclick="tinhToan(this.value)"></td>
+        </tr>
+        <tr>
+        <td><input size="40" type="submit" value="EC"onclick="tinhToan(this.value)"></td>
+        <td><input size="40" type="button" value="0" onclick="tinhToan(this.value)"></td>
+        <td><input size="40" type="button" value="=" onclick="tinh()"></td>
+        <td><input size="40" type="button" value="-" onclick="tinhToan(this.value)"></td>
+        </tr>
+    </table>
+</form>
+<script>
+function tinhToan(val) {
+document.getElementById("dislay").value+=val
+}
+    function tinh() {
+        let tinhtoann = document.getElementById("dislay").value
+        let ketquaa = eval(tinhtoann)
+        document.getElementById("dislay").value = ketquaa
+    }
+</script>
 </body>
 </html>

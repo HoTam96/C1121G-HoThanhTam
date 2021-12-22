@@ -7,20 +7,24 @@
 <body>
 <script>
     // Viết một chương trình để đếm số từ trong một chuỗi
-    let chuoi = "xin"
-   let count =" "
-  document.write(chuoi.split(count).length-1)
-
-    // let str = "I love you and our son";
-    // let sub = "o";
-    //
-    // console.log(str.split(sub).length - 1);
-    // //>4
-
+    let str = (   "hello    xin   chao"  )
+    let arr = str.trim()
+    arr = str.split(" ")
+alert(arr)
+    let dem = checkcount(arr)
+    alert(dem)
+    function checkcount(value) {
+        let count = 0
+        for (let i = 0; i < value.length; i++) {
+            if (value[i] !=" ") {
+                count += 1
+            }
+        }
+        return count;
+    }
 
 
 </script>
-
 
 
 </body>

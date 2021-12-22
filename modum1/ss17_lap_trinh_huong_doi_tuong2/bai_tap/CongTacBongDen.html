@@ -14,13 +14,17 @@
         }
 
         tunrOn() {
-            alert("đèn sáng")
-
+            if (status) {
+                alert("đèn sáng")
+            }
         }
 
         turnOff() {
-            alert("đèn tắt")
+            if (!status) {
+                alert("đèn tắt")
+            }
         }
+
 
     }
 
@@ -36,21 +40,22 @@
         }
 
         switchOn(electriclamp) {
-            this.electriclamp.tunrOn()
 
         }
 
-        switchOff(electriclamp) {
-            this.electriclamp.turnOff()
+        switchOff() {
+            if (!this.status) {
+                alert("đèn tắt")
+            }
         }
     }
 
-    let
-        lamp = new Electriclamp()
-    switchButton = new SwitchButton()
+    let lamp = new Electriclamp()
+    let switchButton = new SwitchButton()
     switchButton.conectToLamp(lamp)
     switchButton.switchOn(lamp)
     switchButton.switchOff(lamp)
+
 
 </script>
 </body>

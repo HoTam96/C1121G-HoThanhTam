@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    let h = parseInt(prompt("nhập chiều caoo h"))
+    let n = h;
+    let m = h;
+    for (let i = 1; i <= h; i++) {
+
+
+        for (let j = 1; j <= (2 * h - 1); j++) {
+
+            if (Math.abs(h-j)<=i-1) {
+                document.write("*")
+            } else {
+                document.write("&nbsp&nbsp");
+            }
+
+        }
+
+
+        document.write("<br>")
+
+    }
+
+</script>
+</body>
+</html>

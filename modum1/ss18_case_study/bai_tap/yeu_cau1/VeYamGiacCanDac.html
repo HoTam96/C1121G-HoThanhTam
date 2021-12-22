@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // for (let i=0;i<5;i++){
+    //     for (let j=0;j<9;j++){
+    //         if(i==0&&j==0||i==0&&j==1||i==0&&j==2||i==0&&j==3||i==0&&j==5||i==0&&j==6||i==0&&j==7||i==0&&j==8||i==1&&j==0||i==1&&j==1||i==1&&j==2||i==1&&j==6||i==1&&j==7||i==1&&j==8||i==2&&j==0||i==2&&j==1||i==2&&j==7||i==2&&j==8||i==3&&j==0||i==3&&j==8){
+    //             document.write("&nbsp&nbsp");
+    //         }
+    //         else {
+    //             document.write("*")
+    //         }
+    //
+    //
+    //     }
+    //     document.write("<br>")
+    // }
+
+    // nhập h là chiều cao của tam giác
+
+    let h = parseInt(prompt("nhập chiều caoo h"))
+    let n = h;
+    let m = h;
+    for (let i = 1; i <= h; i++) {
+
+
+        for (let j = 1; j <= (2 * h - 1); j++) {
+
+            if (i == h || j == n || j == m) {
+                document.write("*")
+            } else {
+                document.write("&nbsp&nbsp");
+            }
+
+        }
+        n--
+        m++
+
+        document.write("<br>")
+
+    }
+
+
+</script>
+</body>
+</html>

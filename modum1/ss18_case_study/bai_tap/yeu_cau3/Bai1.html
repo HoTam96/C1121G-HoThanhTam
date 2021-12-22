@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let n = parseInt(prompt("nhập vào độ dìa của mảng"))
+    alert(typeof n)
+    let check
+    let arr1 = new Array(n)
+    for (let i = 0; i < n; i++) {
+        arr1[i] = parseInt(prompt("nhập vào số nguyên" + i))
+    }
+    // arr1 = parseInt(arr1)
+    // alert(arr1[0])
+
+    let arr2= []
+    // arr2[0] = arr1[0]
+    // arr2.push(arr2[0])
+    let c=0;
+    for (let j = 0; j < arr1.length; j++) {
+        // alert(arr2[0])
+        c+=arr1[j]
+        arr2.push(c);
+    }
+    alert(arr2)
+
+
+</script>
+
+</body>
+</html>

@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<label>SAMPLE SCREEN</label><br>
+<input type="text" id="data">
+<input type="button" value="add" onclick="getData()">
+<input type="button" value="display" onclick="getDisplay()"><br>
+<hr id="output">
+
+<script>
+    let arr = []
+
+    function getData() {
+        let list = document.getElementById("data").value
+        if (list != "") {
+            arr.push(list)
+            alert("bạn vừa thêm " + list + " vào sự lựa chọn")
+            document.getElementById("data").value = ""
+        }
+    }
+
+    function getDisplay() {
+        let newhienThi = ""
+        for (let i = 0; i < arr.length; i++) {
+            newhienThi += "elemen " + i + "=" + arr[i] + "<br>"
+        }
+        document.getElementById("output").innerHTML = newhienThi
+    }
+</script>
 </body>
 </html>

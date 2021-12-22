@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> gọi món từ menu</p>
+<form>
+    <input id="displayy" placeholder="tổng tiền">
+
+    <select id="menu">
+        <option value="cafe">cafe</option>
+        <option value="camvat">cam vắt</option>
+        <option value="nuocEpCaRot">nước ép cà rốt</option>
+        <option value="nuocEpCaChua">nước ép cà chua</option>
+        <option value="nuocloc">nước lọc</option>
+        <option value="nuocdua">nước dừa</option>
+        <option value="out">7</option>
+    </select>
+    <input id="amount" type="number" placeholder="số lượng">
+</form>
+<button type="button" onclick="oder()">gọi món</button>
+<script>
+    function oder() {
+        let b = document.getElementById("amount").value
+        let a = document.getElementById("menu").value
+        let tongTien
+        if (a == "cafe") {
+            tongTien = b * 12000
+        } else if (a == "camvat") {
+            tongTien = b * 15000
+        } else if (a == "nuocEpCaRot") {
+            tongTien = b * 18000
+        } else if (a == "nuocEpCaChua") {
+            tongTien = b * 17000
+        } else if (a == "nuocloc") {
+            tongTien = b * 7000
+        } else if (a == "nuocdua") {
+            tongTien = b * 24000
+        }
+        document.getElementById("displayy").value=tongTien+" vnd"
+    }
+    // Sử dụng vòng lặp do while lặp lại cho người dùng đặt thức uống,
+    //     kết thúc quá trình đặt thức uống khi người nhấn số 7
+
+    do {
+
+    }while ()
+
+
+</script>
+</body>
+</html>

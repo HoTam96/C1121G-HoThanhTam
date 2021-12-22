@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    // Bài 1: Viết chương trình nhập điểm của một sinh viên cho các môn:
+    //     Vật lý, Hóa học, và Sinh học. Sau đó hiển thị điểm trung bình và tổng của những điểm này.
+    let arr
+    let data= new Array(3)
+    arr = ['vật lí', 'hóa học', 'sinh học']
+
+        for (let i = 0; i < data.length; i++) {
+            data[i] = parseInt(prompt("nhập điểm môn " + arr[i]))
+
+        }
+           let sum = (data[0]+data[1]+data[2])/3
+    alert(sum)
+
+</script>
 </body>
 </html>

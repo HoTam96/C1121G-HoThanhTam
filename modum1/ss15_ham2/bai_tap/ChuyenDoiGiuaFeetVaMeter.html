@@ -6,43 +6,46 @@
 </head>
 <body>
 <form>
-    <input type="number" placeholder="Fahrenheit" oninput="footToMeter(this.value)">
+    <input id="tam" type="number" placeholder="Fahrenheit" oninput="footToMeter()">
     <select id="meter">
-        <option value="met">metter</option>
-        <option value="feeet">feet</option>
+        <option value="cc">metter</option>
+        <option value="bb">feet</option>
     </select>
     <br>
-    <input id="display" disabled>
     <select id="feet">
-        <option value="feeet">feet</option>
-        <option value="met">meter</option>
+        <option value="bb">feet</option>
+        <option value="cc">meter</option>
     </select>
-
+<!--    <input type="button" value="clickme" onclick="footToMeter()">-->
+<p id="hello"></p>
 </form>
 <script>
     // Xây dựng hai phương thức sau: Chuyển đổi từ feet sang meters: function footToMeter(foot)
     // Chuyển đổi từ meters sang feet: function meterToFoot(meter) Công thức chuyển đổi như sau:
     // meter = 0.305 * foot
     // foot = 3.279 * meter
-    let mettera = document.getElementById("meter").value
-    let feeta = document.getElementById("feet").value
 
-    function footToMeter(foot) {
-        foot = parseInt(foot);
-        if (mettera == "feeet" && feeta == "met") {
-            document.getElementById("display").innerHTML = (3.279 * foot)
-        } else if (mettera == "met" && feeta == "feeet") {
-            document.getElementById("display").innerHTML = (0.305 * foot)
-        } else {
-            document.getElementById("display").innerHTML = foot
+
+    function footToMeter() {
+        let a = document.getElementById("tam").value
+        a=parseInt(a)
+
+        let meterr = 0.305 * a
+
+        let foott = 3.279 * a
+
+        let b = document.getElementById("meter").value
+
+        let c = document.getElementById("feet").value
+
+        if (b === "bb" && c === "cc") {
+            document.getElementById("hello").innerHTML=("đổi từ foot sáng meter là: "+meterr)
+        } else if (b === "cc" && c === "bb") {
+          document.getElementById("hello").innerHTML=("đổi từ meter sáng foot là :" +foott)
         }
+
     }
 
-    // function meterToFoot(meter){
-    //     if (feeta=="met"&& mettera=="feeet"){
-    //         document.getElementById("display").innerHTML=0.35*meter
-    //     }
-    // }
 
 </script>
 </body>

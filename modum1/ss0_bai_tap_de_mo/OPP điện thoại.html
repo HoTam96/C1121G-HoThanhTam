@@ -2,9 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<input id="iphone">
+<input type="button" value="send" onclick="send('iphone')"><br>
+<input id="nokia">
+<input type="button" value="send" onclick="send('nokia')">
+<script>
+    class DienThoai {
+        constructor() {
+            this.trangThai = true;
+            this.pin = 100;
+            this.vungNhoSoanThao = "";
+            this.vungNhoTinDaGui = [];
+            this.vungNhoTinDen = [];
+        }
+
+        getTrangThai() {
+            return this.trangThai;
+        }
+
+        batTat() {
+            this.trangThai = !this.trangThai;
+        }
+
+        sacPin() {
+            this.pin = 100;
+        }
+
+        soanTinNhan(text) {
+            if (this.trangThai){
+                this.vungNhoSoanThao = text;
+                this.pin--;
+            }
+
+        }
+
+        //nhận tin nhắn đến
+        nhanTinNhanDen(text) {
+            this.vungNhoTinDen.push(text);
+            this.pin--;
+        }
+
+        guiTinNhan(text, dienThoai) {
+            this.soanTinNhan(text);
+            this.vungNhoTinDaGui.push(this.vungNhoSoanThao);
+            dienThoai.nhanTinNhanDen(this.vungNhoSoanThao);
+            this.vungNhoSoanThao = "";
+            this.pin--;
+        }
+
+        getTinDen() {
+            return this.vungNhoTinDen;
+            this.pin--;
+        }
+
+        hienThiTinDaGui() {
+            alert(this.vungNhoTinDaGui);
+            this.pin--;
+        }
+    }
+
+    let iphone = new DienThoai();
+    let nokia = new DienThoai();
+
+    function send(dienThoai) {
+        if (dienThoai == "iphone") {
+            let message = document.getElementById("iphone").value;
+            iphone.guiTinNhan(message, nokia);
+            document.getElementById("iphone").value = "Tin nhắn đã gửi thành công";
+            let message2 = nokia.getTinDen();
+            document.getElementById("nokia").value = message2;
+
+        } else {
+            let message = document.getElementById("nokia").value;
+            iphone.guiTinNhan(message, iphone);
+            document.getElementById("nokia").value = "Tin nhắn đã gửi thành công";
+            let message2 = iphone.getTinDen();
+            document.getElementById("iphone").value = message2;
+
+        }
+    }
+
+    // let samSung = new DienThoai();
+
+    // iphone.guiTinNhan("helo nokia",nokia);
+    // nokia.hienThiTinDen();
+    // nokia.guiTinNhan("ok, nhận được rồi iphone", iphone);
+    // iphone.hienThiTinDen();
+    // nokia.guiTinNhan("hello sam sung",samSung);
+    // samSung.hienThiTinDen();
+</script>
 </body>
 </html>

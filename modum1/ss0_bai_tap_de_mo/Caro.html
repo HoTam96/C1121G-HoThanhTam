@@ -7,32 +7,48 @@
 <body>
 <p id="display"></p>
 <script>
-
-    let data = new Array(10);
+    let dataa = new Array(10)
     for (let i = 0; i < 10; i++) {
-        data[i] = new Array(10);
+        dataa[i] = new Array(10)
         for (let j = 0; j < 10; j++) {
-            data[i][j] = "";
+            dataa[i][j] = ""
         }
-
     }
-    let checkPlayer1 = true;// người chời 1 đánh
+    let player1 = true
     display();
 
     function display() {
-        let tableString = '<table border="1">';
+        let tableString = '<table border="1">'
+
         for (let i = 0; i < 10; i++) {
-            tableString += '<tr>';
+            tableString += '<tr>'
             for (let j = 0; j < 10; j++) {
-                tableString += '<td width="25" height="25" onclick="play(' + i + ',' + j + ')">' + data[i][j] + '</td>';
+                tableString += '<td width="30"height="43" onclick="player(' + i + ',' + j +
+                    ')">' + dataa[i][j] + '</td>'
             }
             tableString += '</tr>'
         }
-        tableString += '</table>';
-        document.getElementById("display").innerHTML = tableString;
+        tableString += '</table>'
+        document.write(tableString)
     }
-    function play(x,y) {
-data[x][y]="x"
+    function player(i, j) {
+        if (player1 && checkNoData(i, j)) {
+            dataa[i][j] = "x"
+            player1 = false
+        } else if (!player1 && checkNoData(i, j)) {
+            dataa[i][j] = "O"
+            player1 = true
+        }
+    }
+    display();
+    function checkNoData(i, j) {
+        if (dataa[i][j] == "") {
+            return true
+        } else {
+            alert("ô này đã có người chơi")
+            return false
+
+        }
 
     }
 </script>

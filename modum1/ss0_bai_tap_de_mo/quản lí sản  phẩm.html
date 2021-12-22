@@ -5,38 +5,52 @@
     <title>Title</title>
 </head>
 <body>
-<input placeholder="nhập tên sản phẩm" type="text">
-<input type="button" value="new product">
-<tr>
-    <td>1</td>
-    <td>ss</td>
-    <td>Edit</td>
-    <td>Delete</td>
-</tr>
+<input id="addProduce" placeholder="nhập tên sản phẩm" type="text">
+<input type="button" value="new product" onclick="newProduce()">
+<p id="hienThi"></p>
+
 <script>
-    let list =["Nokia","samsum","Apple"]
-
-function product() {
-let tableString = '<table border="1" ><tr>\n' +
-    '    <th>STT</th>\n' +
-    '    <th>name</th>\n' +
-    '    <th>Edit</th>\n' +
-    '    <th>Delete</th>\n' +
-    '</tr>'
-for (let i=0;i<data.length;i++){
-
-}
+    let listProduce = ['nopkia', 'samsum', 'apple']
+    tableDisplay(listProduce)
 
 
+    function tableDisplay(data) {
+        let tableString = '<table border="1"><tr>\n' +
+            '    <th>STT</th>\n' +
+            '    <th>Name</th>\n' +
+            '    <th>Edit</th>\n' +
+            '    <th>Delete</th>\n' +
+            '</tr>'
+        for (let i = 0; i < data.length; i++) {
+            tableString += '<tr>\n' +
+                '    <td>' + (i + 1) + '</td>\n' +
+                '    <td>' + data[i] + '</td>\n' +
+                '    <td><input value="Edit" type="button" onclick="editName(' + i + ')" </td>\n' +
+                '    <td><input value="Delete" type="button" onclick="deleteProduce(' + i + ')"></td>\n' +
+                '</tr>'
+        }
+        tableString += '</table>'
+        document.getElementById("hienThi").innerHTML = tableString
+    }
 
+    function newProduce() {
+        let addSanPham = document.getElementById("addProduce").value
+        listProduce.push(addSanPham);
+        alert("bạn vừa thêm sản phẩm " + addSanPham + "vào gio hàng")
+        document.getElementById("addProduce").value = ""
+        tableDisplay(listProduce);
+    }
 
+    function editName(x) {
+        let fix = prompt("nhập tên sản phẩm muốn cập nhật")
+        listProduce[x] = fix
+        tableDisplay(listProduce);
+    }
 
-    tableString+='</tr>'
-
-    tableString+='</table>'
-}
-    
-    
+    function deleteProduce(y) {
+        listProduce.splice(y, 1)
+        tableDisplay(listProduce)
+    }
 </script>
 </body>
 </html>
