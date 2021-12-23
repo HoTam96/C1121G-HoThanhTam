@@ -1,31 +1,51 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<script>-->
+<!--    // Viết một chương trình để đếm số từ trong một chuỗi-->
+<!--//     let str = (   "hello    xin   chao"  )-->
+<!--//     let arr = str.trim()-->
+<!--//     arr = str.split(" ")-->
+<!--// alert(arr)-->
+<!--//     let dem = checkcount(arr)-->
+<!--//     alert(dem)-->
+<!--//     function checkcount(value) {-->
+<!--//         let count = 0-->
+<!--//         for (let i = 0; i < value.length; i++) {-->
+<!--//             if (value[i] !=" ") {-->
+<!--//                 count += 1-->
+<!--//             }-->
+<!--//         }-->
+<!--//         return count;-->
+<!--//     }-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>BT4</title>
 </head>
 <body>
 <script>
-    // Viết một chương trình để đếm số từ trong một chuỗi
-    let str = (   "hello    xin   chao"  )
-    let arr = str.trim()
-    arr = str.split(" ")
-alert(arr)
-    let dem = checkcount(arr)
-    alert(dem)
-    function checkcount(value) {
-        let count = 0
-        for (let i = 0; i < value.length; i++) {
-            if (value[i] !=" ") {
-                count += 1
-            }
+    let a = prompt('Nhập vào 1 chuỗi: ');
+    let b = 0;
+    let arr = a.split(' ');
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] != "") {
+            b++;
         }
-        return count;
     }
-
-
+    document.write('Chuỗi a: ' + arr + '<br>');
+    document.write('Chuỗi có ' + b + ' từ');
 </script>
-
-
 </body>
 </html>
+
+// </script>
+//
+//
+// </body>
+// </html>

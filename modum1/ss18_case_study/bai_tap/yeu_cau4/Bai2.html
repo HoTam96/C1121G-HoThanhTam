@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 1: Viết một hàm chuẩn hóa xâu ký tự: biến đổi xâu ký tự thành xâu sao cho
+    // trong xâu không có 2 dấu cách liền nhau và bắt đầu mỗi từ phải in hoa.
+    //     Ví dụ tRuong    TaN   HAI => Truong Tan Hai.
+    //     Và một hàm tìm từ dài nhất trong 1 xâu ký tự. Hàm main sử dụng các hàm này để
+    // nhập xâu ký tự từ bàn phím, in ra xâu trước và sau khi chuẩn hóa, 1 từ dài nhất trong xâu đó.
+
+    //     Bài 2: Cho xâu kí tự. Hãy đếm số lượng kí tự khác nhau trong xâu đó
+    //     Ví dụ: s = "cabca", thì kết quả differentSymbolsNaive(s) = 3.
+    //  	Có 3 kí tự khác nhau là a, b và c.
+
+
+    let s = "cabcadd"
+    // mảng
+    let b = s.split("")
+    let c = [b[0]]
+
+    for (let i = 1; i < b.length; i++) {
+        let flag = true;
+        for (let j = 0; j < c.length; j++) {
+            if (c[j] == b[i]) {
+                flag = false
+                break;
+            }
+        }
+        if (flag) {
+            c.push(b[i])
+        }
+    }
+    alert(c.length)
+</script>
+</body>
+</html>

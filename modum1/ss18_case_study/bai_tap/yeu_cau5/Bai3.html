@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // let m= prompt("nhập số hàng");
+    // let n= prompt("nhập số cột");
+    // let arr1= new Array(parseInt(m));
+    // let check;
+    // let arr2=""
+    // for (let i=0;i<arr1.length;i++){
+    //     arr1[i]=new Array(parseInt(n))
+    //     for (let j=0;j<arr1[i].length;j++){
+    //         do {
+    //             arr1[i][j]=prompt("nhập số lượng phần tử thứ"+ i+j )
+    //             arr2+=arr1[i][j]+",";
+    //             check=parseInt(arr1[i][j])==arr1[i][j]
+    //         }while (!check)
+    //     }
+    //     arr2+="<br>"
+    // }
+    // Bài 3: Viết hàm tìm giá trị lớn nhất, nhỏ nhất trong mảng 2 chiều
+    let arr = [[1, 3, 20], [2, 5, 9], [7, 5, 7]];
+    let arr2 = [];
+    let arr3 = [];
+    for (let i = 0; i < arr.length; i++) {
+        // let arr3=[];
+        arr2[i] = Math.max(...arr[i]);
+        arr3[i] = Math.min(...arr[i]);
+
+    }
+    let max = Math.max(...arr2);
+    let min = Math.min(...arr3);
+    document.write("số lớn nhất trong mảng là: " + max);
+    document.write("<br>");
+    document.write("số nhỏ nhất nhất trong mảng là: " + min);
+
+
+</script>
+</body>
+</html>
