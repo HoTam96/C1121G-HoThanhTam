@@ -17,24 +17,24 @@
     //  	Có 3 kí tự khác nhau là a, b và c.
 
 
-    let s = "cabcadd"
+    let s = "cabcadd";
     // mảng
-    let b = s.split("")
-    let c = [b[0]]
+    let b = s.split("");
+    let c = [b[0]];
 
     for (let i = 1; i < b.length; i++) {
         let flag = true;
         for (let j = 0; j < c.length; j++) {
             if (c[j] == b[i]) {
-                flag = false
+                flag = false;
                 break;
             }
         }
         if (flag) {
-            c.push(b[i])
+            c.push(b[i]);
         }
     }
-    alert(c.length)
+    alert(c.length);
 </script>
 </body>
 </html>
