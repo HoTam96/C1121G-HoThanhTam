@@ -5,51 +5,98 @@
     <title>Title</title>
 </head>
 <body>
-<p> gọi món từ menu</p>
-<form>
-    <input id="displayy" placeholder="tổng tiền">
+<!--<p> gọi món từ menu</p>-->
+<!--<form>-->
+<!--    <input id="displayy" placeholder="tổng tiền">-->
 
-    <select id="menu">
-        <option value="cafe">cafe</option>
-        <option value="camvat">cam vắt</option>
-        <option value="nuocEpCaRot">nước ép cà rốt</option>
-        <option value="nuocEpCaChua">nước ép cà chua</option>
-        <option value="nuocloc">nước lọc</option>
-        <option value="nuocdua">nước dừa</option>
-        <option value="out">7</option>
-    </select>
-    <input id="amount" type="number" placeholder="số lượng">
-</form>
-<button type="button" onclick="oder()">gọi món</button>
+<!--    <select id="menu">-->
+<!--        <option value="cafe">cafe</option>-->
+<!--        <option value="camvat">cam vắt</option>-->
+<!--        <option value="nuocEpCaRot">nước ép cà rốt</option>-->
+<!--        <option value="nuocEpCaChua">nước ép cà chua</option>-->
+<!--        <option value="nuocloc">nước lọc</option>-->
+<!--        <option value="nuocdua">nước dừa</option>-->
+<!--        <option value="out">7</option>-->
+<!--    </select>-->
+<!--    <input id="amount" type="number" placeholder="số lượng">-->
+<!--</form>-->
+<!--<button type="button" onclick="oder()">gọi món</button>-->
 <script>
-    function oder() {
-        let b = document.getElementById("amount").value
-        let a = document.getElementById("menu").value
-        let tongTien
-        if (a == "cafe") {
-            tongTien = b * 12000
-        } else if (a == "camvat") {
-            tongTien = b * 15000
-        } else if (a == "nuocEpCaRot") {
-            tongTien = b * 18000
-        } else if (a == "nuocEpCaChua") {
-            tongTien = b * 17000
-        } else if (a == "nuocloc") {
-            tongTien = b * 7000
-        } else if (a == "nuocdua") {
-            tongTien = b * 24000
-        }
-        document.getElementById("displayy").value = tongTien + " vnd"
-    }
+    // function oder() {
+    //     let b = document.getElementById("amount").value
+    //     let a = document.getElementById("menu").value
+    //     let tongTien
+    //     if (a == "cafe") {
+    //         tongTien = b * 12000
+    //     } else if (a == "camvat") {
+    //         tongTien = b * 15000
+    //     } else if (a == "nuocEpCaRot") {
+    //         tongTien = b * 18000
+    //     } else if (a == "nuocEpCaChua") {
+    //         tongTien = b * 17000
+    //     } else if (a == "nuocloc") {
+    //         tongTien = b * 7000
+    //     } else if (a == "nuocdua") {
+    //         tongTien = b * 24000
+    //     }
+    //     document.getElementById("displayy").value = tongTien + " vnd"
+    // }
 
     // Sử dụng vòng lặp do while lặp lại cho người dùng đặt thức uống,
     //     kết thúc quá trình đặt thức uống khi người nhấn số 7
 
+    // do {
+    //
+    // } while ()
+    let tenMon = ["cafe", "nước ngọt", "thuốc lá", "nước ép", "nước dừa"]
+    let giaTien = [12000, 8000, 23000, 20000, 25000,30000]
+    let list = ""
+    let oder;
+    let tongTien=0;
+    for (let i = 0; i < tenMon.length; i++) {
+        list += (i + 1) + ". " + tenMon[i] + " có giá là: " + giaTien[i] + " vnd\n"
+    }
     do {
+        oder = prompt("danh sách các thức uống tại quán: \n" +
+            list + "\n"
+            + parseInt(tenMon.length + 1) + ". thoát"
+        )
+        switch (parseInt(oder)) {
+            case 1: {
+                let amount = prompt("số lượng cần mua")
+                tongTien += amount * giaTien[0];
+                break;
+            }
+            case 2: {
+                let amount = prompt("số lượng cần mua")
+                tongTien += amount * giaTien[1];
+                break;
+            }
+            case 3: {
+                let amount = prompt("số lượng cần mua")
+                tongTien += amount * giaTien[2];
+                break;
+            }
+            case 4: {
+                let amount = prompt("số lượng cần mua")
+                tongTien += amount * giaTien[3];
+                break;
+            }
+            case 5: {
+                let amount = prompt("số lượng cần mua")
+                tongTien += amount * giaTien[4];
+                break;
+            }
+            case 6:{
+                break;
+            }
 
-    } while ()
-
-
+            default:{
+                alert("nhập lại ")
+            }
+        }
+    } while (parseInt(oder) != (tenMon.length + 1))
+    alert("số tiền cần trả là: "+tongTien)
 </script>
 </body>
 </html>

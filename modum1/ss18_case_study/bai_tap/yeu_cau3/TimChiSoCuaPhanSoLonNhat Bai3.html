@@ -7,18 +7,17 @@
 <body>
 <script>
     // cho 2 mang số nguyên
-    let arr1 = [5, 7, 9]
-    let arr2 = [4, 4, 3]
-    let index = 0
-    let max = arr1[0] / arr2[0]
+    let arr1 = [5, 7, 9];
+    let arr2 = [4, 4, 3];
+    let index = 0;
+    let max = arr1[0] / arr2[0];
     for (let i = 1; i < arr1.length; i++) {
         if (arr1[i] / arr2[i] > max) {
-            max = arr1[i] / arr2[i]
-            index = i
-            alert(max)
+            max = arr1[i] / arr2[i];
+            index = i;
         }
     }
-    alert("số lớn nhất là " + max + " vị trí thứ: " + index)
+    alert("số lớn nhất là " + max + " vị trí thứ: " + index);
 </script>
 </body>
 </html>

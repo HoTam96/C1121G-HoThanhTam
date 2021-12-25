@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    //  chạy lại dãy số fibonnacy
+    // dùng hàm math.max để kiểm tra số lớn nhất trong mảng và  giới hạn lại phạm vi tìm kiếm
+
+    //mảng tự cho
+    let arr = [1, 2, 4, 5, 7, 8, 9, 11, 13, 17];
+    //mảng so sánh
+    arr1 = [0, 1, 1, 2, 3, 5, 8, 13, 21];
+    arr3 = [];
+    let database = fibonaci(arr);
+    document.write("dãy fibonaci là: " + database);
+
+    function fibonaci(data) {
+        for (let i = 0; i < data.length; i++) {
+            for (let j = 0; j < arr1.length; j++) {
+                if (arr[i] == arr1[j]) {
+                    arr3.push(data[i]);
+                }
+            }
+
+        }
+        arr3.sort(function (x, y) {
+            return x - y;
+        })
+        return arr3;
+    }
+
+</script>
+</body>
+</html>

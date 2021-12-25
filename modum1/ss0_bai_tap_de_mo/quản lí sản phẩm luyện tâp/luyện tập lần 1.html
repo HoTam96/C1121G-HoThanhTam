@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="hienThiManHinh" placeholder="nhập tên sản phẩm">
+<input type="button" value="thêm sản phẩm" onclick="themSanPham()">
+<p id="hienThi1" style="color: red"></p>
+<p id="hienThiBang"></p>
+
+<script>
+    let danhSachSanPham = ["SAM SUM", "NoKIA", "APPLE"]
+    sanPham(danhSachSanPham);
+
+    function sanPham(data) {
+        let bangSanPham = "<table border=\"1\" style=\"collapse: 100\">"
+        bangSanPham += "<tr>\n" +
+            "        <th>STT</th>\n" +
+            "        <th>NAME</th>\n" +
+            "        <th>SỮA</th>\n" +
+            "        <th>XÓA</th>\n" +
+            "    </tr>"
+        for (let i = 0; i < data.length; i++) {
+            bangSanPham += "  <tr>\n" +
+                "        <td>" + (i + 1) + "</td>\n" +
+                "        <td>" + data[i] + "</td>\n" +
+                "        <td><input type='button' value='sữa' onclick='suaSanPham("+i+")'></td>\n" +
+                "        <td><input type='button'value='xóa' onclick='xoaSanPham("+i+")'></td>\n" +
+                "        </td>\n" +
+                "    </tr>"
+        }
+        bangSanPham += "</table>"
+        document.getElementById("hienThiBang").innerHTML=bangSanPham;
+        document.getElementById("hienThi1").innerHTML="số lượng là: "+ data.length
+
+    }
+
+    function themSanPham() {
+        let sanPhamMoi = document.getElementById("hienThiManHinh").value;
+        if(sanPhamMoi==""||sanPhamMoi==null){
+            alert("bạn cần nhập thông tin")
+        }else {
+            danhSachSanPham.push(sanPhamMoi);
+            document.getElementById("hienThiManHinh").value = ""
+            sanPham(danhSachSanPham);
+        }
+    }
+    function suaSanPham(x) {
+let suaSanPham=prompt("nhâp sản phẩm cần sửa")
+        danhSachSanPham[x]=suaSanPham;
+sanPham(danhSachSanPham);
+    }
+    function xoaSanPham(y) {
+let flag = confirm("bạn có chắc chắn muốn xóa sản phẩm "+danhSachSanPham[y])
+        if (flag) {
+            danhSachSanPham.splice(y, 1)
+            sanPham(danhSachSanPham)
+        }
+        else {
+            alert("bạn đã hủy xóa sản phẩm: "+danhSachSanPham[y])
+        }
+    }
+
+
+
+</script>
+</body>
+</html>

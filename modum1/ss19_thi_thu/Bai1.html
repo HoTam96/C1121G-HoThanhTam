@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Câu 1: Nhập từ bàn phím mảng số nguyên gồm n phần tử (n<=50). Hiển thị ra màn hình
+    // danh sách các phần tử của mảng, hiện thị giá trị trung bình của các phần tử
+    // chia hết cho 5 ở vị trí chia hết cho 3 ( phần tử có index chia hết cho 3)
+    // Ví dụ: [15,2,3,5,10,15,7,8,9,10]. Kết quả sau khi thực hiện là: (15+5+10)/3) = 10
+    let arr4 = [];
+    let checker;
+    for (let i = 0; i < 50; i++) {
+        do {
+            arr4[i] = prompt("nhập vào số nguyên thứ: " + (i + 1));
+            checker = parseInt(arr4[i]) == arr4[i];
+        } while (!checker)
+    }
+    alert(arr4);
+    let sum = 0;
+    let avg;
+    count = 0;
+    for (let i = 0; i < arr4.length; i++) {
+        if (parseInt(arr4[i]) % 5 === 0 && i % 3 === 0) {
+            sum += parseInt(arr4[i]);
+            alert(sum);
+            count++;
+        }
+    }
+    avg = sum / count;
+    alert(sum);
+    document.write(avg);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="themChuXe" placeholder="thêm chủ xe">
+<input id="themBienSoXe" placeholder="themBienSoXe">
+<input id="themDungTich" placeholder="themDungTich">
+<input id="them1" type="button" onclick="themMoiXe()" value="add">
+<input id="luu1" type="button" value="save" onclick="luuDuLieu()">
+<p id="hienThi" style="padding-top: 40px"></p>
+
+<script>
+
+    class XeMay {
+        constructor(chuXe, bienSoXe, dungTich) {
+            this.chuXe = chuXe;
+            this.bienSoXe = bienSoXe;
+            this.dungTich = dungTich;
+
+        }
+
+        setChuXe(chuXe) {
+            this.chuXe = chuXe;
+        }
+
+        getChuXe() {
+            return this.chuXe;
+        }
+
+        setBienSoXe(bienSoXe) {
+            this.bienSoXe = bienSoXe
+        }
+
+        getBienSoXe() {
+            return this.bienSoXe
+        }
+
+        setDungTich(dungTich) {
+            this.dungTich = dungTich
+        }
+
+        getDungTich() {
+            return this.dungTich
+        }
+
+
+    }
+
+    let xeMay1 = new XeMay("tam1", "92D1.24104", 95)
+    let xeMay2 = new XeMay("tam2", "92D1.24105", 96)
+    let xeMay3 = new XeMay("tam3", "92D1.24106", 97)
+    let danhSachxe = [xeMay1, xeMay2, xeMay3]
+    quanLiXeMay(danhSachxe)
+    let idChinhSua = 0;
+
+
+    function quanLiXeMay(duLieu) {
+        let bangQuanLiXeMay = "<table border='1'>"
+        bangQuanLiXeMay += "<tr>\n" +
+            "        <th>STT</th>\n" +
+            "        <th>CHỦ XE</th>\n" +
+            "        <th>BIỂN SỐ XE</th>\n" +
+            "        <th>DUNG TÍCH XILANH</th>\n" +
+            "        <th>SỬA</th>\n" +
+            "        <th>XÓA</th>\n" +
+            "    </tr>"
+        for (let i = 0; i < duLieu.length; i++) {
+            bangQuanLiXeMay += " <tr>\n" +
+                "        <td>" + (i + 1) + "</td>\n" +
+                "        <td>" + duLieu[i].getChuXe() + "</td>\n" +
+                "        <td>" + duLieu[i].getBienSoXe() + "</td>\n" +
+                "        <td>" + duLieu[i].getDungTich() + "</td>\n" +
+                "        <td><input type='button' value='sửa' onclick='suaDuLieu(" + i + ")'></td>\n" +
+                "        <td><input type='button' value='xóa' onclick='xoaDuLieu(" + i + ")'></td>\n" +
+                "    </tr>"
+        }
+        bangQuanLiXeMay += "</table>"
+        document.getElementById("hienThi").innerHTML = bangQuanLiXeMay;
+        document.getElementById("luu1").style.display = "none";
+    }
+
+    function themMoiXe() {
+
+        let chuXeMoi = document.getElementById("themChuXe").value;
+        let bienSoXeMoi = document.getElementById("themBienSoXe").value;
+        let dungTichMoi = document.getElementById("themDungTich").value;
+        if (chuXeMoi == "" || bienSoXeMoi == "" || dungTichMoi == ""||chuXeMoi==null||bienSoXeMoi==null||dungTichMoi==null) {
+            alert("mời bạn nhập")
+        }
+        else {
+            let arr = new XeMay(chuXeMoi, bienSoXeMoi, dungTichMoi)
+            danhSachxe.push(arr);
+            document.getElementById("themChuXe").value = "";
+            document.getElementById("themBienSoXe").value = "";
+            document.getElementById("themDungTich").value = "";
+            quanLiXeMay(danhSachxe);
+        }
+    }
+
+    function suaDuLieu(x) {
+        idChinhSua = x
+
+        document.getElementById("themChuXe").value = danhSachxe[x].getChuXe()
+        document.getElementById("themBienSoXe").value = danhSachxe[x].getBienSoXe()
+        document.getElementById("themDungTich").value = danhSachxe[x].getDungTich()
+        document.getElementById("luu1").style.display = "block";
+        document.getElementById("them1").style.display = "none";
+    }
+
+    //lưu dữ liệu sau khi sửa
+    function luuDuLieu(x) {
+        let chuxe = document.getElementById("themChuXe").value;
+        let bienSoXe = document.getElementById("themBienSoXe").value;
+        let dungTich = document.getElementById("themDungTich").value;
+        danhSachxe[idChinhSua].setChuXe(chuxe)
+        danhSachxe[idChinhSua].setBienSoXe(bienSoXe);
+        danhSachxe[idChinhSua].setDungTich(dungTich);
+        quanLiXeMay(danhSachxe);
+        document.getElementById("themChuXe").value = "";
+        document.getElementById("themBienSoXe").value = "";
+        document.getElementById("themDungTich").value = "";
+        document.getElementById("luu1").style.display = "none";
+        document.getElementById("them1").style.display = "block";
+
+    }
+
+    function xoaDuLieu(y) {
+
+        let xacNhan = confirm("bạn có chắc chắn muốn xóa " + danhSachxe[y].getBienSoXe() + + " hay không")
+        if (xacNhan) {
+            danhSachxe.splice(y, 1);
+            quanLiXeMay(danhSachxe);
+        } else {
+            alert("bạn đã hủy xóa")
+        }
+
+
+    }
+</script>
+</body>
+</html>

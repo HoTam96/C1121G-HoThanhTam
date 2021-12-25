@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Biển số" id="bienSo">
+<input type="text" placeholder="Chủ Sở Hưu" id="chuSoHuu">
+<input type="text" placeholder="Dung tích xl" id="dungTichXiLanh">
+<input type="button" id="them" onclick="themMoi()" value="Thêm mới">
+<input type="button" id="luu" onclick="luu1()" value="Lưu" style="display: none">
+<p id="thanhCong" style="color:red;"></p>
+<p id="hienThi"></p>
+<script>
+    // Sở công an cần quản lý xe máy của thành phốn
+    // Tạo 1 class xe máy gồm có các thược tính : Biển số, chủ sở hữu, dung tich xi lanh, tạo các getter và setter
+    // Viết chương trình hiện thị danh sách xe máy + thêm mới.
+
+    class XeMay {
+        constructor(bienSo, chuSoHuu, dungTichXiLanh) {
+            this.bienSo = bienSo;
+            this.chuSoHuu = chuSoHuu;
+            this.dungTichXiLanh = dungTichXiLanh;
+        }
+
+        // tạo getter và setter
+        setBienSo(bienSo) {
+            this.bienSo = bienSo;
+        }
+
+        getBienSo() {
+            return this.bienSo;
+        }
+
+        setChuSoHuu(chuSoHuu) {
+            this.chuSoHuu = chuSoHuu;
+        }
+
+        getChuSoHuu() {
+            return this.chuSoHuu;
+        }
+
+        setDungTichXiLanh(dungTichXiLanh) {
+            this.dungTichXiLanh = dungTichXiLanh;
+        }
+
+        getDungTichXiLanh() {
+            return this.dungTichXiLanh;
+        }
+    }
+
+    let xe1 = new XeMay("43-H1-12345", "Hiếu", 97)
+    let xe2 = new XeMay("43-H2-12345", "Hiếu2", 97)
+    let xe3 = new XeMay("43-H3-12345", "Hiếu3", 150)
+    let danhSachXe = [xe1, xe2, xe3];
+    let idChinhSua = 0;
+    hienThi(danhSachXe);
+
+    function themMoi() {
+        let bienSo = document.getElementById("bienSo").value;
+        let chuSoHuu = document.getElementById("chuSoHuu").value;
+        let dungTichXiLanh = document.getElementById("dungTichXiLanh").value;
+        let xeMoi = new XeMay(bienSo, chuSoHuu, dungTichXiLanh);
+        danhSachXe.push(xeMoi);
+        // sau khi thêm mới thì reset lại input
+        document.getElementById("bienSo").value ="";
+        document.getElementById("chuSoHuu").value ="";
+        document.getElementById("dungTichXiLanh").value ="";
+        hienThi(danhSachXe);
+        document.getElementById("thanhCong").innerText ="Bạn đã thêm mới thành công";
+        // sau khi thong baó thành conong 3 giây thì ẩn
+        setTimeout(dt,3000);
+    }
+    // hàm ẩn thông báo thành công
+    function dt() {
+        document.getElementById("thanhCong").style.display ='none'
+    }
+    function hienThi(danhSach) {
+        let bang = '<table border="1" style="border-collapse: collapse">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Biển KS</th>\n' +
+            '        <th>Chủ Sở Hữu</th>\n' +
+            '        <th>Dung tích xi lanh</th>\n' +
+            '        <th>Chỉnh sửa </th>\n' +
+            '        <th>Xóa</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < danhSach.length; i++) {
+            bang += '<tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + danhSach[i].getBienSo() + '</td>\n' +
+                '        <td>' + danhSach[i].getChuSoHuu() + '</td>\n' +
+                '        <td>' + danhSach[i].getDungTichXiLanh() + '</td>\n' +
+                '        <td><input type="button" value="Edit" onclick="chinhSua(' + i + ')"></td>\n' +
+                '        <td><input type="button" value="Delete" onclick="xoaXe(' + i + ')"></td>\n' +
+                '    </tr>';
+        }
+        bang += '</table>'
+
+        document.getElementById("hienThi").innerHTML = bang;
+
+    }
+    // các bạn
+    function xoaXe(index) {
+        alert(index);
+    }
+
+    function chinhSua(index) {
+        idChinhSua = index;
+        document.getElementById("bienSo").value = danhSachXe[index].getBienSo();
+        document.getElementById("chuSoHuu").value = danhSachXe[index].getChuSoHuu();
+        document.getElementById("dungTichXiLanh").value = danhSachXe[index].getDungTichXiLanh();
+        document.getElementById("luu").style.display='block';
+        document.getElementById("them").style.display='none';
+    }
+
+    function luu1() {
+        let bienSo = document.getElementById("bienSo").value;
+        let chuSoHuu = document.getElementById("chuSoHuu").value;
+        let dungTichXiLanh = document.getElementById("dungTichXiLanh").value;
+        danhSachXe[idChinhSua].setBienSo(bienSo);
+        danhSachXe[idChinhSua].setChuSoHuu(chuSoHuu);
+        danhSachXe[idChinhSua].setDungTichXiLanh(dungTichXiLanh);
+        hienThi(danhSachXe);
+        // sau khi update thì reset lại input
+        document.getElementById("bienSo").value ="";
+        document.getElementById("chuSoHuu").value ="";
+        document.getElementById("dungTichXiLanh").value ="";
+        document.getElementById("luu").style.display='none';
+        document.getElementById("them").style.display='block';
+
+    }
+    // viêt chương trình hiện thị
+</script>
+</body>
+</html>

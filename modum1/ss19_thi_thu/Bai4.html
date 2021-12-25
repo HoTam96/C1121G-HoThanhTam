@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="themMaTaiKhoan" type="number" maxlength="<5" placeholder="thêm mã tài khoản">;
+<input id="themchuTaiKhoan" placeholder="them chủ tài khoản">;
+<input id="themTongTien" placeholder="them số tiền">;
+<input id="them1" type="button" onclick="themTaiKhoanMoi()" value="add">;
+<input id="luu1" type="button" value="save" onclick="luuDuLieu()">;
+<p id="hienThi" style="padding-top: 40px"></p>;
+<script>
+    class TaiKhoanNganHang {
+        constructor(maTaiKhoan,tenChuTaiKhoan,tongTienTaiKhoan) {
+            this.maTaiKhoan=maTaiKhoan;
+            this.tenChuTaiKhoan=tenChuTaiKhoan;
+            this.tongTienTaiKhoan=tongTienTaiKhoan;
+        }
+        setMaTaiKhoan(maTaiKhoan){
+            this.maTaiKhoan=maTaiKhoan;
+        }
+        getMaTaiKhoan(){
+            return this.maTaiKhoan;
+        }
+        setTenChuTaiKhoan(tenChuTaiKhoan){
+            this.tenChuTaiKhoan=tenChuTaiKhoan;
+        }
+        getTenChuTaiKhoan(){
+            return this.tenChuTaiKhoan;;
+        }
+        setTongTienTaiKhoan(tongTienTaiKhoan) {
+            this.tongTienTaiKhoan = tongTienTaiKhoan;
+        }
+        getTongTienTaiKhoan(){
+            return this.tongTienTaiKhoan
+        }
+}
+    let taiKhoanNganHang1 =new TaiKhoanNganHang(123,"tam1",100000);
+    let taiKhoanNganHang2 =new TaiKhoanNganHang(456,"tam1",200000);
+    let taiKhoanNganHang3 =new TaiKhoanNganHang(789,"tam1",300000);
+    let danhSachTaiKhoan=[taiKhoanNganHang1,taiKhoanNganHang2,taiKhoanNganHang3];
+    quanLiTaiKhoan(danhSachTaiKhoan);
+    // let idChinhSua = 0;
+
+    function quanLiTaiKhoan(duLieu) {
+        let bangQuanLiTaiKhoan = "<table border='1'>"
+        bangQuanLiTaiKhoan += "<tr>\n" +
+            "        <th>STT</th>\n" +
+            "        <th>Mã Tai Khoan</th>\n" +
+            "        <th>Tên CHỦ Tài Khoản </th>\n" +
+            "        <th>tổng tiền</th>\n" +
+            "        <th>SỬA</th>\n" +
+            "        <th>XÓA</th>\n" +
+            "    </tr>"
+        for (let i = 0; i < duLieu.length; i++) {
+            bangQuanLiTaiKhoan += " <tr>\n" +
+                "        <td>" + (i + 1) + "</td>\n" +
+                "        <td>" + duLieu[i].getMaTaiKhoan() + "</td>\n" +
+                "        <td>" + duLieu[i].getTenChuTaiKhoan() + "</td>\n" +
+                "        <td>" + duLieu[i].getTongTienTaiKhoan() + "</td>\n" +
+                "        <td><input type='button' value='sửa' onclick='suaDuLieu(" + i + ")'></td>\n" +
+                "        <td><input type='button' value='xóa' onclick='xoaDuLieu(" + i + ")'></td>\n" +
+                "    </tr>"
+        }
+        bangQuanLiTaiKhoan += "</table>"
+        document.getElementById("hienThi").innerHTML = bangQuanLiTaiKhoan;
+        document.getElementById("luu1").style.display = "none";
+    }
+
+    function themTaiKhoanMoi() {
+
+        let maTaiKhoanMoi = document.getElementById("themMaTaiKhoan").value;
+        let chuTaiKhoanMoi = document.getElementById("themchuTaiKhoan").value;
+        let tongTienMoi = document.getElementById("themTongTien").value;
+        if (maTaiKhoanMoi == "" || chuTaiKhoanMoi == "" || tongTienMoi == ""||maTaiKhoanMoi==null||chuTaiKhoanMoi==null||tongTienMoi==null) {
+            alert("mời bạn nhập")
+        }
+        else {
+            let arr = new TaiKhoanNganHang(maTaiKhoanMoi, chuTaiKhoanMoi, tongTienMoi);
+            danhSachTaiKhoan.push(arr);
+            document.getElementById("themMaTaiKhoan").value = "";
+            document.getElementById("themchuTaiKhoan").value = "";
+            document.getElementById("themTongTien").value = "";
+            quanLiTaiKhoan(danhSachTaiKhoan);
+        }
+    }
+
+
+
+
+
+</script>
+</body>
+</html>
