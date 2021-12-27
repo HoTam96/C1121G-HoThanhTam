@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<div id="result"></div>
+<input onclick="menu()" type="button" value="mua vé">
+<input onclick="displayReuslt()" type="button" value="xem kết quả">
+<script>
+    class VietLotery {
+        constructor(number1, number2, number3, number4, number5, number6, grade = "") {
+            this.number1 = number1;
+            this.number2 = number2;
+            this.number3 = number3;
+            this.number4 = number4
+            this.number5 = number5;
+            this.number6 = number6;
+            this.grade = grade;
+        }
+
+        setNumber1(number1) {
+            this.number1 = number1;
+        }
+
+        setNumber2(number2) {
+            this.number2 = number2;
+        }
+
+        setNumber3(number3) {
+            this.number3 = number3;
+        }
+
+        setNumber4(number4) {
+            this.number4 = number4;
+        }
+
+        setNumber5(number5) {
+            this.number5 = number5;
+        }
+
+        setNumber6(number6) {
+            this.number6 = number6;
+        }
+
+        setGrade(grade) {
+            this.grade = grade;
+        }
+
+        getGrade() {
+            return this.grade;
+        }
+
+        getNumber1() {
+            return this.number1;
+        }
+
+        getNumber2() {
+            return this.number2;
+        }
+
+        getNumber3() {
+            return this.number3;
+        }
+
+        getNumber4() {
+            return this.number4;
+        }
+
+        getNumber5() {
+            return this.number5;
+        }
+
+        getNumber6() {
+            return this.number6;
+        }
+
+        getNumberVietLotery() {
+            return (this.number1, this.number2, this.number3, this.number4, this.number5, this.number6)
+        }
+
+        //
+        // getRandomVietlotery() {
+        //     this.setNumber1(Math.floor(Math.random() * 99));
+        //     this.setNumber2(Math.floor(Math.random() * 99));
+        //     this.setNumber3(Math.floor(Math.random() * 99));
+        //     this.setNumber4(Math.floor(Math.random() * 99));
+        //     this.setNumber5(Math.floor(Math.random() * 99));
+        //     this.setNumber6(Math.floor(Math.random() * 99));
+        // }
+
+        getInfo() {
+            return "vé số" + this.getNumberVietLotery().join(" ") + this.grade
+        }
+
+    }
+
+    let arrVietlotery = [];
+
+    function menu() {
+        let choose;
+        if (arrVietlotery.length < 4) {
+            choose = parseInt(prompt("bạn có 2 sự lựa chọn\n"
+                + "1. Bạn muốn tự chọn số\n" +
+                "2. Hệ thống tự chọn"))
+
+            if (choose == 2) {
+                randomVietLotery();
+            } else if (choose == 1) {
+                inputVietLot();
+            }
+
+        } else {
+            alert("bạn đã mua đủ 4 vé quy định")
+        }
+
+    }
+
+
+    function displayVietLotery(arr) {
+        let vietLotery;
+        let str = "";
+        for (let i = 0; i < arr.length; i++) {
+            str += "<input disabled value='" + arr[i].getNumber1() + "'>" +
+                "<input disabled value='" + arr[i].getNumber2() + "'>" +
+                "<input disabled value='" + arr[i].getNumber3() + "'>" +
+                "<input disabled value='" + arr[i].getNumber4() + "'>" +
+                "<input disabled value='" + arr[i].getNumber5() + "'>" +
+                "<input disabled value='" + arr[i].getNumber6() + "'>" + "<br>"
+
+
+        }
+        document.getElementById("result").innerHTML = str
+
+
+    }
+
+    function randomVietLotery() {
+
+        // let vietLotery = new VietLotery()
+        // vietLotery.getRandomVietlotery();
+        // arrVietlotery.push(vietLotery);
+        // displayVietLotery(arrVietlotery)
+        let arr9 = [];
+        for (let i = 0; i < 6; i++) {
+            arr9[i] = Math.floor(Math.random() * 99)
+
+        }
+        let vietLotery1 = new VietLotery();
+        vietLotery1.setNumber1(arr9[0]);
+        vietLotery1.setNumber2(arr9[1]);
+        vietLotery1.setNumber3(arr9[2]);
+        vietLotery1.setNumber4(arr9[3]);
+        vietLotery1.setNumber5(arr9[4]);
+        vietLotery1.setNumber6(arr9[5]);
+        arrVietlotery.push(vietLotery1)
+        displayVietLotery(arrVietlotery);
+    }
+
+    function inputVietLot() {
+        let arrnum = [];
+        for (let i = 0; i < 6; i++) {
+            arrnum[i] = parseInt(prompt("nhập vào số muốn mua thứ " + (i + 1)))
+        }
+        let vietLotery = new VietLotery(arrnum[0], arrnum[1], arrnum[2], arrnum[3], arrnum[4], arrnum[5])
+        arrVietlotery.push(vietLotery);
+        displayVietLotery(arrVietlotery);
+    }
+
+    function checkResult(vietLot) {
+        count = 0;
+        let arr = [11, 22, 33, 44, 55, 66];
+        for (let i= arr.length - 1; i >= 0; i--) {
+            if (arr[i] === vietLot.getNumberVietLotery()[i]) {
+                count++;
+                alert(count)
+
+            } else {
+                break;
+            }
+
+
+        }
+        switch (count) {
+            case 6:
+                vietLot.setGrade(1);
+                break;
+            case 5:
+                vietLot.setGrade(2);
+                break;
+            case 4:
+            case 3:
+                vietLot.setGrade(3);
+                break;
+            default:
+                vietLot.setGrade(4)
+
+        }
+
+    }
+
+    function displayReuslt() {
+        let result = ""
+        for (let i = 0; i < arrVietlotery.length; i++) {
+            checkResult(arrVietlotery[i]);
+            switch (arrVietlotery[i].getGrade()) {
+                case 1:
+                    result += "giải nhât";
+                    break;
+                case 2:
+                    result += "giải giải nhì";
+                    break;
+                case 3:
+                    result += "giải khuyến khích";
+                    break;
+
+            }
+        }
+        if (result === "") {
+            alert("chúc bạn may mắn lần sau")
+        } else {
+            alert("bạn đã trúng giải thưởng " + result);
+        }
+
+    }
+
+
+</script>
+</body>
+</html>

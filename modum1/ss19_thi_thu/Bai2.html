@@ -16,11 +16,11 @@
     // -	    Ví du:   ObjectOriented => chuỗi này chỉ được tính chỉ có 1 từ
 
     function check(data) {
+        let stri=""
         let arr = [];
         for (let i = 0; i < data.length; i++) {
             if (data[i] != "") {
                 arr.push(data[i]);
-
 
             }
         }
@@ -29,15 +29,17 @@
 
         } else {
             for (let i = 0; i < arr.length; i++) {
-                arr[i] = arr[i].slice(0, 1).toUpperCase();
+               arr[i]= arr[i].slice(0, 1).toUpperCase();
+               alert(typeof arr[i])
+
             }
+            arr=arr.join(' ')
             return arr;
         }
 
-
     }
 
-    let str = ("object  Oriented     programming   ")
+    let str = ("object    Oriented      programming   ")
     str.trim();
     str = str.split(" ");
     let database = check(str);

@@ -7,17 +7,29 @@
 
 
 <body>
-<script type="text/javascript" src="">
+<form>
+    <input>
+<form>
+    <input>
+</form>
+    <input>
+</form>
+<select name="tam"></select>
+<script>
     //     Bài 3: Cho hai xâu kí tự, tìm số lượng kí tự chung giữa chúng.
     //         Ví dụ: s1 = "aabcc" và s2 = "adcaa", thì kết quả commonCharacterCount(s1, s2) = 3.
     // ⇨	2 xâu s1 và s2 có 3 kí tự chung: 2 kí tự 'a' và 1 kí tự 'c'.
+
     let s1 = "aabcc";
-    let s2 = "adcaa";
     s1 = s1.split("");
-    s2 = s2.split("");
+    let s2 = "adcaa";
+    s2 = s2.split("")
+
+
 
 
     let s3 = [];
+
     for (let i = 0; i < s1.length; i++) {
         for (let j = 0; j < s2.length; j++) {
             if (s1[i] == s2[j]) {
@@ -30,11 +42,9 @@
             }
         }
 
-
     }
-    alert(s3);
-    alert(s3.length);
-
+    alert(s3)
+alert(s3.length)
 
 </script>
 </body>

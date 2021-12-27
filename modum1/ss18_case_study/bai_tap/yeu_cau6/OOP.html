@@ -4,11 +4,157 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<input type="button" value="hoàn tất">
+<p id="hiensorandom"></p>
+<p id="hienThi10"></p>
+
 <script>
+    // Xây dựng ứng dụng cho phép khách hàng thực hiện mua vé số tương tự VIETLOT,
+    // mỗi vé sẽ bao gồm 6 số nguyên dương, có thể mua tối đa 4 vé.
+    //     Viết chương trình cho phép người dùng mua vé số. Sẽ có hai tuỳ chọn
+    //     cho khách hàng thực hiện chọn số trên mỗi vé.
+    // - Nếu khách hàng chọn tự nhập thì cứ mỗi ô tròn KH click vào sẽ hiển thị 1 bảng chọn số từ 0-99
+    // - Nếu khách hàng chọn tuỳ chọn random thì hệ thống sẽ tự động tạo ra 6 số tương ứng 6 ô tròn
+    // Sau khi khách hàng hoàn tất việc chọn số trên vé thì nhấn hoàn tất để thực hiện quay số
+    // Hệ thống sẽ so khớp dãy số trên vé với dãy số của hệ thống xem KH có trúng thưởng không
+    // Sẽ có 3 giải bao gồm:
+    //     Giải nhất: 6 số trên vé của KH trùng khớp hoàn toàn với 6 số của hệ thống
+    // Giải nhì: 5 số cuối của vé KH trùng khớp với 5 số cuối của hệ thống
+    // Giải khuyến khích: 3 số cuối của vé KH trùng khớp với 3 số cuối của hệ thống
+    // Khi KH may mắn trúng giải nào thì hệ thống sẽ hiển thị kết quả là số tiền sẽ nhận được
+    // tương ứng (HV tự defined)
+    // Khi KH không trúng giải nào thì hệ thống hiển thị thông báo “Chúc bạn may mắn lần sau”
+    let arr8 = [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+        [20, 21, 22, 23, 24, 25, 26, 27, 28, 29],
+        [30, 31, 32, 33, 34, 35, 36, 37, 38, 39],
+        [40, 41, 42, 43, 44, 45, 46, 47, 48, 49],
+        [50, 51, 52, 53, 54, 55, 56, 57, 58, 59],
+        [60, 61, 62, 63, 64, 65, 66, 67, 68, 69],
+        [70, 71, 72, 73, 74, 75, 76, 77, 78, 79],
+        [80, 81, 82, 83, 84, 85, 86, 87, 88, 89],
+        [90, 91, 92, 93, 94, 95, 96, 97, 98, 99]];
+
+
+    class MuaVietLot {
+        Ơ
+
+        constructor(veSo1, veSo2, veSo3, veSo4, veSo5, veSo6) {
+            this.veSo1 = veSo1;
+            this.veSo2 = veSo2;
+            this.veSo3 = veSo3;
+            this.veSo4 = veSo4;
+            this.veSo5 = veSo5;
+            this.veSo6 = veSo6;
+
+        }
+
+        setVeSo1(veSo1) {
+            this.veSo1 = veSo1;
+        } ;
+
+        setVeSo2(veSo2) {
+            this.veSo2 = veSo2;
+        };
+
+        setVeSo3(veSo3) {
+            this.veSo3 = veSo3;
+        };
+
+        setVeSo4(veSo4) {
+            this.veSo4 = veSo4;
+        };
+
+        setVeSo5(veSo5) {
+            this.veSo5 = veSo5;
+        };
+
+        setVeSo6(veSo6) {
+            this.veSo6 = veSo6;
+        };
+
+        getVeSo1() {
+            return this.veSo1;
+        }
+
+        getVeSo2() {
+            return this.veSo2;
+        }
+
+        getVeSo3() {
+            return this.veSo3;
+        }
+
+        getVeSo4() {
+            return this.veSo4;
+        }
+
+        getVeSo5() {
+            return this.veSo5;
+        }
+
+        getVeSo6() {
+            return this.veSo6;
+        }
+
+    }
+
+    let muaVietLot1 = new MuaVietLot(12, 23, 55, 15, 12, 35);
+    let muaVietLot2 = new MuaVietLot(21, 23, 51, 11, 12, 39);
+    let muaVietLot3 = new MuaVietLot(16, 28, 50, 11, 34, 31);
+    let muaVietLot4 = new MuaVietLot(16, 26, 50, 12, 34, 39);
+danhSachChonSO=[];
+
+    let muave = parseInt(prompt("tùy chọn mua vé số\n"
+        + "nhấn phím 1. mua vé số tự động\n"
+        + "nhận phím 2 mua vé số tự chọn"))
+
+
+    switch (muave) {
+        case 1: {
+            let flag =confirm("bạn chọn dạy số tự động");
+            if (!flag){
+                break;
+            }
+            else {
+               let raDom1;
 
 
 
 
+            }
+
+
+            break;
+        }
+        case 2: {
+            let danhSachSo=bangSO(arr8)
+                function bangSO(data) {
+                    let bangChonSo = "<table border='1' style='width: 400px'>"
+                    for (let i = 0; i < data.length; i++) {
+                        bangChonSo += "<tr>"
+                        for (let j = 0; j < data[i].length; j++) {
+                            bangChonSo += "<td>" + data[i][j] + "</td>\n"
+
+                        }
+                        bangChonSo += "<tr>"
+
+                    }
+                    bangChonSo += "</table>"
+                    document.getElementById("hienThi10").innerHTML = bangChonSo;
+
+
+                }
+                break;
+        }
+        default:{
+            alert("bạn cần chọn phím 1 hoặc 2")
+        }
+
+    }
+function f() {
+
+}
 </script>
 </body>
 </html>
