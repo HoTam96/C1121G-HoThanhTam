@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soNguyen = parseInt(prompt("nhập vào số nguyên dương"));
+    let data = checkNumber(soNguyen);
+    if (data == true) {
+        alert(" số nhập vào là hoàn hảo");
+
+    } else {
+        alert("số nhập vào không hoàn hảo");
+    }
+
+    function checkNumber(number) {
+        let sum = 0;
+        for (let i = 0; i < number; i++) {
+            if (number % i == 0) {
+                sum += i;
+            }
+        }
+        if (sum == number) {
+            return true;
+        }
+    }
+
+</script>
+</body>
+</html>

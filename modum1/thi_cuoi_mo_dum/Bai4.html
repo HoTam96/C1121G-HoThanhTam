@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>BẢNG QUẢN LÍ CÔNG NHÂN</h2>
+<p id="display"></p>
+<table>
+
+</table>
+<script>
+    class CongNhan {
+        constructor(hoVaTen, ngaySinh, diaChi, luong, chucVu) {
+
+            this.hoVaTen = hoVaTen;
+            this.ngaySinh = ngaySinh;
+            this.diaChi = diaChi;
+            this.luong = luong;
+            this.chucVu = chucVu;
+        }
+
+        sethoVaTen(hoVaTen) {
+            this.hoVaTen = hoVaTen;
+        }
+
+        getHoVaTen() {
+            return this.hoVaTen;
+        }
+
+        setNgaySinh(ngaySinh) {
+            this.ngaySinh = ngaySinh;
+        }
+
+        getNgaySinh() {
+            return this.ngaySinh;
+        }
+
+        setDiaChi(diaChi) {
+            this.diaChi = diaChi;
+        }
+
+        getDiaChi() {
+            return this.diaChi;
+        }
+
+        setLuong(luong) {
+            this.luong = luong;
+        }
+
+        getLuong() {
+            return this.luong;
+        }
+
+        setChucVu(chucVu) {
+            this.chucVu = chucVu;
+        }
+
+        getChucVu() {
+            return this.chucVu;
+        }
+
+
+    }
+
+    let congNhan1 = new CongNhan("lương xuân trương", "11-2-1996", "Hàm rồng", 20000, "trưởng phòng");
+    let congNhan2 = new CongNhan("Nguyễn Công Phượng", "15-2-1997", "cầu rồng", 80000, "trưởng phòng ban");
+    let congNhan3 = new CongNhan("Nguyễn Văn Toàn", "13-2-1998", "Sông Hàn", 50000, "trưởng giám sát");
+    let danhSach = [congNhan1, congNhan2, congNhan3];
+    let quanLi = bangDanhSach(danhSach);
+
+    function bangDanhSach(data) {
+        let tableString = "<table border='1'>";
+        tableString += " <tr>\n" +
+            "        <th>STT</th>\n" +
+            "        <th>Họ và tên</th>\n" +
+            "        <th>Ngày sinh</th>\n" +
+            "        <th>địa chỉ</th>\n" +
+            "        <th>Lương</th>\n" +
+            "        <th>Chứcvụ </th>\n" +
+            "    </tr>";
+        for (let i = 0; i < data.length; i++) {
+            tableString += "<tr>\n" +
+                "        <td>" + (i + 1) + "</td>\n" +
+                "        <td>" + data[i].getHoVaTen() + "</td>\n" +
+                "        <td>" + data[i].getNgaySinh() + "</td>\n" +
+                "        <td>" + data[i].getDiaChi() + "</td>\n" +
+                "        <td>" + data[i].getLuong() + "</td>\n" +
+                "        <td>" + data[i].getChucVu() + "</td>\n" +
+                "    </tr>"
+        }
+
+        tableString += "<table>";
+        document.getElementById("display").innerHTML = tableString;
+    }
+
+</script>
+</body>
+</html>

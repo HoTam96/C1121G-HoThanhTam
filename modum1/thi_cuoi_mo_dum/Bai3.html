@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Câu 3: Viết chương trình cho phép nhập tháng, năm. Tính xem tháng/ năm đó có bao nhiêu ngày
+    // Yêu cầu kiểm tra định dạng của tháng năm nhập vào MM/yyyy
+    // *Yêu cầu nâng cao: Đối với tháng 2 cần kiểm tra xem có phải là năm nhuận hay không.
+    //     Nếu năm Nhuận thì tháng 2 sẽ có 29 ngày, ngược lại thì là 28 ngày
+
+    let thang = parseInt(prompt("nhập tháng muốn kiểm tra"));
+    let nam = parseInt(prompt("nhập năm muốn kiểm tra"));
+    let check = kiemTraNamNhuan(nam);
+    display(thang);
+
+    function display(n) {
+        switch (n) {
+            case 1 :
+                alert("tháng 1 năm " + nam + " có 31 ngày và là " + check);
+                break;
+            case 2:
+                if (check == "năm nhuận") {
+                    alert("tháng 2 năm " + nam + " có 29  ngày và là " + check)
+                } else if (check == "năm không nhuận") {
+                    alert("tháng 2 năm " + nam + " có 28 ngày và là " + check)
+                }
+                break;
+            case 3:
+                alert("tháng 3 năm " + nam + " có 31 ngày và là " + check);
+                break;
+            case 4:
+                alert("tháng 4 năm " + nam + " có 30 ngày và là " + check);
+                break;
+            case 5:
+                alert("tháng 5 năm " + nam + " có 31 ngày và là " + check);
+                break;
+            case 6:
+                alert("tháng 6 năm " + nam + " có 30 ngày và là " + check);
+                break;
+            case 7:
+                alert("tháng 7 năm " + nam + " có 31 ngày và là " + check);
+                break;
+            case 8:
+                alert("tháng 8 năm " + nam + " có 31 ngày và là " + check);
+                break;
+            case 9:
+                alert("tháng 9 năm " + nam + " có 30 ngày và là " + check);
+                break;
+            case 10:
+                alert("tháng 10 năm" + nam + " có 31 ngày và là " + check);
+                break;
+            case 11 :
+                alert(" tháng 11 năm " + nam + " có 30 ngày và là " + check);
+                break;
+            case 12:
+                alert("tháng 12 năm  " + nam + " có 31 ngày và là " + check);
+                break;
+            default:
+                alert("nhập số không đúng");
+        }
+    }
+
+    function kiemTraNamNhuan(year) {
+        let namNhuan = "năm nhuận";
+        let namKhongNhuan = "năm không nhuận";
+        if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
+            return namNhuan;
+        } else {
+            return namKhongNhuan;
+        }
+    }
+
+</script>
+</body>
+</html>

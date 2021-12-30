@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<input id="bienso" type="text">
+<input id="chuxe" type="text">
+<input id="dungtich" type="text">
+<input type="button" value="add" onclick="addDaTa()">
+<input type="button" value="luu" onclick="saveDaTa()">
+
+<p id="haha"></p>
+<body>
+<script>
+    class QuanLiXe {
+        constructor(bienSoXe,chuXe,dungTichXe) {
+            this.bienSoXe=bienSoXe;
+            this.chuXe=chuXe;
+            this.dungTichXe=dungTichXe;
+
+        }
+        setBienSoXe(bienSoXe) {
+            this.bienSoXe = bienSoXe;
+
+        }
+        getBienSoXe(){
+         return this.bienSoXe;
+        }
+        setChuXe(chuXe) {
+            this.chuXe = chuXe;
+
+        }
+        getChuXe(){
+            return this.chuXe;
+        }
+        setDungTichXe(dungTichXe) {
+            this.dungTichXe = dungTichXe;
+
+        }
+        getDungTichXe(){
+            return this.dungTichXe;
+        }
+    }
+    let xe1 = new QuanLiXe(5611,"tam1","79cc");
+    let xe2 = new QuanLiXe(5634,"tam2","74cc");
+    let xe3 = new QuanLiXe(5645,"tam3","76cc");
+    let arr = [xe1,xe2,xe3];
+    quanLiCuaHnag(arr);
+    let bienchinhsua=0;
+
+    function quanLiCuaHnag(data) {
+        let bangDaTa ="<table border='1'>"
+        bangDaTa+="<tr>\n" +
+            "        <th>STT</th>\n" +
+            "        <th>BIEN SO XE</th>\n" +
+            "        <th>CHU XE</th>\n" +
+            "        <th>DUNG TICH XE</th>\n" +
+            "        <th>EDIT</th>\n" +
+            "        <th>DELETE</th>\n" +
+            "    </tr>"
+       for (let i=0;i<data.length;i++){
+           bangDaTa+="<tr>\n" +
+               "        <td>"+(i+1)+"</td>\n" +
+               "        <td>"+data[i].getBienSoXe()+"</td>\n" +
+               "        <td>"+data[i].getChuXe()+"</td>\n" +
+               "        <td>"+data[i].getDungTichXe()+"</td>\n" +
+               "        <td>"+"<input value='edit' type='button' onclick='edit("+i+")'>"+"</td>\n" +
+               "        <td><input value='delete' type='button'></td>\n" +
+               "    </tr>"
+       }
+        bangDaTa+="<table>"
+document.getElementById("haha").innerHTML=bangDaTa;
+    }
+    function addDaTa() {
+let bienSoXeMoi = document.getElementById("bienso").value;
+
+let chuXeMoi = document.getElementById("chuxe").value;
+let dungTichXeMoi = document.getElementById("dungtich").value;
+let xeMoi = new QuanLiXe(bienSoXeMoi,chuXeMoi,dungTichXeMoi);
+        arr.push(xeMoi);
+quanLiCuaHnag(arr);
+
+    }
+    function edit(x) {
+        bienchinhsua=x;
+document.getElementById("bienso").value=arr[x].getBienSoXe();
+document.getElementById("chuxe").value=arr[x].getChuXe();
+document.getElementById("dungtich").value=arr[x].getDungTichXe();
+    }
+
+    function saveDaTa() {
+        let bienSoXeMoii = document.getElementById("bienso").value;
+        let chuXeMoii = document.getElementById("chuxe").value;
+        let dungTichXeMoii = document.getElementById("dungtich").value;
+     arr[bienchinhsua].setBienSoXe(bienSoXeMoii);
+     arr[bienchinhsua].setChuXe(chuXeMoii);
+     arr[bienchinhsua].setDungTichXe(dungTichXeMoii);
+        quanLiCuaHnag(arr);
+    }
+</script>
+</body>
+</html>

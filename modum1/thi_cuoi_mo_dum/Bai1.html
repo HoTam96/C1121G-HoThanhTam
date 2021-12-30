@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Câu 1: Cho một mảng số nguyên có số phần tử không vượt quá 50 phần tử,
+    //     viết chương trình hiển thị trung bình cộng các số có trong mảng chia hết cho 3.
+
+    let arr = new Array(5);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = parseInt(prompt("nhập các phần tử số nguyên vào mảng"));
+    }
+
+    document.write(arr);
+    document.write("<br>");
+    let sum = 0;
+    count = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 3 == 0) {
+            sum += arr[i];
+            count++;
+        }
+    }
+    let avg = sum / count;
+    document.write("trung bình cộng của các số chia hết cho 3 là: " + avg);
+</script>
+</body>
+</html>
