@@ -23,28 +23,29 @@ public class ThemPhanTuVaoMang {
         int index = Integer.parseInt(sc.nextLine());
 
 
-        if (number<0){
+        if (number < 0) {
             System.out.println("cần nhập lại ");
-        }
-        else {
+        } else {
             boolean flag = true;
-            int[] newarray = new int[array.length + 1];
-            for (int i = 0; i < array.length + 1; i++) {
+            int[] newArray = new int[array.length + 1];
+            for (int i = 0; i < array.length; i++) {
                 if (i != index) {
-                    newarray[i]=array[i];
+                    newArray[i] = array[i];
 
-                }
-                else {
-                    flag=false;
-                    
+                } else {
+                    flag = false;
+                    break;
                 }
             }
-            if (!flag){
-                newarray[]=number
-
+            if (!flag) {
+                newArray[index] = number;
+                for (int j = index + 1; j < newArray.length; j++) {
+                    newArray[j] = array[index];
+                    index += 1;
+                }
             }
-
-
+            System.out.println(Arrays.toString(newArray));
         }
+
     }
 }
