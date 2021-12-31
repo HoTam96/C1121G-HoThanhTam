@@ -11,10 +11,7 @@ public class KiemTraSoNguyenTo {
                 flag=false;
                 break;
 
-            } else {
-                flag = true;
             }
-
         }
         if (flag){
             return true ;

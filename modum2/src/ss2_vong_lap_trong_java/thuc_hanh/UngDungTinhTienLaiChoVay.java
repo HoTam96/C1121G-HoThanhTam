@@ -16,8 +16,11 @@ public class UngDungTinhTienLaiChoVay {
 //lãi xuất từng tháng
       double tongLaiXuat=0;
       for (int i=0;i<thangGui;i++){
-          tongLaiXuat+=tienGui*(laiSuat/100)/12*thangGui;
+          tongLaiXuat+=(tienGui*(laiSuat/100)/12*thangGui);
           tienGui+=tongLaiXuat;
+
       }
+        System.out.println(tongLaiXuat);
+        System.out.println(tienGui);
     }
 }
