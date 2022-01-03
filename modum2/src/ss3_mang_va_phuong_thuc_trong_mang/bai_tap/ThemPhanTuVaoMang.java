@@ -22,7 +22,6 @@ public class ThemPhanTuVaoMang {
         System.out.println("nhập vị trí cần chèn");
         int index = Integer.parseInt(sc.nextLine());
 
-
         if (number < 0) {
             System.out.println("cần nhập lại ");
         } else {
