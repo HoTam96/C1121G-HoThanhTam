@@ -9,7 +9,7 @@ public class DemSoLanXuatHienCuaKiTu {
         System.out.println("nhập kí tự muốn kiểm tra");
 //        String data = sc.nextLine();
 
-        char data = 'a';
+        char data = sc.next().charAt(0);
 
         int count = 0;
         for (int i = 0; i < str.length(); i++) {
