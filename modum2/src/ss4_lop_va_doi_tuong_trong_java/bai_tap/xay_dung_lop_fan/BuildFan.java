@@ -58,5 +58,15 @@ public class BuildFan {
     public String  statusFanOff (){
         return "màu sắc của quạt là: "+ this.color + "bán kính cánh quạt " + this.radius + " fan is off";
     }
+
+    @Override
+    public String toString() {
+        return "BuildFan{" +
+                "speedFan=" + speedFan +
+                ", statusFan=" + statusFan +
+                ", radius=" + radius +
+                ", color='" + color + '\'' +
+                '}';
+    }
 }
 
