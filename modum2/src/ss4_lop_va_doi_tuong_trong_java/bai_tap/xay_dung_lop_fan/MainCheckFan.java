@@ -6,9 +6,9 @@ public class MainCheckFan {
       SpeedFan speedFan2 = new SpeedFan(1);
       SpeedFan speedFan3 = new SpeedFan(1);
 
-      BuildFan buildFan1 = new BuildFan(speedFan1,false,5,"yelow");
-      BuildFan buildFan2 = new BuildFan(speedFan2,true,5,"blue");
-      BuildFan buildFan3 = new BuildFan(speedFan3,false,5,"red");
+      Fan buildFan1 = new Fan(speedFan1,false,5,"yelow");
+      Fan buildFan2 = new Fan(speedFan2,true,5,"blue");
+      Fan buildFan3 = new Fan(speedFan3,false,5,"red");
 
         System.out.println(buildFan1.informationFan());
         if (buildFan1.isStatusFan()){

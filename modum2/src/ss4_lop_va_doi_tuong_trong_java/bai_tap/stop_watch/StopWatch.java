@@ -5,10 +5,10 @@ import com.sun.org.apache.bcel.internal.generic.Select;
 import java.sql.Date;
 import java.time.LocalTime;
 
-public class BuildStopWatch {
+public class StopWatch {
     private long startTime;
 
-    public BuildStopWatch(long startTime) {
+    public StopWatch(long startTime) {
         this.startTime = startTime;
     }
 

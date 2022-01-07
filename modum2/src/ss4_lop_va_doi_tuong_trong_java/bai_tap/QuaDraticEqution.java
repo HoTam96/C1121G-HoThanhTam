@@ -1,11 +1,11 @@
 package ss4_lop_va_doi_tuong_trong_java.bai_tap;
 
-public class BuildQuaDraticEqution {
+public class QuaDraticEqution {
     private double a ;
     private double b ;
     private double c ;
 
-    public BuildQuaDraticEqution(double a, double b, double c) {
+    public QuaDraticEqution(double a, double b, double c) {
         this.a = a;
         this.b = b;
         this.c = c;
@@ -47,7 +47,7 @@ public class BuildQuaDraticEqution {
         return(-this.b)/(2*this.a);
     }
     public static void main(String[] args) {
-        BuildQuaDraticEqution buildQuaDraticEqution = new BuildQuaDraticEqution(1,3,1);
+        QuaDraticEqution buildQuaDraticEqution = new QuaDraticEqution(1,3,1);
         if (buildQuaDraticEqution.denta()>0){
             System.out.println("x1= "+buildQuaDraticEqution.nghiem1());
             System.out.println("x2= "+ buildQuaDraticEqution.nghiem2());

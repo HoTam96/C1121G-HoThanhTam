@@ -34,7 +34,7 @@ public class LopHinhChuNhat {
     public double perimeter (){
         return (this.width+this.height)/2;
     }
-    public void displayarea(){
+    public void displayArea(){
         System.out.println("diện thích hình chữ nhật là: "+ this.area());
         System.out.println("chu vi hình chữ nhật là: "+ this.perimeter());
     }
@@ -47,7 +47,7 @@ public class LopHinhChuNhat {
         double height = Double.parseDouble(sc.nextLine());
 
         LopHinhChuNhat lopHinhChuNhat = new LopHinhChuNhat(width,height);
-        lopHinhChuNhat.displayarea();
+        lopHinhChuNhat.displayArea();
     }
 
 }

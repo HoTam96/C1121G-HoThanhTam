@@ -1,12 +1,12 @@
 package ss4_lop_va_doi_tuong_trong_java.bai_tap.xay_dung_lop_fan;
 
-public class BuildFan {
+public class Fan {
     private SpeedFan speedFan;
     private boolean statusFan;
     private double radius;
     private String color;
 
-    public BuildFan(SpeedFan speedFan, boolean statusFan, double radius, String color) {
+    public Fan(SpeedFan speedFan, boolean statusFan, double radius, String color) {
         this.speedFan = speedFan;
         this.statusFan = statusFan;
         this.radius = radius;
