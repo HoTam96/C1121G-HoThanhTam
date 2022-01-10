@@ -47,15 +47,15 @@ public class QuaDraticEqution {
         return(-this.b)/(2*this.a);
     }
     public static void main(String[] args) {
-        QuaDraticEqution buildQuaDraticEqution = new QuaDraticEqution(1,3,1);
-        if (buildQuaDraticEqution.denta()>0){
-            System.out.println("x1= "+buildQuaDraticEqution.nghiem1());
-            System.out.println("x2= "+ buildQuaDraticEqution.nghiem2());
-        }else if (buildQuaDraticEqution.denta()<0){
+        QuaDraticEqution quaDraticEqution = new QuaDraticEqution(1,3,1);
+        if (quaDraticEqution.denta()>0){
+            System.out.println("x1= "+quaDraticEqution.nghiem1());
+            System.out.println("x2= "+ quaDraticEqution.nghiem2());
+        }else if (quaDraticEqution.denta()<0){
             System.out.println("phương trình vô nghiệm");
         }
         else {
-            System.out.println("phương trình có nghiệm kép: x1=x2 = " + buildQuaDraticEqution.nghiemKep());
+            System.out.println("phương trình có nghiệm kép: x1=x2 = " + quaDraticEqution.nghiemKep());
 
         }
 

@@ -1,12 +1,12 @@
 package LuyenTapONha.compareto;
 
-public class SinhVien implements Comparable<SinhVien> {
+public class SinhVien1 implements Comparable<SinhVien1> {
     private int maSinhVien;
     private String hoVaTen;
     private String tenLop;
     private double diemTrungBinh;
 
-    public SinhVien(int maSinhVien, String hoVaTen, String tenLop, double diemTrungBinh) {
+    public SinhVien1(int maSinhVien, String hoVaTen, String tenLop, double diemTrungBinh) {
         this.maSinhVien = maSinhVien;
         this.hoVaTen = hoVaTen;
         this.tenLop = tenLop;
@@ -57,7 +57,7 @@ public class SinhVien implements Comparable<SinhVien> {
     }
 
     @Override
-    public int compareTo(SinhVien o) {
+    public int compareTo(SinhVien1 o) {
         return this.getTen().compareTo(o.getTen());
     }
 

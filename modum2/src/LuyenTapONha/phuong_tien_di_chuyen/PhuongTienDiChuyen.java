@@ -1,8 +1,8 @@
 package LuyenTapONha.phuong_tien_di_chuyen;
 
 public abstract class PhuongTienDiChuyen {
-    private String loaiPhuongTien;
-    private HangSanXuat hangSanXuat;
+    protected String loaiPhuongTien;
+    protected HangSanXuat hangSanXuat;
 
     public PhuongTienDiChuyen(String loaiPhuongTien, HangSanXuat hangSanXuat) {
         this.setLoaiPhuongTien(loaiPhuongTien);

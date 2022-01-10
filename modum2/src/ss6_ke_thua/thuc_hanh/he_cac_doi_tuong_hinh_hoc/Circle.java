@@ -1,5 +1,7 @@
 package ss6_ke_thua.thuc_hanh.he_cac_doi_tuong_hinh_hoc;
 
+
+
 public class Circle extends Shape {
     private double radius;
 
@@ -24,8 +26,12 @@ public class Circle extends Shape {
         this.radius = radius;
     }
 
+
+
     @Override
     public String toString() {
-        return "A Circle with radius=xxx, which is a subclass of yyy";
+        return "Circle{" +
+                "radius=" + radius +
+                '}';
     }
 }
