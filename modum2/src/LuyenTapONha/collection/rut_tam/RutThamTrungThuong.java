@@ -30,7 +30,7 @@ public class RutThamTrungThuong {
         String ketQua="";
         Random rd = new Random();
         int viTri = rd.nextInt(this.thungRutThamTrungThuong.size());
-       ketQua=  (String) this.thungRutThamTrungThuong.toArray()[viTri];
+       ketQua+=   this.thungRutThamTrungThuong.toArray()[viTri];
        return ketQua;
     }
     public void inMaDuThuong(){

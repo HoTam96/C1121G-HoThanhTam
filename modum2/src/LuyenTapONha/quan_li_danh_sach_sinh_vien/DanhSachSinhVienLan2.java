@@ -37,7 +37,7 @@ public class DanhSachSinhVienLan2  {
     }
 //kiểm tra danh sách có rỗng hay không
     public boolean kiemTraDanhSach(){
-       return this.listDanhSach.isEmpty();
+        return this.listDanhSach.isEmpty();
     }
 //lấy số lượng sinh viên trong danh sách
 public int laysoluongsinhvientrongdanhsach(){
@@ -81,5 +81,6 @@ if (sinhVien.getHoVaTen().indexOf(ten)>=0){
         }
         );
     }
+
 
 }

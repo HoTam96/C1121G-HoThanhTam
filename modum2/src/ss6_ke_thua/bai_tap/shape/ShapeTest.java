@@ -13,6 +13,5 @@ public class ShapeTest {
         System.out.println("bán kính của đấy hình trụ là: " + Circle.radius);
         Circle circle1 = new Circle("yellow");
 
-
     }
 }
