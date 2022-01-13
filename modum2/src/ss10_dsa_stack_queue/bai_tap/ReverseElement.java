@@ -17,12 +17,10 @@ public class ReverseElement {
         for (int i = 0; i < arr.length; i++) {
             array.push(arr[i]);
         }
-//        for (String element : array) {
-//            System.out.print(element);
-//        }
-        System.out.println("cái j đây "+Arrays.toString(array.toArray()));
-        System.out.println("chuổi ban dầu là: " + Arrays.toString(arr));
-        System.out.println("bao nhiêu đây " + array.size());
+
+        System.out.println(Arrays.toString(array.toArray()));
+        System.out.println(Arrays.toString(arr));
+        System.out.println( array.size());
         System.out.println("chuổi đảo ngược");
         for (int i = 0; i < arr.length; i++) {
             arr1[i] = array.pop();
