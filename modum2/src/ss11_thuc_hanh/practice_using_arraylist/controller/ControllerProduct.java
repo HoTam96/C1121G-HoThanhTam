@@ -58,8 +58,8 @@ public class ControllerProduct {
                 case 5:
                     System.out.println("nhập tên cần tìm kiếm");
                     String name3= sc.nextLine();
-                    Product product4 = new Product(name3);
-                    productService.findNameProduct(product4);
+//                    Product product4 = new Product(name3);
+                    productService.findNameProduct(name3);
                     break;
                 case 6:
                     productService.SortByProductPrice();

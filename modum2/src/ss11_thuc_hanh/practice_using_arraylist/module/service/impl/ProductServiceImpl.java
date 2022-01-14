@@ -59,7 +59,7 @@ public class ProductServiceImpl implements IProduct {
     }
 
     @Override
-    public void findNameProduct(Product name) {
+    public void findNameProduct(String name) {
         for (Product product : productArrayList) {
             if (product.getName().equals(name)) {
                 System.out.println("id là: " + product.getId() + " tên sản phẩm: " + product.getName() + " giá: " + product.getPrice());

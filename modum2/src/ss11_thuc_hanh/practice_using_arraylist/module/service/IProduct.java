@@ -12,7 +12,7 @@ public interface IProduct {
 
     void displayProduct();
 
-    void findNameProduct(Product name);
+    void findNameProduct(String name);
 
     void SortByProductPrice();
 
