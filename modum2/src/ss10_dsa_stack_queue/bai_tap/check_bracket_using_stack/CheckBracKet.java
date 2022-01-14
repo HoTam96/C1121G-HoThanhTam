@@ -37,7 +37,6 @@ public class CheckBracKet {
             }
 
             for (int i = 0; i < n; i++) {
-                int count = 0;
                 if (arrayList1.get(i) == "(") {
                     arrayList1.set(i, ")");
                 } else if (arrayList1.get(i) == "{") {
@@ -49,7 +48,6 @@ public class CheckBracKet {
                     if (arrayList1.get(i) == arrayList2.get(j)) {
                         arrayList1.remove(i);
                         arrayList2.remove(j);
-                        count++;
                         i--;
                         j--;
                         break;
