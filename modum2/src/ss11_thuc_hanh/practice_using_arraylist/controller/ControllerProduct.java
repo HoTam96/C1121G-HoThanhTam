@@ -45,8 +45,7 @@ public class ControllerProduct {
                 case 3:
                     System.out.println("nhập id sản phẩm cần xóa");
                     int id3 = Integer.parseInt(sc.nextLine());
-                    Product product3 = new Product(id3);
-                    System.out.println(productService.removeProduct(product3));
+                    productService.removeProduct(id3);
                     break;
 
                 case 4:

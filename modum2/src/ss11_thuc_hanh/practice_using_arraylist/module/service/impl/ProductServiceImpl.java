@@ -4,6 +4,7 @@ import ss11_thuc_hanh.practice_using_arraylist.module.moduleclass.Product;
 import ss11_thuc_hanh.practice_using_arraylist.module.service.IProduct;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 
@@ -11,9 +12,9 @@ public class ProductServiceImpl implements IProduct {
     public static ArrayList<Product> productArrayList = new ArrayList<>();
 
     static {
-        Product product = new Product("khải", 1, 20);
+        Product product = new Product("bánh quy", 1, 20);
         productArrayList.add(product);
-        Product product1 = new Product("tuấn", 2, 22);
+        Product product1 = new Product("bánh ken", 2, 22);
         productArrayList.add(product1);
     }
 
@@ -38,8 +39,13 @@ public class ProductServiceImpl implements IProduct {
     }
 
     @Override
-    public boolean removeProduct(Product id) {
-        return productArrayList.remove(id);
+    public void removeProduct(int id) {
+        for (Product element: productArrayList) {
+            if (element.getId()==id){
+                productArrayList.remove(element);
+                System.out.println("đã xóa thành công");
+            }
+        }
 
     }
 
@@ -80,7 +86,8 @@ public class ProductServiceImpl implements IProduct {
                     return 0;
                 }
             }
-        });
+        }
+        );
 
 
     }

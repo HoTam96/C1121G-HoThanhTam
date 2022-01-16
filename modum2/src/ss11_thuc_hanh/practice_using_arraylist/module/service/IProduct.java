@@ -7,7 +7,7 @@ public interface IProduct {
 
     void editIdProduct(Product id);
 
-    boolean removeProduct(Product id);
+    void removeProduct(int id);
     boolean removeProductName(Product name);
 
     void displayProduct();
