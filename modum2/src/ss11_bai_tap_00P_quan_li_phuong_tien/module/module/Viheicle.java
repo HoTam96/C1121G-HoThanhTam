@@ -5,11 +5,11 @@ import java.util.Objects;
 public abstract class Viheicle  {
 
     private String bienKiemSoat;
-    private String hangSanXuat;
+    private HangSanXuat hangSanXuat;
     private int namSanXuat;
     private String chuSoHuu;
 
-    public Viheicle(String bienKiemSoat, String hangSanXuat, int namSanXuat, String chuSoHuu) {
+    public Viheicle(String bienKiemSoat, HangSanXuat hangSanXuat, int namSanXuat, String chuSoHuu) {
         this.bienKiemSoat = bienKiemSoat;
         this.hangSanXuat = hangSanXuat;
         this.namSanXuat = namSanXuat;
@@ -31,11 +31,11 @@ public abstract class Viheicle  {
         this.bienKiemSoat = bienKiemSoat;
     }
 
-    public String getHangSanXuat() {
+    public HangSanXuat getHangSanXuat() {
         return hangSanXuat;
     }
 
-    public void setHangSanXuat(String hangSanXuat) {
+    public void setHangSanXuat(HangSanXuat hangSanXuat) {
         this.hangSanXuat = hangSanXuat;
     }
 
@@ -57,11 +57,12 @@ public abstract class Viheicle  {
 
     @Override
     public String toString() {
-        return
+        return "{" +
                 "bienKiemSoat='" + bienKiemSoat + '\'' +
-                ", hangSanXuat='" + hangSanXuat + '\'' +
+                ", hangSanXuat=" + hangSanXuat.getTenHangSanXuat() +
                 ", namSanXuat=" + namSanXuat +
-                ", chuSoHuu='" + chuSoHuu + '\'' ;
+                ", chuSoHuu='" + chuSoHuu + '\'' +
+                '}';
     }
 
     @Override

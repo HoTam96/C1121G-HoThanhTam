@@ -27,8 +27,8 @@ public class OToService implements IOTo {
         hangSanXuatArrayList.add(hangSanXuat6);
         hangSanXuatArrayList.add(hangSanXuat7);
 
-        OTo oTo1 = new OTo("43c1-24105", "yamaha", 1990, "tam", 24, "du lich");
-        OTo oTo2 = new OTo("43c1-24104", "yamaha", 1991, "tam", 45, "khach");
+        OTo oTo1 = new OTo("43c1-24105", hangSanXuat1, 1990, "tam", 24, "du lich");
+        OTo oTo2 = new OTo("43c1-24104", hangSanXuat2, 1991, "tam", 45, "khach");
 
         oToArrayList.add(oTo1);
         oToArrayList.add(oTo2);
@@ -61,14 +61,9 @@ public class OToService implements IOTo {
                 "6.Toyota\n" +
                 "7.Hino\n");
         int luaChon = Integer.parseInt(sc.nextLine());
-
-        String str = "";
-        str = hangSanXuatArrayList.get(luaChon - 1).getTenHangSanXuat();
-
-        OTo oTo = new OTo(bienKiemSoat, str, namSanXuat, chuSoHuu, soChoNgoi, kieuXe);
+        OTo oTo = new OTo(bienKiemSoat, hangSanXuatArrayList.get(luaChon-1), namSanXuat, chuSoHuu, soChoNgoi, kieuXe);
         oToArrayList.add(oTo);
     }
-
     @Override
     public void disPlayVehicle() {
         for (OTo oto : oToArrayList) {

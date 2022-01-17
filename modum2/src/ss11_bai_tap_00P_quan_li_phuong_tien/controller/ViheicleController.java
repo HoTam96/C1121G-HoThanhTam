@@ -66,12 +66,12 @@ public class ViheicleController {
                     System.out.println(xeTaiService.xacNhanTonTai(xeTai));
                     if (oToService.xacNhanTonTai(oTo)) {
                         System.out.println("xác nhận");
-                        System.out.println("\t 1, yes\n" +
+                        System.err.println("\t 1, yes\n" +
                                 "\t phím bất kì. No");
                         int luachon3 = Integer.parseInt(sc.nextLine());
                         if (luachon3 == 1) {
                             oToService.deleteVehicle(oTo);
-                            System.out.println("đã xóa thành công");
+                            System.err.println("đã xóa thành công");
 
                         } else {
                             break;
@@ -81,10 +81,10 @@ public class ViheicleController {
                         System.out.println("xác nhận");
                         System.out.println("\t 1, yes\n" +
                                 "\t phím bất kì. No");
-                        int luachon4 = Integer.parseInt(sc.nextLine());
-                        if (luachon4 == 1) {
+                        int luachon3 = Integer.parseInt(sc.nextLine());
+                        if (luachon3 == 1) {
                             xeMayService.deleteVehicle(xeMay);
-                            System.out.println("đã xóa thành công");
+                            System.err.println("đã xóa thành công");
 
 
                         } else {
@@ -94,10 +94,10 @@ public class ViheicleController {
                         System.out.println("xác nhận");
                         System.out.println("\t 1, yes\n" +
                                 "\t phím bất kì. No");
-                        int luachon5 = Integer.parseInt(sc.nextLine());
-                        if (luachon5 == 1) {
+                        int luachon3 = Integer.parseInt(sc.nextLine());
+                        if (luachon3 == 1) {
                             xeTaiService.deleteVehicle(xeTai);
-                            System.out.println("đã xóa thành công");
+                            System.err.println("đã xóa thành công");
 
 
                         }
@@ -107,13 +107,13 @@ public class ViheicleController {
 
                     }
                     else {
-                        System.out.println("biển số xe không tồn tại");
+                        System.err.println("biển số xe không tồn tại");
                     }
 
                     break;
 
                 default:
-                    System.out.println("đã thoát");
+                    System.err.println("đã thoát");
             }
         } while (luaChon != 4);
 

@@ -4,7 +4,7 @@ public class OTo extends Viheicle implements Comparable<OTo> {
     private  int soChoNgoi;
     private String kieuXe;
 
-    public OTo(String bienKiemSoat, String hangSanXuat, int namSanXuat, String chuSoHuu, int soChoNgoi, String kieuXe) {
+    public OTo(String bienKiemSoat, HangSanXuat hangSanXuat, int namSanXuat, String chuSoHuu, int soChoNgoi, String kieuXe) {
         super(bienKiemSoat, hangSanXuat, namSanXuat, chuSoHuu);
         this.soChoNgoi = soChoNgoi;
         this.kieuXe = kieuXe;
@@ -17,27 +17,11 @@ public class OTo extends Viheicle implements Comparable<OTo> {
     public OTo() {
     }
 
-    public int getSoChoNgoi() {
-        return soChoNgoi;
-    }
-
-    public void setSoChoNgoi(int soChoNgoi) {
-        this.soChoNgoi = soChoNgoi;
-    }
-
-    public String getKieuXe() {
-        return kieuXe;
-    }
-
-    public void setKieuXe(String kieuXe) {
-        this.kieuXe = kieuXe;
-    }
-
     @Override
     public String toString() {
         return "OTo{" +
                 "bienKiemSoat='" + getBienKiemSoat()  + '\'' +
-                ", hangSanXuat='" + getHangSanXuat() + '\'' +
+                ", hangSanXuat='" + getHangSanXuat().getTenHangSanXuat() + '\'' +
                 ", namSanXuat=" + getNamSanXuat() +'\'' +
                 ", chuSoHuu='" + getChuSoHuu() + '\'' +
                 "soChoNgoi=" + soChoNgoi +

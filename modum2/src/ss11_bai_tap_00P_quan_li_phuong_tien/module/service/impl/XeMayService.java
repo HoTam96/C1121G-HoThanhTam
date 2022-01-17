@@ -27,8 +27,8 @@ public class XeMayService implements IXeMay {
         hangSanXuatArrayList.add(hangSanXuat6);
         hangSanXuatArrayList.add(hangSanXuat7);
 
-        XeMay xeMay1 = new XeMay("92d1-24104", "yamaha", 1996, "tam", 110);
-        XeMay xeMay2 = new XeMay("92d1-24107", "honda", 2000, "quang", 150);
+        XeMay xeMay1 = new XeMay("92d1-24104", hangSanXuat1, 1996, "tam", 110);
+        XeMay xeMay2 = new XeMay("92d1-24107", hangSanXuat2, 2000, "quang", 150);
 
         xeMayArrayList.add(xeMay1);
         xeMayArrayList.add(xeMay2);
@@ -59,36 +59,9 @@ public class XeMayService implements IXeMay {
                 "6.Toyota\n" +
                 "7.Hino\n");
         int luaChon = Integer.parseInt(scanner.nextLine());
-        String nhaSanXuat = "";
-        switch (luaChon) {
-            case 1:
-                nhaSanXuat = hangSanXuatArrayList.get(0).getTenHangSanXuat();
-                break;
-            case 2:
-                nhaSanXuat = hangSanXuatArrayList.get(1).getTenHangSanXuat();
-                break;
-            case 3:
-                nhaSanXuat = hangSanXuatArrayList.get(2).getTenHangSanXuat();
-                break;
-            case 4:
-                nhaSanXuat = hangSanXuatArrayList.get(3).getTenHangSanXuat();
-                break;
-            case 5:
-                nhaSanXuat = hangSanXuatArrayList.get(4).getTenHangSanXuat();
-                break;
-            case 6:
-                nhaSanXuat = hangSanXuatArrayList.get(5).getTenHangSanXuat();
-                break;
-            case 7:
-                nhaSanXuat = hangSanXuatArrayList.get(6).getTenHangSanXuat();
-                break;
-            default:
-                System.out.println("chọn chưa đúng");
-        }
 
-        XeMay xeMay = new XeMay(bienKiemSoat, nhaSanXuat, namSanXuat, chuSoHuu, congSuat);
+        XeMay xeMay = new XeMay(bienKiemSoat, hangSanXuatArrayList.get(luaChon-1), namSanXuat, chuSoHuu, congSuat);
         xeMayArrayList.add(xeMay);
-
     }
 
     @Override

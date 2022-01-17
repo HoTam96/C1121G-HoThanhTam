@@ -27,8 +27,8 @@ public class XeTaiService implements IXeTai {
         hangSanXuatArrayList.add(hangSanXuat6);
         hangSanXuatArrayList.add(hangSanXuat7);
 
-        XeTai xeTai1 = new XeTai("93d1-24104", "yamaha", 1998, "tam", 4.5f);
-        XeTai xeTai2 = new XeTai("94d1-24105", "honda", 2000, "tú", 5.5f);
+        XeTai xeTai1 = new XeTai("93d1-24104", hangSanXuat1, 1998, "tam", 4.5f);
+        XeTai xeTai2 = new XeTai("94d1-24105", hangSanXuat2, 2000, "tú", 5.5f);
 
 
         xeTaiArrayList.add(xeTai1);
@@ -57,34 +57,8 @@ public class XeTaiService implements IXeTai {
                 "6.Toyota\n" +
                 "7.Hino\n");
         int luaChon = Integer.parseInt(scanner.nextLine());
-        String nhaSanXuat = "";
-        switch (luaChon) {
-            case 1:
-                nhaSanXuat = hangSanXuatArrayList.get(0).getTenHangSanXuat();
-                break;
-            case 2:
-                nhaSanXuat = hangSanXuatArrayList.get(1).getTenHangSanXuat();
-                break;
-            case 3:
-                nhaSanXuat = hangSanXuatArrayList.get(2).getTenHangSanXuat();
-                break;
-            case 4:
-                nhaSanXuat = hangSanXuatArrayList.get(3).getTenHangSanXuat();
-                break;
-            case 5:
-                nhaSanXuat = hangSanXuatArrayList.get(4).getTenHangSanXuat();
-                break;
-            case 6:
-                nhaSanXuat = hangSanXuatArrayList.get(5).getTenHangSanXuat();
-                break;
-            case 7:
-                nhaSanXuat = hangSanXuatArrayList.get(6).getTenHangSanXuat();
-                break;
-            default:
-                System.out.println("chọn chưa đúng");
-        }
 
-        XeTai xeTai = new XeTai(bienKiemSoat, nhaSanXuat, namSanXuat, chuSoHuu, trongTai);
+        XeTai xeTai = new XeTai(bienKiemSoat,hangSanXuatArrayList.get(luaChon-1), namSanXuat, chuSoHuu, trongTai);
         xeTaiArrayList.add(xeTai);
 
     }
