@@ -1,8 +1,9 @@
 package LuyenTapONha.quan_li_danh_sach_sinh_vien;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class SinhVienONha implements Comparable<SinhVienONha> {
+public class SinhVienONha implements Comparable<SinhVienONha>, Serializable {
     private String maSinhVien;
     private String hoVaTen;
     private int namSinh ;

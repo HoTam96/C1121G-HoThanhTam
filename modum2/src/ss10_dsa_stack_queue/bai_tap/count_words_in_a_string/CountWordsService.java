@@ -1,33 +1,31 @@
 package ss10_dsa_stack_queue.bai_tap.count_words_in_a_string;
 
-import java.util.Arrays;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class CountWordsService {
-    Map<String,String> data = new TreeMap<String,String>();
+    public static void main(String[] args) {
 
-    public void add(String key,String value){
-        data.put(key,value);
-    }
-    public void print(){
-//        System.out.println("key: "+Arrays.toString(data.keySet().toArray())+"value: "+Arrays.toString(data.values().toArray()));
-        System.out.println(Arrays.toString(data.entrySet().toArray()));
-    }
-    public String getValueToLowerCase(String key){
-        return (this.data.get(key).toLowerCase());
-    }
-    public boolean checkForExistence (String key){
-      return  this.data.containsKey(key);
-    }
-    public String remove(String key){
-        return this.data.remove(key);
-    }
-//    public int amount(){
-//        return data.size();
-//    }
-    public void overLoad(String key,String value){
-        add(key, value);
+
+        Map<String, Integer> data = new TreeMap<>();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("nhập vào 1 chuổi");
+        String str = sc.nextLine();
+        str = str.trim().replaceAll("\\s+", " ");
+        System.out.println(str);
+
+        String[] arr = str.split(" ");
+
+        for (int i = 0; i < arr.length; i++) {
+            if (data.keySet().contains(arr[i])){
+                data.put(arr[i], data.get(arr[i]) + 1);
+            } else {
+
+                data.put(arr[i], 1);
+
+            }
+        }
+        System.out.println(data);
+
     }
 
 

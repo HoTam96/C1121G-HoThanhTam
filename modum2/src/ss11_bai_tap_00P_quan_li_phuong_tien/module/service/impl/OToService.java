@@ -61,32 +61,10 @@ public class OToService implements IOTo {
                 "6.Toyota\n" +
                 "7.Hino\n");
         int luaChon = Integer.parseInt(sc.nextLine());
+
         String str = "";
-        switch (luaChon) {
-            case 1:
-                str = hangSanXuatArrayList.get(0).getTenHangSanXuat();
-                break;
-            case 2:
-                str = hangSanXuatArrayList.get(1).getTenHangSanXuat();
-                break;
-            case 3:
-                str = hangSanXuatArrayList.get(2).getTenHangSanXuat();
-                break;
-            case 4:
-                str = hangSanXuatArrayList.get(3).getTenHangSanXuat();
-                break;
-            case 5:
-                str = hangSanXuatArrayList.get(4).getTenHangSanXuat();
-                break;
-            case 6:
-                str = hangSanXuatArrayList.get(5).getTenHangSanXuat();
-                break;
-            case 7:
-                str = hangSanXuatArrayList.get(6).getTenHangSanXuat();
-                break;
-            default:
-                System.out.println("chọn chưa đúng");
-        }
+        str = hangSanXuatArrayList.get(luaChon - 1).getTenHangSanXuat();
+
         OTo oTo = new OTo(bienKiemSoat, str, namSanXuat, chuSoHuu, soChoNgoi, kieuXe);
         oToArrayList.add(oTo);
     }
