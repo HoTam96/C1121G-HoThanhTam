@@ -33,12 +33,9 @@ public class OToService implements IOTo {
         oToArrayList.add(oTo1);
         oToArrayList.add(oTo2);
 
-
     }
 
-
     public void addVehicle() {
-
 
         Scanner sc = new Scanner(System.in);
         System.out.println("nhập biển kiểm soát");
