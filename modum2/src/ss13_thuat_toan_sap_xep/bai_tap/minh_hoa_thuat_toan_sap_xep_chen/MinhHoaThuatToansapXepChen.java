@@ -1,9 +1,10 @@
-package ss13_thuat_toan_sap_xep.thuc_hanh.minh_hoa_thuat_toan_noi_bot;
+package ss13_thuat_toan_sap_xep.bai_tap.minh_hoa_thuat_toan_sap_xep_chen;
 
 import java.util.Scanner;
 
-public class MinhHoaThuatToanSapXepNoiBot {
+public class MinhHoaThuatToansapXepChen {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter list size:");
         int size = scanner.nextInt();
@@ -17,10 +18,9 @@ public class MinhHoaThuatToanSapXepNoiBot {
             System.out.print(list[i] + "\t");
         }
         Service service = new Service();
-        service.sapXepNoiBot(list);
-    }
+        service.sapXepChen(list);
 
 
     }
 
-
+}
