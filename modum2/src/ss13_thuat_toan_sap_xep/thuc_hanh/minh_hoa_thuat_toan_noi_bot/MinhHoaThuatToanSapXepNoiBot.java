@@ -17,7 +17,7 @@ public class MinhHoaThuatToanSapXepNoiBot {
             System.out.print(list[i] + "\t");
         }
         Service service = new Service();
-        service.sapXepnoiBot(list);
+        service.sapXepNoiBot(list);
     }
 
 
