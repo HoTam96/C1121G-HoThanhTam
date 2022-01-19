@@ -1,13 +1,13 @@
 package case_study.module.module_Furama;
 
-public abstract class ResortFurama {
+public abstract class facility {
     private String serviceName;
     private float usableArea;
     private double rentalCost;
     private int maximumNumberPeople;
     private RentType rentType;
 
-    public ResortFurama(String serviceName, float usableArea, double rentalCost, int maximumNumberPeople, RentType rentType) {
+    public facility(String serviceName, float usableArea, double rentalCost, int maximumNumberPeople, RentType rentType) {
         this.serviceName = serviceName;
         this.usableArea = usableArea;
         this.rentalCost = rentalCost;
@@ -15,7 +15,7 @@ public abstract class ResortFurama {
         this.rentType = rentType;
     }
 
-    public ResortFurama() {
+    public facility() {
     }
 
     public String getServiceName() {

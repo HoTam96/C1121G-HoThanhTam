@@ -70,13 +70,12 @@ public abstract class Person {
 
     @Override
     public String toString() {
-        return "person{" +
+        return
                 "hoTen='" + hoTen + '\'' +
                 ", ngaySinh='" + ngaySinh + '\'' +
                 ", gioiTinh='" + gioiTinh + '\'' +
                 ", cMND='" + cMND + '\'' +
                 ", soDienThoai=" + soDienThoai +
-                ", email='" + email + '\'' +
-                '}';
+                ", email='" + email+", ";
     }
 }

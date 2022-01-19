@@ -1,0 +1,5 @@
+package case_study.module.furama_service;
+
+public interface CustomerService extends InterfaceFuramaService{
+
+}

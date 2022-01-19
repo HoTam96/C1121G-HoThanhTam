@@ -1,6 +1,6 @@
 package case_study.module.module_Furama;
 
-public class Room extends ResortFurama {
+public class Room extends facility {
     private String freeService;
 
     public Room(String serviceName, float usableArea, double rentalCost, int maximumNumberPeople, RentType rentType, String freeService) {

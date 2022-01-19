@@ -1,6 +1,6 @@
 package case_study.module.module_Furama;
 
-public class House extends ResortFurama{
+public class House extends facility {
     private String roomStandard;
     private int numberOfFloor;
 

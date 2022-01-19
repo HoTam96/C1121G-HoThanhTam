@@ -4,14 +4,14 @@ public class Employee extends Person {
     private String maNhanVien;
     private TrinhDo trinhDo;
     private ViTri viTri;
-    private  String luobg;
+    private  double luong;
 
-    public Employee(String hoTen, String ngaySinh, String gioiTinh, String cMND, double soDienThoai, String email, String maNhanVien, TrinhDo trinhDo, ViTri viTri, String luobg) {
+    public Employee(String hoTen, String ngaySinh, String gioiTinh, String cMND, double soDienThoai, String email, String maNhanVien, TrinhDo trinhDo, ViTri viTri, double luobg) {
         super(hoTen, ngaySinh, gioiTinh, cMND, soDienThoai, email);
         this.maNhanVien = maNhanVien;
         this.trinhDo = trinhDo;
         this.viTri = viTri;
-        this.luobg = luobg;
+        this.luong = luobg;
     }
 
     public Employee() {
@@ -41,12 +41,22 @@ public class Employee extends Person {
         this.viTri = viTri;
     }
 
-    public String getLuobg() {
-        return luobg;
+    public double getLuong() {
+        return luong;
     }
 
-    public void setLuobg(String luobg) {
-        this.luobg = luobg;
+    public void setLuong(double luong) {
+        this.luong = luong;
     }
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                super.toString()+
+                "maNhanVien='" + maNhanVien + '\'' +
+                ", trinhDo=" + trinhDo.getBangCap() +
+                ", viTri=" + viTri.getViTri() +
+                ", luong=" + luong +
+                '}';
+    }
 }
