@@ -12,9 +12,14 @@ import java.util.List;
 public class TestTextVanBan {
 
 
-    public static void main(String[] args) throws IOException {
-        File file = new File("D:\\codegym\\codegymC1121G1\\modum2\\tamday\\tuanday\\tam.txt");
-//        file.createNewFile();
+    public static void main(String[] args)  {
+        File file = new File("D:\\codegym\\codegymC1121G1\\modum2\\helllo\\tuandayy\\tammmm.txt");
+        try {
+            file.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println("haha");
 //        file.mkdirs();
 //        file.deleteOnExit();
 
@@ -33,17 +38,17 @@ public class TestTextVanBan {
 //        for (String element:alltext) {
 //            System.out.println(element);
 //        }
-        BufferedReader br = Files.newBufferedReader(file.toPath(),StandardCharsets.UTF_8);
-String line = null;
-while (true){
-    line = br.readLine();
-    if (line ==null){
-break;
-    }
-    else {
-        System.out.println(line);
-    }
-}
+//        BufferedReader br = Files.newBufferedReader(file.toPath(),StandardCharsets.UTF_8);
+//String line = null;
+//while (true){
+//    line = br.readLine();
+//    if (line ==null){
+//break;
+//    }
+//    else {
+//        System.out.println(line);
+//    }
+//}
 
     }
 

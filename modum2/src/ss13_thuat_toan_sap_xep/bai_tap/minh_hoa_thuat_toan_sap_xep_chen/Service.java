@@ -6,20 +6,17 @@ import java.util.Arrays;
 
 public class Service {
     public void sapXepChen(int[] arr) {
-
         for (int i = 1; i < arr.length; i++) {
             int min = arr[i];
             int pos = i;
-            while (pos > 0&&min < arr[pos - 1] ) {
+            while (pos > 0 && min < arr[pos - 1]) {
 
                 arr[pos] = arr[pos - 1];
 
                 pos--;
             }
             arr[pos] = min;
-
         }
-        
         System.out.println(Arrays.toString(arr));
 
     }
