@@ -14,9 +14,6 @@ public class IllegalTriangle {
         if ((a + b) < c || (a + c) < b || (b + c) < a) {
             throw new IllegalTriangleException("tổng 2 cạnh phải lớn hơn cạnh còn lại");
 
-        } else if (a < 1 || b < 1 || c < 1) {
-            throw new IllegalTriangleException("a , b , c phải lớn hơn 0");
-
         }
         int[] arr = {a, b, c};
         return arr;
