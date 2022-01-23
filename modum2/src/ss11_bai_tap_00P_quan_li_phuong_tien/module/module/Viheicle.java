@@ -57,12 +57,11 @@ public abstract class Viheicle  {
 
     @Override
     public String toString() {
-        return "{" +
+        return
                 "bienKiemSoat='" + bienKiemSoat + '\'' +
                 ", hangSanXuat=" + hangSanXuat.getTenHangSanXuat() +
                 ", namSanXuat=" + namSanXuat +
-                ", chuSoHuu='" + chuSoHuu + '\'' +
-                '}';
+                ", chuSoHuu='" + chuSoHuu + '\'';
     }
 
     @Override

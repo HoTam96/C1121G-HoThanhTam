@@ -3,13 +3,16 @@ package ss11_bai_tap_00P_quan_li_phuong_tien.module.service.impl;
 import ss11_bai_tap_00P_quan_li_phuong_tien.module.module.HangSanXuat;
 import ss11_bai_tap_00P_quan_li_phuong_tien.module.module.XeTai;
 import ss11_bai_tap_00P_quan_li_phuong_tien.module.service.IXeTai;
+import ss11_bai_tap_00P_quan_li_phuong_tien.module.until.WriteReaderFileOto;
+import ss11_bai_tap_00P_quan_li_phuong_tien.module.until.WriteReaderFileXeTai;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class XeTaiService implements IXeTai {
-    private static ArrayList<XeTai> xeTaiArrayList = new ArrayList<>();
     private static ArrayList<HangSanXuat> hangSanXuatArrayList = new ArrayList<>();
+    private static final String xeTaiPathFile="src/ss11_bai_tap_00P_quan_li_phuong_tien/module/until/xetai.csv";
 
     static {
         HangSanXuat hangSanXuat1 = new HangSanXuat("HSX-001", "Yamaha", "Nhật Bản");
@@ -27,17 +30,12 @@ public class XeTaiService implements IXeTai {
         hangSanXuatArrayList.add(hangSanXuat6);
         hangSanXuatArrayList.add(hangSanXuat7);
 
-        XeTai xeTai1 = new XeTai("93d1-24104", hangSanXuat1, 1998, "tam", 4.5f);
-        XeTai xeTai2 = new XeTai("94d1-24105", hangSanXuat2, 2000, "tú", 5.5f);
-
-
-        xeTaiArrayList.add(xeTai1);
-        xeTaiArrayList.add(xeTai2);
     }
 
 
     @Override
     public void addVehicle() {
+          ArrayList<XeTai> xeTaiArrayList = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         System.out.println("nhập biển kiểm soát");
         String bienKiemSoat = scanner.nextLine();
@@ -60,18 +58,27 @@ public class XeTaiService implements IXeTai {
 
         XeTai xeTai = new XeTai(bienKiemSoat,hangSanXuatArrayList.get(luaChon-1), namSanXuat, chuSoHuu, trongTai);
         xeTaiArrayList.add(xeTai);
+        WriteReaderFileXeTai.writeFile(xeTaiPathFile,xeTaiArrayList, true);
+        xeTaiArrayList = new ArrayList<>();
 
     }
 
     @Override
     public void disPlayVehicle() {
-        for (XeTai element : xeTaiArrayList) {
+        List<XeTai>xeTaiList = WriteReaderFileXeTai.readerFile(xeTaiPathFile);
+
+        for (XeTai element : xeTaiList) {
             System.out.println(element);
         }
     }
 
     @Override
     public void deleteVehicle(XeTai bienKiemSoat) {
+        List<XeTai>xeTaiList = WriteReaderFileXeTai.readerFile(xeTaiPathFile);
+        xeTaiList.remove(bienKiemSoat);
+        WriteReaderFileXeTai.writeFile(xeTaiPathFile,xeTaiList,false);
+
+
 //        for (XeTai element :xeTaiArrayList) {
 //            if (element.getBienKiemSoat().equals(bienKiemSoat)){
 //                xeTaiArrayList.remove(bienKiemSoat);
@@ -81,10 +88,11 @@ public class XeTaiService implements IXeTai {
 //                System.out.println("biển kiểm soát không tồn tại");
 //            }
 //        }
-        xeTaiArrayList.remove(bienKiemSoat);
+//        xeTaiArrayList.remove(bienKiemSoat);
 
     }
     public boolean xacNhanTonTai(XeTai bienKiemSoat){
-        return xeTaiArrayList.contains(bienKiemSoat);
+        List<XeTai>xeTaiList = WriteReaderFileXeTai.readerFile(xeTaiPathFile);
+        return xeTaiList.contains(bienKiemSoat);
     }
 }

@@ -14,6 +14,10 @@ public class HangSanXuat {
     public HangSanXuat() {
     }
 
+    public HangSanXuat(String tenHangSanXuat) {
+        this.tenHangSanXuat = tenHangSanXuat;
+    }
+
     public String getMaHangSanXuat() {
         return maHangSanXuat;
     }
@@ -38,12 +42,8 @@ public class HangSanXuat {
         this.tenQuocGia = tenQuocGia;
     }
 
-    @Override
-    public String toString() {
-        return "HangSanXuat{" +
-                "maHangSanXuat='" + maHangSanXuat + '\'' +
-                ", tenHangSanXuat='" + tenHangSanXuat + '\'' +
-                ", tenQuocGia='" + tenQuocGia + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return this.getTenHangSanXuat();
+//    }
 }

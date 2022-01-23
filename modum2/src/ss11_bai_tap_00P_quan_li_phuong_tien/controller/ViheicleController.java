@@ -55,15 +55,16 @@ public class ViheicleController {
                     break;
 
                 case 3:
-                    System.out.println("nhập vào biển kiểm soát");
+                    System.out.println(" danh sách oto");
+                    oToService.disPlayVehicle();
+                    System.out.println(" danh sách xe tải");
+                    xeTaiService.disPlayVehicle();
+                    System.out.println("nhập vào biển kiểm soát để xác nhận ");
                     String bienKiemSoat = sc.nextLine();
                     OTo oTo = new OTo(bienKiemSoat);
                     XeTai xeTai = new XeTai(bienKiemSoat);
                     XeMay xeMay = new XeMay(bienKiemSoat);
 
-                    System.out.println(oToService.xacNhanTonTai(oTo));
-                    System.out.println(xeMayService.xacNhanTonTai(xeMay));
-                    System.out.println(xeTaiService.xacNhanTonTai(xeTai));
                     if (oToService.xacNhanTonTai(oTo)) {
                         System.out.println("xác nhận");
                         System.err.println("\t 1, yes\n" +

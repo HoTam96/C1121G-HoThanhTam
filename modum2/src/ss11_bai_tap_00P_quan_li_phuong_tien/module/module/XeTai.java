@@ -9,6 +9,7 @@ public class XeTai extends Viheicle {
     }
 
 
+
     public XeTai(String bienKiemSoat) {
         super(bienKiemSoat);
     }
@@ -16,11 +17,15 @@ public class XeTai extends Viheicle {
     public XeTai() {
     }
 
+    public String getInFoXeTai() {
+        return this.getBienKiemSoat() + "," + this.getHangSanXuat().getTenHangSanXuat() + "," +
+                this.getNamSanXuat() + "," + this.getChuSoHuu() + "," + this.trongTai;
+    }
+
     @Override
     public String toString() {
-        return "XeTai" +
-                super.toString()+
-                "trongTai=" + trongTai +
-                '}';
+        return "[ biển kiểm soát = "+ getBienKiemSoat()+", " + "hãng sản xuất = " + getHangSanXuat().getTenHangSanXuat()+", " +
+                "năm sản xuất = "+ getNamSanXuat()+", " + "Chủ sở hữu = "+ getChuSoHuu()+", " + " trọng tải = "+ trongTai + " ]";
+
     }
 }

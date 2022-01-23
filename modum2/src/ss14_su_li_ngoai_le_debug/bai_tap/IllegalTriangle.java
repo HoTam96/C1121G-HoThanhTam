@@ -1,5 +1,6 @@
 package ss14_su_li_ngoai_le_debug.bai_tap;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class IllegalTriangle {
@@ -42,7 +43,12 @@ public class IllegalTriangle {
     }
 
     public static void main(String[] args) {
-        display();
-
+        Random random = new Random();
+        int x = 0;
+        while (x < 6) {
+            int a = random.nextInt(55);
+            System.out.println(a);
+            x++;
+        }
     }
 }

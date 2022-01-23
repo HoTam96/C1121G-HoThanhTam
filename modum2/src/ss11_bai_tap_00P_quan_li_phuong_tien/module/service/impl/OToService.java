@@ -3,11 +3,14 @@ package ss11_bai_tap_00P_quan_li_phuong_tien.module.service.impl;
 import ss11_bai_tap_00P_quan_li_phuong_tien.module.module.HangSanXuat;
 import ss11_bai_tap_00P_quan_li_phuong_tien.module.module.OTo;
 import ss11_bai_tap_00P_quan_li_phuong_tien.module.service.IOTo;
+import ss11_bai_tap_00P_quan_li_phuong_tien.module.until.WriteReaderFileOto;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class OToService implements IOTo {
+    private static final String OtoPathFile = "src/ss11_bai_tap_00P_quan_li_phuong_tien/module/until/ototoco.csv";
     private static ArrayList<OTo> oToArrayList = new ArrayList<>();
     private static ArrayList<HangSanXuat> hangSanXuatArrayList = new ArrayList<>();
 
@@ -26,12 +29,6 @@ public class OToService implements IOTo {
         hangSanXuatArrayList.add(hangSanXuat5);
         hangSanXuatArrayList.add(hangSanXuat6);
         hangSanXuatArrayList.add(hangSanXuat7);
-
-        OTo oTo1 = new OTo("43c1-24105", hangSanXuat1, 1990, "tam", 24, "du lich");
-        OTo oTo2 = new OTo("43c1-24104", hangSanXuat2, 1991, "tam", 45, "khach");
-
-        oToArrayList.add(oTo1);
-        oToArrayList.add(oTo2);
 
     }
 
@@ -58,23 +55,40 @@ public class OToService implements IOTo {
                 "6.Toyota\n" +
                 "7.Hino\n");
         int luaChon = Integer.parseInt(sc.nextLine());
-        OTo oTo = new OTo(bienKiemSoat, hangSanXuatArrayList.get(luaChon-1), namSanXuat, chuSoHuu, soChoNgoi, kieuXe);
-        oToArrayList.add(oTo);
+        OTo oTo = new OTo(bienKiemSoat, hangSanXuatArrayList.get(luaChon - 1), namSanXuat, chuSoHuu, soChoNgoi, kieuXe);
+oToArrayList.add(oTo);
+        WriteReaderFileOto.writeFile(OtoPathFile, oToArrayList,true);
+//        oToArrayList.clear();
+        oToArrayList = new ArrayList<>();
+
+
     }
+
     @Override
     public void disPlayVehicle() {
-        for (OTo oto : oToArrayList) {
+        List<OTo> oToList = WriteReaderFileOto.readerFile(OtoPathFile);
+        for (OTo oto : oToList) {
             System.out.println(oto);
         }
     }
 
     @Override
     public void deleteVehicle(OTo data) {
-        oToArrayList.remove(data);
+        List<OTo> oToList = WriteReaderFileOto.readerFile(OtoPathFile);
+//       for (int i =0;i<oToList.size();i++){
+//           System.out.println((i+1)+". "+ oToList.get(i));
+//       }
+//       Scanner scanner = new Scanner(System.in);
+//        System.out.println("chọn oto cần xóa");
+//        int indexOTo = Integer.parseInt(scanner.nextLine())-1;
+        oToList.remove(data);
+        WriteReaderFileOto.writeFile(OtoPathFile, oToList,false);
+
     }
 
     public boolean xacNhanTonTai(OTo bienKiemSoat) {
-        return oToArrayList.contains(bienKiemSoat);
+        List<OTo> oToList = WriteReaderFileOto.readerFile(OtoPathFile);
+        return oToList.contains(bienKiemSoat);
     }
 
 

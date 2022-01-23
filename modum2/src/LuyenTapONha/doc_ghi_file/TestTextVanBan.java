@@ -1,10 +1,7 @@
 package LuyenTapONha.doc_ghi_file;
 
 import javax.sound.sampled.Line;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.List;
@@ -13,6 +10,8 @@ public class TestTextVanBan {
 
 
     public static void main(String[] args)  {
+
+
         File file = new File("D:\\codegym\\codegymC1121G1\\modum2\\helllo\\tuandayy\\tammmm.txt");
         try {
             file.createNewFile();
@@ -20,6 +19,10 @@ public class TestTextVanBan {
             e.printStackTrace();
         }
         System.out.println("haha");
+
+
+
+
 //        file.mkdirs();
 //        file.deleteOnExit();
 
