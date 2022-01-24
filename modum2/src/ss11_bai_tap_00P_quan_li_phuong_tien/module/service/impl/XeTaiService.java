@@ -3,7 +3,7 @@ package ss11_bai_tap_00P_quan_li_phuong_tien.module.service.impl;
 import ss11_bai_tap_00P_quan_li_phuong_tien.module.module.HangSanXuat;
 import ss11_bai_tap_00P_quan_li_phuong_tien.module.module.XeTai;
 import ss11_bai_tap_00P_quan_li_phuong_tien.module.service.IXeTai;
-import ss11_bai_tap_00P_quan_li_phuong_tien.module.until.WriteReaderFileOto;
+import ss11_bai_tap_00P_quan_li_phuong_tien.module.until.WriteReaderFile;
 import ss11_bai_tap_00P_quan_li_phuong_tien.module.until.WriteReaderFileXeTai;
 
 import java.util.ArrayList;
@@ -58,7 +58,7 @@ public class XeTaiService implements IXeTai {
 
         XeTai xeTai = new XeTai(bienKiemSoat,hangSanXuatArrayList.get(luaChon-1), namSanXuat, chuSoHuu, trongTai);
         xeTaiArrayList.add(xeTai);
-        WriteReaderFileXeTai.writeFile(xeTaiPathFile,xeTaiArrayList, true);
+        WriteReaderFile.writeFileXeTai(xeTaiPathFile,xeTaiArrayList, true);
         xeTaiArrayList = new ArrayList<>();
 
     }

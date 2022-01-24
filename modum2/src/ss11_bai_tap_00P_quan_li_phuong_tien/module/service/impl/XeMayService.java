@@ -3,13 +3,16 @@ package ss11_bai_tap_00P_quan_li_phuong_tien.module.service.impl;
 import ss11_bai_tap_00P_quan_li_phuong_tien.module.module.HangSanXuat;
 import ss11_bai_tap_00P_quan_li_phuong_tien.module.module.XeMay;
 import ss11_bai_tap_00P_quan_li_phuong_tien.module.service.IXeMay;
+import ss11_bai_tap_00P_quan_li_phuong_tien.module.until.WriteReaderFile;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class XeMayService implements IXeMay {
     private static ArrayList<XeMay> xeMayArrayList = new ArrayList<>();
     private static ArrayList<HangSanXuat> hangSanXuatArrayList = new ArrayList<>();
+    private static final String xeMayPathFile = "src/ss11_bai_tap_00P_quan_li_phuong_tien/module/until/XeMay.csv";
 
     static {
         HangSanXuat hangSanXuat1 = new HangSanXuat("HSX-001", "Yamaha", "Nhật Bản");
@@ -27,15 +30,8 @@ public class XeMayService implements IXeMay {
         hangSanXuatArrayList.add(hangSanXuat6);
         hangSanXuatArrayList.add(hangSanXuat7);
 
-        XeMay xeMay1 = new XeMay("92d1-24104", hangSanXuat1, 1996, "tam", 110);
-        XeMay xeMay2 = new XeMay("92d1-24107", hangSanXuat2, 2000, "quang", 150);
-
-        xeMayArrayList.add(xeMay1);
-        xeMayArrayList.add(xeMay2);
-
 
     }
-
 
     @Override
     public void addVehicle() {
@@ -62,17 +58,23 @@ public class XeMayService implements IXeMay {
 
         XeMay xeMay = new XeMay(bienKiemSoat, hangSanXuatArrayList.get(luaChon-1), namSanXuat, chuSoHuu, congSuat);
         xeMayArrayList.add(xeMay);
+        WriteReaderFile.writeFileXeMay(xeMayPathFile,xeMayArrayList,true);
+        xeMayArrayList=new ArrayList<>();
     }
 
     @Override
     public void disPlayVehicle() {
-        for (XeMay element : xeMayArrayList) {
+        List<XeMay>xeMayList = WriteReaderFile.xeMayReaderFiel(xeMayPathFile);
+
+        for (XeMay element : xeMayList) {
             System.out.println(element);
         }
     }
 
     @Override
     public void deleteVehicle(XeMay bienKiemSoat) {
+        List<XeMay>xeMayList = WriteReaderFile.xeMayReaderFiel(xeMayPathFile);
+
 //        for (XeMay element : xeMayArrayList) {
 //            if (element.getBienKiemSoat().equals(bienKiemSoat)) {
 //                xeMayArrayList.remove(bienKiemSoat);
@@ -81,11 +83,12 @@ public class XeMayService implements IXeMay {
 //                System.out.println("biển kiểm soát không tồn tại");
 //            }
 //        }
-        xeMayArrayList.remove(bienKiemSoat);
+        xeMayList.remove(bienKiemSoat);
 
     }
 
     public boolean xacNhanTonTai(XeMay bienKiemSoat) {
-        return xeMayArrayList.contains(bienKiemSoat);
+        List<XeMay>xeMayList = WriteReaderFile.xeMayReaderFiel(xeMayPathFile);
+        return xeMayList.contains(bienKiemSoat);
     }
 }

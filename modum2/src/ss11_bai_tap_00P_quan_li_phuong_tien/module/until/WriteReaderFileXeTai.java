@@ -11,7 +11,6 @@ import java.util.List;
 public class WriteReaderFileXeTai {
     public static void writeFile(String Path,List<XeTai>xeTaiList, boolean append){
 
-
         try {
             File file = new File(Path);
             if(!file.exists()){

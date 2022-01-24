@@ -3,7 +3,7 @@ package ss11_bai_tap_00P_quan_li_phuong_tien.module.service.impl;
 import ss11_bai_tap_00P_quan_li_phuong_tien.module.module.HangSanXuat;
 import ss11_bai_tap_00P_quan_li_phuong_tien.module.module.OTo;
 import ss11_bai_tap_00P_quan_li_phuong_tien.module.service.IOTo;
-import ss11_bai_tap_00P_quan_li_phuong_tien.module.until.WriteReaderFileOto;
+import ss11_bai_tap_00P_quan_li_phuong_tien.module.until.WriteReaderFile;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,7 +57,7 @@ public class OToService implements IOTo {
         int luaChon = Integer.parseInt(sc.nextLine());
         OTo oTo = new OTo(bienKiemSoat, hangSanXuatArrayList.get(luaChon - 1), namSanXuat, chuSoHuu, soChoNgoi, kieuXe);
 oToArrayList.add(oTo);
-        WriteReaderFileOto.writeFile(OtoPathFile, oToArrayList,true);
+        WriteReaderFile.writeFileOTo(OtoPathFile, oToArrayList,true);
 //        oToArrayList.clear();
         oToArrayList = new ArrayList<>();
 
@@ -66,7 +66,7 @@ oToArrayList.add(oTo);
 
     @Override
     public void disPlayVehicle() {
-        List<OTo> oToList = WriteReaderFileOto.readerFile(OtoPathFile);
+        List<OTo> oToList = WriteReaderFile.readerFile(OtoPathFile);
         for (OTo oto : oToList) {
             System.out.println(oto);
         }
@@ -74,7 +74,7 @@ oToArrayList.add(oTo);
 
     @Override
     public void deleteVehicle(OTo data) {
-        List<OTo> oToList = WriteReaderFileOto.readerFile(OtoPathFile);
+        List<OTo> oToList =WriteReaderFile.readerFile(OtoPathFile);
 //       for (int i =0;i<oToList.size();i++){
 //           System.out.println((i+1)+". "+ oToList.get(i));
 //       }
@@ -82,15 +82,23 @@ oToArrayList.add(oTo);
 //        System.out.println("chọn oto cần xóa");
 //        int indexOTo = Integer.parseInt(scanner.nextLine())-1;
         oToList.remove(data);
-        WriteReaderFileOto.writeFile(OtoPathFile, oToList,false);
+        WriteReaderFile.writeFileOTo(OtoPathFile, oToList,false);
 
     }
 
     public boolean xacNhanTonTai(OTo bienKiemSoat) {
-        List<OTo> oToList = WriteReaderFileOto.readerFile(OtoPathFile);
+        List<OTo> oToList = WriteReaderFile.readerFile(OtoPathFile);
         return oToList.contains(bienKiemSoat);
     }
+    public void searchByname(String name){
+        List<OTo> oToList = WriteReaderFile.readerFile(OtoPathFile);
+        for (OTo element : oToList) {
+            if (element.getChuSoHuu().contains(name)){
+                System.out.println(element);
+            }
+        }
 
+    }
 
 }
 

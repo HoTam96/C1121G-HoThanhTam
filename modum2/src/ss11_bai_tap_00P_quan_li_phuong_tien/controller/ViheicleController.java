@@ -23,7 +23,8 @@ public class ViheicleController {
             System.out.println("1. Thêm mới phương tiện.\n" +
                     "2. Hiện thị phương tiện\n" +
                     "3. Xóa phương tiện\n" +
-                    "4. Thoát\n");
+                    "4. tìm kiếm theo tên chủ sở hữu\n" +
+                    "5. Thoát\n");
             luaChon = Integer.parseInt(sc.nextLine());
             switch (luaChon) {
                 case 1:
@@ -112,11 +113,16 @@ public class ViheicleController {
                     }
 
                     break;
+                case 4:
+                    System.out.println("nhập tên chủ sở hữu cần tìm kiếm");
+                    String nane = sc.nextLine();
+                    oToService.searchByname(nane);
+                    break;
 
                 default:
                     System.err.println("đã thoát");
             }
-        } while (luaChon != 4);
+        } while (luaChon != 5);
 
     }
 }

@@ -23,4 +23,8 @@ public class XeMay extends Viheicle {
                 " congSuat=" + congSuat +
                 '}';
     }
+    public String getInFoXeMay() {
+        return this.getBienKiemSoat() + "," + this.getHangSanXuat().getTenHangSanXuat() + "," +
+                this.getNamSanXuat() + "," + this.getChuSoHuu() + "," + this.congSuat;
+    }
 }
