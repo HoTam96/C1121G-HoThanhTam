@@ -11,7 +11,7 @@ public class Test2 extends JFrame {
         FlowLayout flowLayout = new FlowLayout();
         FlowLayout flowLayout1 = new FlowLayout(FlowLayout.RIGHT);
 
-        FlowLayout flowLayout2 = new FlowLayout(FlowLayout.CENTER,10,10);
+        FlowLayout flowLayout2 = new FlowLayout(FlowLayout.CENTER,50,100);
         this.setLayout(flowLayout2);
 
         JButton j1 = new JButton("tâm");

@@ -9,7 +9,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WriteReaderFile {
+public class  WriteReaderFile {
     public static void writeFileOTo(String path, List<OTo> oToList, boolean append) {
         List<String> stringList = new ArrayList<>();
         try {
@@ -51,19 +51,18 @@ public class WriteReaderFile {
 
     public static void writeFileXeMay(String path, List<XeMay> xeMayList, boolean append) {
         List<String> stringList = new ArrayList<>();
-        File file = new File(path);
-        try {
-            FileWriter fileWriter = new FileWriter(file, append);
-            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+//        File file = new File(path);
+//        try {
+//            FileWriter fileWriter = new FileWriter(file, append);
+//            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             for (XeMay element : xeMayList) {
                 stringList.add(element.getInFoXeMay());
-                bufferedWriter.newLine();
             }
             writeFileString(path, stringList, append);
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
 
     }

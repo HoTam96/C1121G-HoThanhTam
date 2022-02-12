@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+
 public class OToService implements IOTo {
     private static final String OtoPathFile = "src/ss11_bai_tap_00P_quan_li_phuong_tien/module/until/ototoco.csv";
-    private static ArrayList<OTo> oToArrayList = new ArrayList<>();
     private static ArrayList<HangSanXuat> hangSanXuatArrayList = new ArrayList<>();
 
     static {
@@ -55,11 +55,10 @@ public class OToService implements IOTo {
                 "6.Toyota\n" +
                 "7.Hino\n");
         int luaChon = Integer.parseInt(sc.nextLine());
+        ArrayList<OTo> oToArrayList = new ArrayList<>();
         OTo oTo = new OTo(bienKiemSoat, hangSanXuatArrayList.get(luaChon - 1), namSanXuat, chuSoHuu, soChoNgoi, kieuXe);
 oToArrayList.add(oTo);
         WriteReaderFile.writeFileOTo(OtoPathFile, oToArrayList,true);
-//        oToArrayList.clear();
-        oToArrayList = new ArrayList<>();
 
 
     }
@@ -71,6 +70,7 @@ oToArrayList.add(oTo);
             System.out.println(oto);
         }
     }
+
 
     @Override
     public void deleteVehicle(OTo data) {

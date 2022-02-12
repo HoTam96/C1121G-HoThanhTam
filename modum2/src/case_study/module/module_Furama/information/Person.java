@@ -71,11 +71,11 @@ public abstract class Person {
     @Override
     public String toString() {
         return
-                "hoTen='" + hoTen + '\'' +
-                ", ngaySinh='" + ngaySinh + '\'' +
-                ", gioiTinh='" + gioiTinh + '\'' +
-                ", cMND='" + cMND + '\'' +
-                ", soDienThoai=" + soDienThoai +
-                ", email='" + email+", ";
+                "HoTen='" + hoTen + '\'' +
+                        ", NgaySinh='" + ngaySinh + '\'' +
+                        ", GioiTinh='" + gioiTinh + '\'' +
+                        ", CMND='" + cMND + '\'' +
+                        ", SoDienThoai=" + soDienThoai +
+                        ", Email='" + email+", ";
     }
 }

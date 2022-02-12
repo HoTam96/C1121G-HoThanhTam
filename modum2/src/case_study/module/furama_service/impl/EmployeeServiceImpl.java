@@ -1,54 +1,48 @@
 package case_study.module.furama_service.impl;
 
+import case_study.module.data.write_file.WriteFileCsv;
 import case_study.module.furama_service.EmployeeService;
 import case_study.module.module_Furama.information.Employee;
-import case_study.module.module_Furama.information.TrinhDo;
-import case_study.module.module_Furama.information.ViTri;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class EmployeeServiceImpl implements EmployeeService {
     private static ArrayList<Employee> employeeArrayList = new ArrayList<>();
-    private static ArrayList<TrinhDo> arrayListTrinhDo = new ArrayList<>();
-    private static ArrayList<ViTri> arrayListViTri = new ArrayList<>();
+    private static ArrayList<String> arrayListTrinhDo = new ArrayList<>();
+    private static ArrayList<String> arrayListViTri = new ArrayList<>();
+    private static final String PATHFILE1 = "src/case_study/until/file_csv/employee/TrinhDo.csv";
+    private static final String PATHFILE2 = "src/case_study/until/file_csv/employee/ViTri.csv";
 
     static {
-        TrinhDo trinhDo1 = new TrinhDo("trung cấp");
-        TrinhDo trinhDo2 = new TrinhDo("cao đẳng");
-        TrinhDo trinhDo3 = new TrinhDo("dại học");
-        TrinhDo trinhDo4 = new TrinhDo("sau đại hoc");
+        arrayListTrinhDo.add("trung cấp");
+        arrayListTrinhDo.add("cao đẳng");
+        arrayListTrinhDo.add("đại học");
+        arrayListTrinhDo.add("sau đại học");
 
-        ViTri viTri1 = new ViTri("lễ tân");
-        ViTri viTri2 = new ViTri("phục vụ");
-        ViTri viTri3 = new ViTri("chuyên viên");
-        ViTri viTri4 = new ViTri("giám sát");
-        ViTri viTri5 = new ViTri("quản lí");
-        ViTri viTri6 = new ViTri("giám đôc");
+        arrayListViTri.add("lễ tân");
+        arrayListViTri.add("phục vụ");
+        arrayListViTri.add("chuyên viên");
+        arrayListViTri.add("giám sát");
+        arrayListViTri.add("quản lí");
+        arrayListViTri.add("giám đốc");
 
-        Employee employee1 = new Employee("Hồ Thanh Tâm", "04/08/1996", "nam", "205852669", 0788040896d, "hotam196@gmail.com", "ms01", trinhDo3, viTri6, 25000000);
-        Employee employee2 = new Employee("Lưu Bị", "02/08/996", "nam", "203582669", 07883687434d, "hotam196@gmail.com", "ms02", trinhDo2, viTri1, 20000000);
-        Employee employee3 = new Employee("Tào Tháo", "03/08/994", "nam", "205819069", 07880468954d, "hotam196@gmail.com", "ms03", trinhDo3, viTri2, 18000000);
-
+        Employee employee1 = new Employee("Hồ Thanh Tâm", "04/08/1996", "nam", "205852669", 0788040896d, "hotam196@gmail.com", "ms01", arrayListTrinhDo.get(2), arrayListViTri.get(2), 25000000);
+        Employee employee2 = new Employee("Lưu Bị", "02/08/996", "nam", "203582669", 07883687434d, "hotam196@gmail.com", "ms02", arrayListTrinhDo.get(3), arrayListViTri.get(3), 20000000);
+        Employee employee3 = new Employee("Tào Tháo", "03/08/994", "nam", "205819069", 07880468954d, "hotam196@gmail.com", "ms03", arrayListTrinhDo.get(1), arrayListViTri.get(1), 18000000);
         employeeArrayList.add(employee1);
         employeeArrayList.add(employee2);
         employeeArrayList.add(employee3);
-        arrayListTrinhDo.add(trinhDo1);
-        arrayListTrinhDo.add(trinhDo2);
-        arrayListTrinhDo.add(trinhDo3);
-        arrayListTrinhDo.add(trinhDo4);
 
-        arrayListViTri.add(viTri1);
-        arrayListViTri.add(viTri2);
-        arrayListViTri.add(viTri3);
-        arrayListViTri.add(viTri4);
-        arrayListViTri.add(viTri5);
-        arrayListViTri.add(viTri6);
+
+        WriteFileCsv.writeViTri(arrayListViTri, PATHFILE2, true);
+        WriteFileCsv.writeTrinhDo(arrayListTrinhDo, PATHFILE1, true);
 
     }
 
     @Override
     public void addNew() {
+
         Scanner sc = new Scanner(System.in);
         System.out.println("nhập vào họ và tên");
         String name = sc.nextLine();
@@ -71,7 +65,6 @@ public class EmployeeServiceImpl implements EmployeeService {
                 "2. cao đăng\n" +
                 "3. đại học\n" +
                 "4. sau đại học");
-
         int trinhDo = Integer.parseInt(sc.nextLine());
         System.out.println("chọn vị trí");
         System.out.println("1. lễ tân\n" +
@@ -80,6 +73,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                 "4. giám sát\n" +
                 "5. quản lí\n" +
                 "6. giám đốc");
+
         int viTri = Integer.parseInt(sc.nextLine());
         Employee employee = new Employee(name, birthDay, male, cMND, sDT, email, codeEmployee, arrayListTrinhDo.get(trinhDo - 1), arrayListViTri.get(viTri - 1), luong);
         employeeArrayList.add(employee);
@@ -89,7 +83,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public void displayList() {
         for (Employee element : employeeArrayList) {
-            System.out.println("1" + element);
+            System.out.println(element);
         }
     }
 
@@ -99,7 +93,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         for (Employee element : employeeArrayList) {
             if (element.getHoTen().contains(name)) {
 
-                System.out.println("bạn có muốn xóa tên này ra khỏi danh sách không "+ element);
+                System.out.println("bạn có muốn sửa tên  này không " + element);
                 flag = true;
                 Scanner sc = new Scanner(System.in);
                 System.out.println("nhập lại các thông tin cần edit");
@@ -189,13 +183,11 @@ public class EmployeeServiceImpl implements EmployeeService {
                 } while (choice != 0);
 
 
-            }
-
-           else {
-            flag=false;
+            } else {
+                flag = false;
             }
         }
-        if (!flag){
+        if (!flag) {
             System.out.println("không tồn tại tên trong danh sách");
         }
     }

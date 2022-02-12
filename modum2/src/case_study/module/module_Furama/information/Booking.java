@@ -1,12 +1,16 @@
 package case_study.module.module_Furama.information;
 
-public class Booking {
+public class Booking implements Comparable<Booking> {
     private String maBooking;
     private String ngayBatDau;
     private String ngayKetThuc;
     private String maKhachHang;
     private String tenDichVu;
     private String loaiDichVu;
+
+//    private static int number=0;
+//    private int id;
+
 
     public Booking(String maBooking, String ngayBatDau, String ngayKetThuc, String maKhachHang, String tenDichVu, String loaiDichVu) {
         this.maBooking = maBooking;
@@ -15,10 +19,16 @@ public class Booking {
         this.maKhachHang = maKhachHang;
         this.tenDichVu = tenDichVu;
         this.loaiDichVu = loaiDichVu;
+//        this.id= number++;
     }
 
     public Booking() {
     }
+
+    public Booking(String maBooking) {
+        this.maBooking = maBooking;
+    }
+
 
     public String getMaBooking() {
         return maBooking;
@@ -68,4 +78,28 @@ public class Booking {
         this.loaiDichVu = loaiDichVu;
     }
 
+//    public int getId() {
+//        return id;
+//    }
+//
+//    public void setId(int id) {
+//        this.id = id;
+
+
+    @Override
+    public String toString() {
+        return "Booking{" +
+                "maBooking='" + maBooking + '\'' +
+                ", ngayBatDau='" + ngayBatDau + '\'' +
+                ", ngayKetThuc='" + ngayKetThuc + '\'' +
+                ", maKhachHang='" + maKhachHang + '\'' +
+                ", tenDichVu='" + tenDichVu + '\'' +
+                ", loaiDichVu='" + loaiDichVu + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Booking o) {
+        return this.getMaBooking().compareTo(o.maBooking);
+    }
 }

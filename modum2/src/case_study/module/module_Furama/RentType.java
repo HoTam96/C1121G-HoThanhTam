@@ -5,12 +5,17 @@ public class RentType {
     private int month;
     private int day;
     private double hour;
+    private String renType;
 
     public RentType(int year, int month, int day, double hour) {
         this.year = year;
         this.month = month;
         this.day = day;
         this.hour = hour;
+    }
+
+    public RentType(String renType) {
+        this.renType = renType;
     }
 
     public int getYear() {
@@ -45,4 +50,18 @@ public class RentType {
         this.hour = hour;
     }
 
+    public String getRenType() {
+        return renType;
+    }
+
+    public void setRenType(String renType) {
+        this.renType = renType;
+    }
+
+    @Override
+    public String toString() {
+        return "RentType{" +
+                "renType='" + renType + '\'' +
+                '}';
+    }
 }

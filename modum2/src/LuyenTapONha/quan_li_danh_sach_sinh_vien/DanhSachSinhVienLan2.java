@@ -88,7 +88,7 @@ public class DanhSachSinhVienLan2 {
 
     //xuất ra màn hình sinh viên có điểm từ cao đến thâp
     public void sapXepDiemGiamDantangdan() {
-        Collections.sort(this.listDanhSach, new Comparator<SinhVienONha>() {
+        Collections.sort(this.getListDanhSach(), new Comparator<SinhVienONha>() {
                     @Override
                     public int compare(SinhVienONha o1, SinhVienONha o2) {
                         if (o1.getDiemTrungBinh() > o2.getDiemTrungBinh()) {

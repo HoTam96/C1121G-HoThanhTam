@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
 
 public class CrawlSongExample {
     private static final String URLSONG = "https://www.nhaccuatui.com/bai-hat/nhac-tre-moi.html";
-    private static final String regex = "name_song\\\">(.*?)</a>";
+    private static final String regex = "name_song\\\">(.*)</a>";
 
     public static void song() {
 

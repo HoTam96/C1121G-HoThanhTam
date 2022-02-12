@@ -1,6 +1,6 @@
 package case_study.module.furama_service;
 
-public interface BookingService {
+public interface BookingService extends InterfaceFuramaService {
 
 
 }

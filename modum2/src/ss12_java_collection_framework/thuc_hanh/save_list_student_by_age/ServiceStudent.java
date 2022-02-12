@@ -18,8 +18,8 @@ public class ServiceStudent {
     public void sapxepKeyGiamDan(){
         Map<String,Integer>studen1 = new TreeMap<>(student);
         System.out.println("tree map "+studen1);
-        System.out.println(studen1.keySet());
-        System.out.println(studen1.values());
+        System.out.println("1"+studen1.keySet());
+        System.out.println("2"+studen1.values());
         Set<String>taphop=studen1.keySet();
         for (String elemrnt:taphop) {
             System.out.println(elemrnt +" có giá trị là "+ studen1.get(elemrnt));

@@ -40,6 +40,7 @@ public class Set {
                     break;
                 case 5:
                     System.out.println("số lượng phiếu là: "+  rutThamTrungThuong.soLuongPhieu());
+                    rutThamTrungThuong.display();
                     break;
 
                 case 6:

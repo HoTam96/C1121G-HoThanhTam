@@ -1,5 +1,5 @@
 package case_study.module.furama_service;
 
-public interface ContractService {
+public interface ContractService extends InterfaceFuramaService {
 
 }
