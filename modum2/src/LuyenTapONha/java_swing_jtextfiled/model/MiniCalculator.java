@@ -5,6 +5,7 @@ public class MiniCalculator {
     private double secondValue;
     private double answer;
 
+
     public MiniCalculator(double firstValue, double secondValue, double answer) {
         this.firstValue = firstValue;
         this.secondValue = secondValue;
@@ -22,8 +23,10 @@ public class MiniCalculator {
         this.firstValue = firstValue;
     }
 
+
     public double getSecondValue() {
         return secondValue;
+
     }
 
     public void setSecondValue(double secondValue) {
@@ -37,6 +40,7 @@ public class MiniCalculator {
     public void setAnswer(double answer) {
         this.answer = answer;
     }
+
 
     public void plus() {
         this.answer = this.firstValue + this.secondValue;

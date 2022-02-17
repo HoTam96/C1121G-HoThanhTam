@@ -1,0 +1,13 @@
+Villa ,200.5,1.0E7,5,ngày,SVVL-1234,5 sao,20.4,2
+Villa plus ,300.0,2.0E7,7,tháng,SVVL-2345,5 sao,30.4,2
+Villa ultra,400.0,3.0E7,10,năm,SVVL-3456,5 sao,40.4,2
+House,80.2,5000000.0,4,tháng,SVHO-1234,4 sao,4
+House plus,100.2,8000000.0,5,tháng,SVHO-2345,4 sao,3
+House ultra,120.2,1.0E7,6,tháng,SVHO-3456,4 sao,4
+Room,40.5,1000000.0,2,tháng,SVRO-1234,freeWater
+Room plus,50.5,2000000.0,2,tháng,SVRO-2345,freeWater
+Room ultra,60.5,3000000.0,2,tháng,SVRO-3456,freeWater
+Room vip,70.5,3000000.0,2,tháng,SVRO-4567,freeWater
+Room vip pro,80.5,4000000.0,2,tháng,SVRO-5678,freeWater
+Villa tam,500.0,500.0,5,ngày,SVVL-6789,5 SAO,600.0,5
+Villa,40.4,5000000.0,5,giờ,SVVL-9734,5 sao,60.5,5

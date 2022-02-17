@@ -1,6 +1,6 @@
 package case_study.until;
 
-import case_study.module.module_Furama.information.Booking;
+import case_study.models.Booking;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

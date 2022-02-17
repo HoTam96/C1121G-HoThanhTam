@@ -49,6 +49,7 @@ public class CalculatorView extends JFrame {
         jButton_mod.addActionListener(actionListener);
 
         JPanel jPanel_center = new JPanel();
+        GridLayout gridLayout = new GridLayout();
         jPanel_center.setLayout(new GridLayout(2, 3, 10, 10));
         jPanel_center.add(jButton_plus);
         jPanel_center.add(jButton_minus);
@@ -56,6 +57,8 @@ public class CalculatorView extends JFrame {
         jPanel_center.add(jButton_divide);
         jPanel_center.add(jButton_pow);
         jPanel_center.add(jButton_mod);
+
+
 
         Font font1 = new Font("Arial", Font.BOLD, 30);
 
@@ -89,6 +92,7 @@ public class CalculatorView extends JFrame {
     }
 
     public void plus() {
+
         miniCalculator.setFirstValue(Double.parseDouble(jTextField_1st.getText()));
         miniCalculator.setSecondValue(Double.parseDouble(jTextField_2nd.getText()));
         miniCalculator.plus();

@@ -1,8 +1,6 @@
 package case_study.controller;
 
-import case_study.module.furama_service.EmployeeService;
-import case_study.module.furama_service.impl.*;
-import case_study.module.module_Furama.information.Employee;
+import case_study.services.impl.*;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -50,6 +48,7 @@ public class FuramaController {
                         } else {
                             break;
                         }
+                        break;
 
                     case 2:
 
@@ -83,7 +82,7 @@ public class FuramaController {
                                 "4\tReturn main menu\n");
                         choice = Integer.parseInt(sc.nextLine());
                         if (choice == 1) {
-                            facilityService.displayList();
+                            facilityService.DisplayListFacility();
                         } else if (choice == 2) {
                             do {
                                 System.out.println("--------chọn chức năng--------");
@@ -149,7 +148,7 @@ public class FuramaController {
                                         if (luaChon == 1) {
                                             customerSerVice.displayList();
                                         } else if (luaChon == 2) {
-                                            facilityService.displayList();
+                                            facilityService.DisplayListFacility();
                                         } else if (luaChon == 3) {
                                             bookingService.addNew();
                                         }else {
