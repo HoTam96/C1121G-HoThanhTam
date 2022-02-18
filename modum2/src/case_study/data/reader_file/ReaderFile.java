@@ -388,7 +388,6 @@ public class ReaderFile {
             if (!file.exists()) {
                 System.out.println("file không tồn tại");
             }
-
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line = "";

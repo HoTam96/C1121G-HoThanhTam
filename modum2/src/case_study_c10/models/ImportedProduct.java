@@ -11,6 +11,7 @@ public class ImportedProduct extends Product {
         this.priceImport = priceImport;
         this.provinceImport = provinceImport;
         this.tax = tax;
+
     }
 
     public ImportedProduct(double priceImport, String provinceImport, double tax) {
@@ -57,7 +58,7 @@ public class ImportedProduct extends Product {
     }
 
     @Override
-    public String getInForProduct() {
+    public String getInForProduct()  {
         return super.getInForProduct()+","+priceImport+","+provinceImport+","+tax;
     }
 }
