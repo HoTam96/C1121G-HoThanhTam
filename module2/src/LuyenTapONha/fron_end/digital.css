@@ -1,0 +1,119 @@
+
+.body {
+    background: #E72727;
+}
+
+.container {
+    width: 543px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.preheader {
+    background: url("anh1.png");
+    width: 543px;
+    height: 14px;
+}
+
+.header {
+    background: url("a2.png");
+    width: 543px;
+    height: 56px;
+}
+
+.header h3 {
+    color: red;
+    margin: 0px;
+    margin-left: 200px;
+    padding-top: 10px;
+
+
+}
+
+.menu {
+    background: url("a3.png");
+    width: 543px;
+    height: 19px;
+}
+b
+.menu a {
+    color: black;
+    margin: 0px;
+    margin-left: 250px;
+
+
+}
+
+.main {
+    background: url("a4.png");
+    width: 543px;
+    height: auto;
+    display: flex;
+}
+
+.left {
+    width: 70%;
+    height: auto;
+    padding-left: 10px;
+}
+
+.title {
+    font-size: 18px;
+    color: lightcoral;
+    font-weight: bold;
+    padding-top: 2px;
+    padding-bottom: 5px;
+
+}
+
+.image {
+    width: 370px;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.descretion {
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-family: sans-serif;
+    padding-right: 10px;
+
+}
+
+.right {
+    width: 30%;
+    height: auto;
+}
+
+.new {
+    font-size: 18px;
+    color: lightcoral;
+    font-weight: bold;
+    padding-top: 2px;
+    padding-bottom: 5px;
+}
+
+.chu {
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-family: sans-serif;
+    padding-right: 10px;
+}
+
+.search {
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.input {
+    border: dashed 1px;
+    width: 100px;
+}
+
+.footer {
+    background: url("a5.png");
+    width: 543px;
+    height: 18px;
+}
