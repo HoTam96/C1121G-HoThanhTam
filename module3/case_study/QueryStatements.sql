@@ -77,9 +77,65 @@ where year(start_date_contract)=2021 group by `month`;
 --  so_luong_dich_vu_di_kem (được tính dựa trên việc sum so_luong ở dich_vu_di_kem).
 
 select contract.contract_id, contract.start_date_contract,
- contract.end_date_contract, contract.deposits, count(accompanied_service.service_code)as so_luong from contract
- join detail_contract on contract.contract_id = detail_contract.contract_id
- join 
+ contract.end_date_contract, contract.deposits, sum(ifnull(detail_contract.amount,0))as so_luong from contract
+ left  join detail_contract on contract.contract_id = detail_contract.contract_id
+ left   join  accompanied_service on detail_contract.service_code = accompanied_service.service_code 
+ group by contract.contract_id ;
+ 
+ 
+--   task 11.	Hiển thị thông tin các dịch vụ đi kèm đã được sử dụng bởi những khách hàng 
+--  có ten_loai_khach là “Diamond” và có dia_chi ở “Vinh” hoặc “Quảng Ngãi”.
+
+ select accompanied_service.service_code, accompanied_service.name_service from accompanied_service
+ join detail_contract on detail_contract.service_code = accompanied_service.service_code
+ join contract on contract.contract_id = detail_contract.contract_id
+ join customer on customer.customer_id = contract.customer_id
+ join type_customer on type_customer.type_customer_id = customer.type_customer_id
+ where (type_customer.type_customer_id = 1 and (customer.c_address 
+ like '%Quảng Ngãi%' or customer.c_address like '%Vinh%' ));
+
+-- task  12.	Hiển thị thông tin ma_hop_dong, ho_ten (nhân viên), ho_ten (khách hàng), 
+-- so_dien_thoai (khách hàng), ten_dich_vu, so_luong_dich_vu_di_kem 
+-- (được tính dựa trên việc sum so_luong ở dich_vu_di_kem), 
+-- tien_dat_coc của tất cả các dịch vụ đã từng được khách hàng đặt vào 3 tháng cuối năm 2020 
+-- nhưng chưa từng được khách hàng đặt vào 6 tháng đầu năm 2021.
+ 
+
+select contract.contract_id, employee.e_name, customer.c_name,customer.phone_number,
+service.service_name,sum(ifnull(detail_contract.amount,0))as so_luong, contract.deposits from contract
+left join employee on employee.employee_id = contract.employee_id
+left join service on service.service_id = contract.service_id
+left join customer on customer.customer_id = contract.customer_id
+left join detail_contract on detail_contract.contract_id = contract.contract_id
+where contract.contract_id in (select contract.contract_id from contract where year(start_date_contract)=2020
+ and (month(start_date_contract) between 10 and 12)) and (contract.contract_id not in 
+ (select contract.contract_id from contract where year(start_date_contract)=2021 
+ and month(start_date_contract) between 1 and 6)) group by contract.contract_id ;
+ 
+
+-- task 13 13.	Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi
+--  các Khách hàng đã đặt phòng. (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).
+  
+  select  accompanied_service.service_code, accompanied_service.name_service,  sum(ifnull(detail_contract.amount,0)) as so_luong from
+  detail_contract
+  join accompanied_service on detail_contract.service_code = accompanied_service.service_code
+ join contract on contract.contract_id = detail_contract.contract_id group by accompanied_service.service_code
+  having so_luong >= ( select max(detail_contract.amount)from detail_contract);
+  
+--   task 14 14.	Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất.
+--   Thông tin hiển thị bao gồm ma_hop_dong, ten_loai_dich_vu, ten_dich_vu_di_kem,
+--   so_lan_su_dung (được tính dựa trên việc count các ma_dich_vu_di_kem).
+
+select contract.contract_id, type_service.type_name_service,accompanied_service.name_service, 
+count(accompanied_service.service_code) as so_lan_su_dung from contract
+join detail_contract on detail_contract.contract_id = contract.contract_id
+join accompanied_service on accompanied_service.service_code= detail_contract.service_code
+join service on service.service_id = contract.service_id
+join type_service on type_service.type_service_id = service.type_service_id
+group by accompanied_service.service_code
+having count(accompanied_service.service_code) =1
+order by contract.contract_id ;
+
 
 
 
