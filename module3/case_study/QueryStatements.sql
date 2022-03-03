@@ -136,6 +136,81 @@ group by accompanied_service.service_code
 having count(accompanied_service.service_code) =1
 order by contract.contract_id ;
 
+-- task 15 15.	Hiển thi thông tin của tất cả nhân viên bao gồm ma_nhan_vien, ho_ten,
+--  ten_trinh_do, ten_bo_phan, so_dien_thoai, dia_chi mới chỉ lập được tối đa 3 hợp đồng từ năm 2020 đến 2021.
 
+select employee.employee_id, employee.e_name,trinh_do.ten_trinh_do,bo_phan.ten_bo_phan,
+employee.phone_number,employee.e_address, count(contract.employee_id)as so_hop_dong  from employee
+join trinh_do on trinh_do.ma_trinh_do = employee.ma_trinh_do
+join bo_phan on bo_phan.ma_bo_phan = employee.ma_bo_phan
+join contract on contract.employee_id = employee.employee_id
+where  year(contract.start_date_contract) between 2020 and  2021 
+group by employee.employee_id
+having (so_hop_dong between 0 and 3);
+
+-- task 16.	Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2019 đến năm 2021.
+-- drop temporary table temp_delete_employee;
+create temporary table temp_delete_employee(
+select contract.employee_id from contract
+join employee on employee.employee_id = contract.employee_id
+where year(contract.start_date_contract) between 2019 and 2021);
+set sql_safe_updates =0;
+delete from employee where employee.employee_id not in (select*from  temp_delete_employee);
+set sql_safe_updates =1;
+
+-- task 17 :Cập nhật thông tin những khách hàng có ten_loai_khach từ Platinum lên Diamond, 
+-- chỉ cập nhật những khách hàng đã từng đặt phòng với Tổng Tiền thanh toán 
+-- trong năm 2021 là lớn hơn 10.000.000 VNĐ. 
+-- Chi Phí Thuê + Số Lượng * Giá, với Số Lượng và Giá là từ bảng dich_vu_di_kem, hop_dong_chi_tiet) 
+drop temporary table up_laodsss;
+create temporary table up_laodsss (
+select customer.customer_id , customer.c_name from customer
+ join type_customer on type_customer.type_customer_id = customer.type_customer_id
+ join contract on contract.customer_id = customer.customer_id
+ join service on service.service_id = contract.service_id
+ join detail_contract on detail_contract.contract_id = contract.contract_id
+ join accompanied_service on accompanied_service.service_code = detail_contract.service_code
+ where customer.type_customer_id =2 group by customer_id
+ having  sum( ifnull(service.rental_cost,0)+
+ ifnull( detail_contract.amount,0)*ifnull(accompanied_service.price,0))>10000000);
+ set sql_safe_updates =0;
+ update customer 
+ set customer.type_customer_id=1
+   where customer.customer_id in (select customer_id  from  up_laodsss) ;
+ set sql_safe_updates =1;
+ 
+ -- task :18.	Xóa những khách hàng có hợp đồng trước năm 2021 (chú ý ràng buộc giữa các bảng).
+ 
+set sql_safe_updates =0;
+delete from customer
+ where customer.customer_id in
+(select contract.customer_id from contract
+where year(start_date_contract)<2021);
+set sql_safe_updates =1;
+
+-- task 19 19.	Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.
+create temporary table cap_nhat(
+select accompanied_service.service_code,  accompanied_service.name_service , accompanied_service.price, accompanied_service.unit 
+from accompanied_service
+join detail_contract on detail_contract.service_code = accompanied_service.service_code
+join contract on contract.contract_id = detail_contract.contract_id
+where  year(start_date_contract) =2020 and detail_contract.amount>10  group by  accompanied_service.service_code);
+set sql_safe_updates =0;
+update accompanied_service
+set accompanied_service.price = accompanied_service.price*2
+where accompanied_service.service_code in 
+(select service_code from cap_nhat );
+set sql_safe_updates =1;
+
+-- 20.	Hiển thị thông tin của tất cả các nhân viên và khách hàng có trong hệ thống,
+--  thông tin hiển thị bao gồm id (ma_nhan_vien, ma_khach_hang), ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi.
+
+use management_furama;
+select management_furama.customer.customer_id, management_furama.customer.c_name,management_furama.customer.c_email,
+management_furama.customer.day_of_birth, management_furama.customer.phone_number,
+ management_furama.customer.c_address, 'khach_hang' as role from
+management_furama.customer union all select management_furama.employee.employee_id, management_furama.employee.e_name,
+management_furama.employee.e_email, management_furama.employee.day_of_birth,management_furama.employee.phone_number,
+management_furama.employee.e_address, 'nhan_vien' as role from management_furama.employee
 
 

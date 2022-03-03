@@ -1,6 +1,7 @@
-create database managament_furama;
-use managament_furama;
+-- drop database management_furama;
 
+create database management_furama;
+use management_furama;
 -- --tạo bang vi_tri-- 
 create table vitri(
 ma_vi_tri int auto_increment ,
@@ -34,9 +35,9 @@ ma_vi_tri int,
 ma_trinh_do int,
 ma_bo_phan int,
 primary key (employee_id),
-foreign key(ma_vi_tri)references vitri(ma_vi_tri),
-foreign key (ma_trinh_do)references trinh_do(ma_trinh_do),
-foreign key(ma_bo_phan)references bo_phan(ma_bo_phan)
+foreign key(ma_vi_tri)references vitri(ma_vi_tri) on delete cascade on update cascade,
+foreign key (ma_trinh_do)references trinh_do(ma_trinh_do) on delete cascade on update cascade,
+foreign key(ma_bo_phan)references bo_phan(ma_bo_phan) on delete cascade on update cascade
 );
 -- tạo bang loai khach-- 
 create table type_customer(
@@ -57,7 +58,7 @@ phone_number varchar(45),
 c_email varchar(45),
 c_address varchar(45),
 primary key (customer_id),
-foreign key(type_customer_id)references type_customer(type_customer_id)
+foreign key(type_customer_id)references type_customer(type_customer_id) on delete cascade on update cascade
     );
     
    -- tạo bảng laoi dịch vụ--
@@ -87,8 +88,8 @@ foreign key(type_customer_id)references type_customer(type_customer_id)
    area_pool double,
    number_floor int,
    primary key(service_id),
-   foreign key(type_rent_id)references type_rent(type_rent_id),
-   foreign key (type_service_id)references type_service(type_service_id)
+   foreign key(type_rent_id)references type_rent(type_rent_id) on delete cascade on update cascade,
+   foreign key (type_service_id)references type_service(type_service_id) on delete cascade on update cascade
    );
 
 	-- tao bangr hop ddoong -- 
@@ -101,9 +102,9 @@ foreign key(type_customer_id)references type_customer(type_customer_id)
    customer_id int,
     service_id int,
    primary key (contract_id),
-   foreign key (employee_id)references employee(employee_id),
-   foreign key(customer_id)references  customer(customer_id ),
-   foreign key ( service_id)references service( service_id)
+   foreign key (employee_id)references employee(employee_id) on delete cascade on update cascade,
+   foreign key(customer_id)references  customer(customer_id ) on delete cascade on update cascade,
+   foreign key ( service_id)references service( service_id) on delete cascade on update cascade
    );
    
    -- taoj bangr dichj vu ddi kem-- 
@@ -123,8 +124,8 @@ contract_id int ,
 service_code int,
 amount int,
 primary key (detail_contract_code),
-foreign key (contract_id)references contract(contract_id),
-foreign key (service_code)references accompanied_service(service_code)
+foreign key (contract_id)references contract(contract_id) on delete cascade on update cascade,
+foreign key (service_code)references accompanied_service(service_code) on delete cascade on update cascade
 );
 
     
