@@ -1,0 +1,124 @@
+.container{
+    width: 100%;
+    height: auto;
+
+}
+.menu{
+    width: 100%;
+    height: 120px;
+    background-color: darkorange;
+
+}
+.up{
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    padding-top: 10px;
+
+}
+.up ul {
+    list-style: none;
+    margin-top: 0px
+
+}
+.up ul li{
+    display: inline-block;
+    padding: 10px;
+
+}
+.up ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+}
+.up ul li img {
+    vertical-align: middle;
+}
+.logo img{
+    padding-right: 50px;
+}
+.down {
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
+}
+.search {
+    height: 35px;
+    width: 550px;
+    background-color: white;
+    margin-right: 30px;
+    border-radius: 5px
+
+}
+.search input{
+    width: 470px;
+    height: 30px;
+    padding-left: 20px;
+    border-radius: 5px
+}
+
+.search button img {
+    width: 20px;
+    height: 10px;
+    vertical-align: middle;
+
+}
+.content{
+    width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+
+
+}
+.itemp img {
+    width: 150px ;
+    height: 150px ;
+    border-radius: 10px;
+}
+.itemp1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.itemp1 img {
+    width: 310px;
+}
+
+.itemp2{
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+.itemp2 img {
+    width: 310px;
+}
+.itemp1 {
+    position: relative;
+}
+
+.itemp1 h2{
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    color: black;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
