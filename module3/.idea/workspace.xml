@@ -2,47 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ef377d0-fd87-46e5-8ecb-de8f07a740b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../module2/src/LuyenTapONha/folder/thiett_ke_cho_tot/ChoTot.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module2/src/LuyenTapONha/folder/thiett_ke_cho_tot/StyleCss.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module2/src/LuyenTapONha/folder/thiett_ke_cho_tot/image/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module2/src/LuyenTapONha/folder/thiett_ke_cho_tot/image/logo1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss6_cascading_style_sheet/bai_tap/nhung_css_vao_html/NhungCss.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss6_cascading_style_sheet/bai_tap/nhung_css_vao_html/StyleCss.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss6_cascading_style_sheet/bai_tap/nhung_css_vao_html/dinh_dang_van_bang/DinhDangVanBan.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss6_cascading_style_sheet/bai_tap/nhung_css_vao_html/dinh_dang_van_bang/StyleCss.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss6_cascading_style_sheet/bai_tap/wep_truyen_tranh/HomePage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss6_cascading_style_sheet/bai_tap/wep_truyen_tranh/StyleCss.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss6_cascading_style_sheet/thuc_hanh/su_dung_css/StyleCss.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss6_cascading_style_sheet/thuc_hanh/su_dung_css/SuDungCss.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/src/file.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/module3.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss1_co_so_du_lieu_quan_he/bai_tap/XayDungCoSoDuLieuQuanLiSinhVien.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss1_co_so_du_lieu_quan_he/thuc_hanh/TaoBangTrenMySqlWorkBrench.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss1_co_so_du_lieu_quan_he/thuc_hanh/TaoCsdlTrenMySQLWorkbrench.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss1_co_so_du_lieu_quan_he/thuc_hanh/XoaCsdlTrenMySQLWorkbrench.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss1_co_so_du_lieu_quan_he/thuc_hanh/studen_management_students.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss2_thiet_ke_va_tao_csdl/bai_tap/ChuyenDoiErdThanhMoHinhQuanHe.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss2_thiet_ke_va_tao_csdl/bai_tap/QuanLiBanHang.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss2_thiet_ke_va_tao_csdl/thuc_hanh/QuanLiDonDatHang.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss2_thiet_ke_va_tao_csdl/thuc_hanh/TaoBangTrongCsdl.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss2_thiet_ke_va_tao_csdl/thuc_hanh/TaoCsdlQuanLiSinhVien.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss3_thao_tac_csdl/bai_tap/QuanLiBanHang.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss3_thao_tac_csdl/bai_tap/QuanLiSinhVien.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss3_thao_tac_csdl/thuc_hanh/TruyVanDuLieuQuanLiSinhVien.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss3_thao_tac_csdl/thuc_hanh/management_student.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss4_cac_ham_thong_dung_trong_sql/bai_tap/management_student.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss4_cac_ham_thong_dung_trong_sql/thuc_hanh/ManagementStudent.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss5_sql_view_index/bai_tap/products.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss5_sql_view_index/thuc_hanh/ChiMucTrongMySql.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss5_sql_view_index/thuc_hanh/TaoCsdlClassicmodels.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss5_sql_view_index/thuc_hanh/TruyenThamSoVaoStoreProcedure.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss5_sql_view_index/thuc_hanh/store_procedure.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/luyen_tap/thiett_ke_cho_tot/StyleCss.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/luyen_tap/thiett_ke_cho_tot/StyleCss.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss6_cascading_style_sheet/bai_tap/wep_truyen_tranh/HomePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_cascading_style_sheet/bai_tap/wep_truyen_tranh/HomePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss6_cascading_style_sheet/bai_tap/wep_truyen_tranh/StyleCss.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_cascading_style_sheet/bai_tap/wep_truyen_tranh/StyleCss.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +63,7 @@
       <workItem from="1646367576032" duration="8709000" />
       <workItem from="1646384853985" duration="562000" />
       <workItem from="1646385612239" duration="68000" />
-      <workItem from="1646386709171" duration="2530000" />
+      <workItem from="1646386709171" duration="5250000" />
     </task>
     <servers />
   </component>
