@@ -1,0 +1,106 @@
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.col-12{
+    width: 100%;
+    height: 50px;
+    background-color: violet;
+    position: relative;
+}
+.header-1 {
+   display: flex;
+    list-style: none;
+    float: left;
+}
+.header-1-1{
+  margin-left: 900px;
+}
+.header-1-2{
+    margin-left: 20px;
+    padding: 0;
+}
+.col-12-1{
+    width: 100%;
+    height: 500px;
+    display: flex;
+
+}
+.left{
+    width: 15%;
+    height: 500px;
+    background-color: violet;
+}
+.right{
+    width: 15%;
+    height: 500px;
+    background-color: blue;
+}
+.center{
+
+    width: 70%;
+    height: 500px;
+    background-color: chocolate;
+}
+.col-12-2{
+    width: 100%;
+    height: 40px;
+    background-color: brown;
+    padding: 0;
+    margin: 0;
+}
+.left a{
+    margin-left: 50px;
+}
+.left-1{
+    position: relative;
+    top: 50px;
+}
+.left-2{
+    position: absolute;
+    top: 150px;
+}
+.left-3{
+    position: absolute;
+    top: 200px;
+}
+.right input{
+   width: 150px;
+    height: 70px;
+    margin-left: 30px;
+
+}
+.right-1{
+    top: 100px;
+    position: absolute;
+}
+.right-2{
+    top: 200px;
+    position: absolute;
+}
+.col-12-2 p{
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+@media screen and(max-width: 486px) {
+    [class*=col-]{
+        width: 100%;
+    }
+
+}
+@media screen and(max-width: 768px) {
+    [class*=col-]{
+        width: 50%;
+    }
+
+}
