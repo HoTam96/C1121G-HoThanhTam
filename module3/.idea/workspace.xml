@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ef377d0-fd87-46e5-8ecb-de8f07a740b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ss7_Thiet_ke_bo_cuc_trang_wep/bai_tap/phat_trien_trang_wep/StyleCss.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Thiet_ke_bo_cuc_trang_wep/bai_tap/phat_trien_trang_wep/WepHoatHinhTrucTuyen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Thiet_ke_bo_cuc_trang_wep/bai_tap/tao_lay_out_rwd/StyleCssRwd.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss7_Thiet_ke_bo_cuc_trang_wep/bai_tap/tao_lay_out_rwd/TaoLayoutVoiRWD.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss8_bootstrap_co_ban/bai_tap/Tao_galerry/StyleCssGallery.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss8_bootstrap_co_ban/bai_tap/Tao_galerry/TaoGallery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss8_bootstrap_co_ban/thiet_ke_lading_page/StyleCssLadingPage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss8_bootstrap_co_ban/thiet_ke_lading_page/ThietKeLadingPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss8_bootstrap_co_ban/thuc_hanh/xay_dung_form_login/StyleCssLogin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss8_bootstrap_co_ban/thuc_hanh/xay_dung_form_login/XayDungFormLogin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,6 +69,7 @@
       <workItem from="1646386709171" duration="5650000" />
       <workItem from="1646409489064" duration="5557000" />
       <workItem from="1646624672279" duration="35554000" />
+      <workItem from="1646714790344" duration="12964000" />
     </task>
     <servers />
   </component>
