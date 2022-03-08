@@ -76,34 +76,6 @@ body{
 }
 .footer-anh{
     display: flex;
-    justify-content: space-around;
-}
-.card-text a  {
-    color: blue;
-    margin-left: 60px;
-    text-decoration: none;
-}
-.footer-last{
-    display: flex;
-
-}
-.footer-last .a{
-    flex: 1;
-
 }
 
-.footer-last .b {
-    flex: 2;
 
-}
-.footer-last img {
-    height: 300px;
-
-}
-.footer-star{
-    height: 150px;
-    background-color:#1a161f;
-    color: #CDCDCD;
-    margin: 0;
-    padding: 0;
-}
