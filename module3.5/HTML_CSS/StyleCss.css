@@ -1,0 +1,124 @@
+body{
+    font-family: Arial;
+    font-size: 13px;
+    color: #333333;
+}
+#header{
+    background-color: #333333;
+}
+#search, #cart, #logo  {
+   height: 60px;
+
+}
+#search, #cart  {
+    padding-top: 15px;
+
+}
+#search input{
+    width: 280px;
+    height: 30px;
+    font-size: 13px;
+    border-radius: 3px 0 0 3px;
+}
+#search button{
+    width: 80px;
+    height: 30px;
+    color: #fff;
+    background-color: #ff3333 ;
+    font-size: 13px;
+    border-radius: 3px 0 0 3px;
+}
+#cart{
+    text-align: center;
+}
+#cart a{
+    color: #fff;
+    margin-right:10px;
+}
+#cart span{
+    color: #fff;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #ff3333;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50px;
+}
+/*end phần 1*/
+#body{
+   background-color: #e7ecf4;
+}
+#menu{
+    padding-top: 5px;
+}
+#menu ul{
+    margin: 0px;
+    padding: 0px;
+display: flex;
+    background : #ff3333 ;
+}
+#menu ul li{
+    list-style: none;
+    height: 40px;
+    padding: 0 15px;
+    line-height: 40px;
+    border-right: 1px solid #cc0000;
+
+
+}
+#menu ul li a {
+    font-size: 13px;
+    color: #fff;
+}
+/*sản phẩm nỗi bật*/
+
+.product h3{
+    font-size: 18px;
+    padding-top: 15px;
+}
+.product img{
+    width: 128px;
+    height: 180px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+.product h4{
+    font-weight: bold;
+    color: #333;
+    font-size: 13px;
+}
+.product span{
+    color: #cc0000;
+    font-weight: bold;
+}
+.product-item{
+    text-align: center;
+    margin-right: 5px; !important;
+    margin-left: 5px; !important;
+}
+
+.product-list{
+    margin-right: -5px;
+    margin-left: -5px;
+}
+#footer-top{
+    padding-top: 20px;
+}
+.logo h3, .dia-chi h3 , .hot-line h3 , .dich-vu h3{
+    font-size: 18px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+
+}
+#footer-bottom{
+    background-color: #333333;
+}
+#footer-bottom p{
+    color: #e7ecf4;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+    line-height: 30px;
+}

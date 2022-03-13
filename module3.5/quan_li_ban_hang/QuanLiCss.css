@@ -1,0 +1,155 @@
+body {
+    font-family: Arial;
+
+}
+
+#header {
+    background-color: #333333;
+    padding-bottom: 3px;
+}
+
+#logo, #search, #cart {
+    height: 60px;
+
+}
+
+#search, #cart {
+    padding-top: 15px;
+}
+
+#logo {
+    padding-top: 15px;
+}
+
+#search input {
+    width: 280px;
+    border-radius: 5px;
+    height: 30px;
+}
+
+#search button {
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 13px;
+    background-color: #cc0000;
+    color: whitesmoke;
+}
+
+#cart {
+    text-align: center;
+}
+
+#cart a {
+    font-weight: bold;
+    font-size: 13px;
+    color: #e7ecf4;
+}
+
+#cart label {
+    line-height: 30px;
+    display: inline-block;
+    width: 30px;
+    background-color: #cc0000;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 5px;
+    padding: 0;
+
+}
+
+/*kết thúc phần css cho header*/
+
+/*bắt đầu css body*/
+/*css menu*/
+#body {
+    background-color: #e7ecf4;
+    padding-bottom: 10px;
+}
+
+#menu ul {
+    display: flex;
+    list-style: none;
+}
+
+#menu ul li a {
+    font-size: 15px;
+    /*margin-left: 20px;*/
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 15px;
+}
+
+#menu ul {
+    background-color: #cc0000;
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul li{
+    line-height: 40px;
+    border-right: 1px black solid;
+}
+#side-bar img{
+    width: 99.5%;
+    margin-top: 5px;
+}
+/*css sản phẩm nỗi bât*/
+.p{
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding-bottom: 0px;
+    margin-left: 2px;
+
+}
+
+.card-list span {
+    font-weight: bold;
+    color: #cc0000;
+}
+.card-list h4 {
+    font-size: 17px;
+    font-weight: bold;
+}
+.center{
+text-align: center;
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 5px;
+ }
+.card-list{
+    margin-right: -5px;
+    margin-left: -5px;
+}
+.i{
+width: 130px;
+    height: 200px;
+}
+/*kết thúc phần body content*/
+.footer-a{
+    padding-top: 15px;
+}
+
+.footer-p{
+    border-bottom: 1px black solid;
+}
+.footer-bottom p {
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    line-height: 50px;
+    margin-bottom: 0px;
+    color: #e7ecf4;
+}
+.footer-bottom{
+    background-color: #333333;
+}
+
+
+
+
+
+
+
+
+

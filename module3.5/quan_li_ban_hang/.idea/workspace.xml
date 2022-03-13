@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ab954bb2-f42f-4ca5-9e54-ebe2e1ce5919" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/StyleCss.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/Thiet_ke_wep.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/banner-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/banner-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/banner-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/banner-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/banner-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/banner-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/img-ship.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/logo-footer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/logo-footer.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/logo.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/mua-oppo-trung-vision.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/product-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/product-10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/product-11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/product-12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/product-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/product-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/product-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/product-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/product-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/product-7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/product-8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/product-9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/slide-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/slide-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/slide-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/slide-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/slide-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HTML_CSS/img/slide-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demoservlet/src/main/java/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demoservlet/src/main/java/dao/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demoservlet/src/main/java/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demoservlet/src/main/java/service/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demoservlet/src/main/webapp/customer/editCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demoservlet/src/main/webapp/customer/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demoservlet/src/main/webapp/customer/newCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomePage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QuanLiCss.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/banner-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/banner-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/banner-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/banner-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/banner-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/banner-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/img-ship.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/logo-footer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/logo-footer.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/logo.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/mua-oppo-trung-vision.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/product-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/product-10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/product-11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/product-12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/product-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/product-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/product-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/product-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/product-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/product-7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/product-8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/product-9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/slide-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/slide-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/slide-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/slide-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/slide-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/slide-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/src/ss10_jsp_jstl/bai_tap/hien_thi_danh_danh_khach_hang/src/main/java/Service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/src/ss10_jsp_jstl/bai_tap/hien_thi_danh_danh_khach_hang/src/main/java/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/src/ss10_jsp_jstl/bai_tap/hien_thi_danh_danh_khach_hang/src/main/java/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/src/ss10_jsp_jstl/bai_tap/ung_dung_calculator/src/main/java/CalculatorServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/src/ss10_jsp_jstl/thuc_hanh/Diconary/src/main/webapp/Diconary.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/src/ss10_jsp_jstl/thuc_hanh/currency_converter_app/src/main/webapp/converter.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/src/ss11_mvs_model/bai_tap/management_product/src/main/java/controller/ProductServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/src/ss11_mvs_model/bai_tap/management_product/src/main/java/models/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/src/ss11_mvs_model/bai_tap/management_product/src/main/java/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/src/ss11_mvs_model/bai_tap/management_product/src/main/java/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/src/ss11_mvs_model/bai_tap/management_product/src/main/webapp/Create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/src/ss11_mvs_model/bai_tap/management_product/src/main/webapp/HomePage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/src/ss11_mvs_model/thuc_hanh/ung_dung_quan_li_khach_hang/src/main/java/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/src/ss11_mvs_model/thuc_hanh/ung_dung_quan_li_khach_hang/src/main/java/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/src/ss11_mvs_model/thuc_hanh/ung_dung_quan_li_khach_hang/src/main/java/reponsility/CustomerReponsitory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/src/ss11_mvs_model/thuc_hanh/ung_dung_quan_li_khach_hang/src/main/java/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/src/ss11_mvs_model/thuc_hanh/ung_dung_quan_li_khach_hang/src/main/java/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/src/ss11_mvs_model/thuc_hanh/ung_dung_quan_li_khach_hang/src/main/webapp/customer/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/src/ss11_mvs_model/thuc_hanh/ung_dung_quan_li_khach_hang/src/main/webapp/customer/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/src/ss11_mvs_model/thuc_hanh/ung_dung_quan_li_khach_hang/src/main/webapp/customer/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/src/ss11_mvs_model/thuc_hanh/ung_dung_quan_li_khach_hang/src/main/webapp/customer/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module3/src/ss11_mvs_model/thuc_hanh/ung_dung_quan_li_khach_hang/src/main/webapp/customer/view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dome_tomcat/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dome_tomcat/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dome_tomcat/.gradle/6.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dome_tomcat/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dome_tomcat/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dome_tomcat/.gradle/6.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dome_tomcat/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dome_tomcat/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dome_tomcat/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dome_tomcat/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dome_tomcat/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dome_tomcat/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dome_tomcat/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dome_tomcat/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dome_tomcat/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dome_tomcat/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dome_tomcat/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dome_tomcat/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dome_tomcat/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dome_tomcat/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dome_tomcat/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dome_tomcat/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module3.1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module3.1/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module3.1/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module3.1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module3.1/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module3.1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module3.1/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module3.1/src/main/java/severlet/SeverletDeMo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module3.1/src/main/wepapp/WEP-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module3.1/target/classes/severlet/SeverletDeMo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/src/main/java/ServerTimeServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/src/main/webapp/hom.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/src/test/java/HienThiThoiGianHeThongTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled/.idea/artifacts/web_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled/.idea/copyright/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled/.idea/scopes/scope_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled/JavaEEWebApp.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled/untitled.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/.gradle/6.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/.gradle/6.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/src/file.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled1/src/main/webapp/index.jsp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="26JxJSXy6vxPMbytTF2IDJCPRja" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../demoservlet" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ab954bb2-f42f-4ca5-9e54-ebe2e1ce5919" name="Default Changelist" comment="" />
+      <created>1647155419514</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647155419514</updated>
+      <workItem from="1647155490424" duration="92000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1647155614972">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1647155614972" />
+  </component>
+</project>
