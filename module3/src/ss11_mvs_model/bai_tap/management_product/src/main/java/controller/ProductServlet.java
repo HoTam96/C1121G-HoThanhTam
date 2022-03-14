@@ -66,7 +66,7 @@ public class ProductServlet extends HttpServlet {
 
     }
 
-    //tạo mới một sản phẩm
+    //tạo mới một sản phẩm nhé
     private void createProduct(HttpServletRequest request , HttpServletResponse response) throws IOException, ServletException {
         ProductServiceImpl productService = new ProductServiceImpl();
         int id = Integer.parseInt(request.getParameter("id"));
