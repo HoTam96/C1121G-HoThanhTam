@@ -15,9 +15,12 @@
 <h1 style="text-align: center">Management Product</h1>
 <h2 style="text-align: center">
     <a href="Create.jsp?">Create new Prodcut</a>
-    <a href="#">Get List All Product</a>
+    <a href="product?">Get List All Product</a>
 </h2>
-<form style="text-align: center">
+<c:if test="${message!=null}">
+    <p style="color: red;text-align: center;font-size: 18px">${message}</p>
+</c:if>
+<form style="text-align: center" action="product?action=search" method="post">
     <input type="text" name="search" size="45">
     <input type="submit" value="tìm kiếm">
 </form>
@@ -38,7 +41,7 @@
 
         <tr>
             <td>${i.id}</td>
-            <td>${i.name}</td>
+            <td><a href="product?action=view&id=${i.id}">${i.name}</a></td>
             <td>${i.description}</td>
             <td>${i.price}</td>
             <td>${i.yearOfManufacture}</td>

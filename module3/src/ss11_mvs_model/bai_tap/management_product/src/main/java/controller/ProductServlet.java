@@ -22,7 +22,8 @@ public class ProductServlet extends HttpServlet {
             case "create":
                 createProduct(request,response);
                 break;
-            case "delete":
+            case "search":
+                searchProduct(request,response);
                 break;
             case "edit":
                 update(request,response);
@@ -49,6 +50,7 @@ public class ProductServlet extends HttpServlet {
               showEdit(request,response);
               break;
           case "view":
+              showViewName(request,response);
               break;
           default:
               getProductList(response,request);
@@ -120,6 +122,31 @@ public class ProductServlet extends HttpServlet {
         Product product = new Product(id,name,description,price,year,country);
         productService.update(product);
         response.sendRedirect("product");
+
+    }
+    private void searchProduct(HttpServletRequest request , HttpServletResponse response) throws ServletException, IOException {
+        ProductServiceImpl productService = new ProductServiceImpl();
+        String name = request.getParameter("search");
+        List<Product>productList=productService.search(name);
+        if (productList!=null){
+            request.setAttribute("list", productList);
+            request.getRequestDispatcher("HomePage.jsp").forward(request, response);
+        }else {
+            String message = "không tìm thấy tên sản phẩm";
+            request.setAttribute("message",message);
+            request.getRequestDispatcher("HomePage.jsp").forward(request, response);
+        }
+
+
+
+
+    }
+    private void showViewName(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
+        ProductServiceImpl productService = new ProductServiceImpl();
+        int id = Integer.parseInt(request.getParameter("id"));
+        Product product = productService.getProductById(id);
+        request.setAttribute("product",product);
+        request.getRequestDispatcher("View.jsp").forward(request,response);
 
     }
 
