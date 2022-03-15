@@ -1,6 +1,6 @@
 package service.impl;
 
-import models.Product;
+import model.Product;
 import service.ProductService;
 
 import java.util.ArrayList;
@@ -20,6 +20,13 @@ public class ProductServiceImpl implements ProductService {
         Product product5 = new Product(5, "Lead ", "xe dành cho những ninja", 38.000000, "2021", "Pháp");
         Product product6 = new Product(6, "ExCenter", "xe quốc dân cho anh em trộm chó", 55.000000, "2020", "Việt Nam");
 
+        Product product7 = new Product(7, "AbLack", "xe thích hợp mọi lứa tuổi", 44.000000, "2022", "nhật bản");
+        Product product8 = new Product(8, "SiriUs", "xe giá rẻ", 28.000000, "2022", "nhật bản");
+        Product product9 = new Product(9, "winner", "xe tay côn , công xuất 150 mã lực", 40.000000, "2022", "hàn quốc");
+        Product product10 = new Product(10, "Grand", "xe dành cho nữ , kiểu dáng sang trọng", 33.000000, "2022", "Anh");
+        Product product11 = new Product(11, "Lead ", "xe dành cho những ninja", 38.000000, "2021", "Pháp");
+        Product product12 = new Product(12, "ExCenter", "xe quốc dân cho anh em trộm chó", 55.000000, "2020", "Việt Nam");
+
 
         productMap.put(product1.getId(), product1);
         productMap.put(product2.getId(), product2);
@@ -27,6 +34,12 @@ public class ProductServiceImpl implements ProductService {
         productMap.put(product4.getId(), product4);
         productMap.put(product5.getId(), product5);
         productMap.put(product6.getId(), product6);
+        productMap.put(product7.getId(), product7);
+        productMap.put(product8.getId(), product8);
+        productMap.put(product9.getId(), product9);
+        productMap.put(product10.getId(), product10);
+        productMap.put(product11.getId(), product11);
+        productMap.put(product12.getId(), product12);
 
     }
 
@@ -57,16 +70,14 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<Product> search(String name) {
         List<Product> productList = new ArrayList<>(productMap.values());
-        List<Product> products = null;
+        List<Product> products = new ArrayList<>();
         for (Product element : productList) {
             if (element.getName().contains(name)) {
-                products = new ArrayList<>();
                 products.add(element);
             }
         }
         return products;
     }
-
 
     @Override
     public Product getProductById(int id) {

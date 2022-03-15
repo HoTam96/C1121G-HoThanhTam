@@ -1,6 +1,6 @@
 package controller;
 
-import models.Product;
+import model.Product;
 import service.impl.ProductServiceImpl;
 
 import javax.servlet.ServletException;
@@ -30,6 +30,9 @@ public class ProductServlet extends HttpServlet {
                 break;
             case "view":
                 break;
+            case "delete":
+                deleteProduct(request,response);
+                break;
             default:
                 getProductList(response,request);
         }
@@ -43,14 +46,14 @@ public class ProductServlet extends HttpServlet {
           action="";
       }
       switch (action){
-          case "delete":
-              deleteProduct(request,response);
-              break;
           case "edit":
               showEdit(request,response);
               break;
           case "view":
               showViewName(request,response);
+              break;
+          case "search":
+              searchProduct(request,response);
               break;
           default:
               getProductList(response,request);
