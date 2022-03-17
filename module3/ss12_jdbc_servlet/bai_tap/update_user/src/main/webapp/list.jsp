@@ -49,7 +49,9 @@
                 <td><c:out value="${user.email}"/></td>
                 <td><c:out value="${user.country}"/></td>
                 <td>
-                    <a href="/users?action=edit&id=${user.id}">Edit</a>
+                  <button  type="button" class="btn btn-primary" data-bs-toggle="modal"><a href="/users?action=edit&id=${user.id}">Edit</a>Edit
+                  </button>
+
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" onclick="getId(${user.id})"
                             data-bs-target="#exampleModal">
                         delete
@@ -60,10 +62,11 @@
                 </td>
             </tr>
         </c:forEach>
+        <div>
         <c:forEach begin="1" end="${endPage}" var="i">
-            <label><a href="users?index=${i}&action=search&search=${country}"></a></label>
+            <a href="users?index=${i}&action=search&search=${country}">${i}</a>
         </c:forEach>
-
+        </div>
 
 
 
@@ -106,11 +109,11 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-<%--<script>--%>
-<%--    $(document).ready(function () {--%>
-<%--        $('#example').DataTable();--%>
-<%--    });--%>
-<%--</script>--%>
+<script>
+    $(document).ready(function () {
+        $('#example').DataTable();
+    });
+</script>
 <script>
     function getId(id) {
         document.getElementById("idDelete").value = id;

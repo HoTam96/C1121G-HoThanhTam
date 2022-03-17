@@ -135,6 +135,7 @@ public class UserServlet extends HttpServlet {
         if (total%3!=0){
             endPage++;
         }
+
         List<User>userList=iUserService.getByName(country,index);
         request.setAttribute("listUser", userList);
         request.setAttribute("endPage",endPage);

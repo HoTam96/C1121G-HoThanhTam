@@ -77,7 +77,6 @@ public class UserReponsitory implements IUserReponsitory {
                         rs.getString(3), rs.getString(4));
                 userList.add(user);
             }
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -132,11 +131,12 @@ public class UserReponsitory implements IUserReponsitory {
 @Override
     public List<User> getByName(String country, int index) {
 
-        String query = "select users.id,users.name,users.email,users.country from users where country like ? limit ?*3-3,3";
+        String query = "select users.id,users.name,users.email,users.country from users where country like ? limit ?,3";
         try {
             conn = BaseRepository.getConnection();
             ps = conn.prepareStatement(query);
             ps.setString(1,"%"+country+"%");
+            index=index*3-3;
             ps.setInt(2,index);
             rs = ps.executeQuery();
             List<User> userList = new ArrayList<>();
@@ -156,7 +156,7 @@ public class UserReponsitory implements IUserReponsitory {
 //    search cho ra số lượng phần tử có trong 1 trang
 
     public int getCount(String name ){
-        String query = "select count(users.id) from users where users.name like ?";
+        String query = "select count(users.id) from users where users.country like ?";
         int endPage = 0;
         try {
             conn = BaseRepository.getConnection();

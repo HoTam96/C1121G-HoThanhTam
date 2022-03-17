@@ -1,0 +1,68 @@
+#header{
+    background-color: #4f4b4b;
+}
+.ip input {
+    height: 40px;
+    width: 250px;
+    border-radius: 5px;
+}
+.ip button{
+    height: 40px;
+    font-size: 14px;
+    width: 100px;
+    color: aliceblue;
+    background-color: red;
+}
+.ca label{
+    font-family: Arial;
+    font-size: 17px;
+    color: aliceblue;
+    line-height: 30px;
+}
+.ca span{
+    text-align: center;
+   width: 30px;
+  line-height: 30px;
+    background-color: red;
+    display: inline-block;
+    border-radius: 50%;
+
+}
+.search, .logo, .ca  {
+    padding-top: 10px;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+}
+
+/*kết thúc phần header*/
+#menu ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: red;
+
+}
+#menu ul li {
+    margin-left: 50px;
+
+}
+#menu ul li a {
+    text-decoration: none;
+    line-height: 40px;
+    font-family: Arial;
+    font-size: 17px;
+    font-weight: bold;
+}
+/*phần cart*/
+.cart-img img{
+    box-sizing: border-box;
+width: 200px;
+height: 300px;
+    margin-left: 50px;
+}
+.cart-img p {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
