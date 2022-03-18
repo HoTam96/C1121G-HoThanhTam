@@ -8,7 +8,8 @@ public class Employee extends Person {
     private Integer divisionId;
     private String userName;
 
-    public Employee(Integer employeId, double salary, Integer positionId, Integer educationDegreeId, Integer divisionId, String userName) {
+    public Employee(String name, String birthDay, String id_card, String phone, String email, String address, Integer employeId, double salary, Integer positionId, Integer educationDegreeId, Integer divisionId, String userName) {
+        super(name, birthDay, id_card, phone, email, address);
         this.employeId = employeId;
         this.salary = salary;
         this.positionId = positionId;
@@ -16,6 +17,7 @@ public class Employee extends Person {
         this.divisionId = divisionId;
         this.userName = userName;
     }
+
 
     public Employee() {
     }
@@ -79,5 +81,4 @@ public class Employee extends Person {
                 ", userName='" + userName + '\'' +
                 '}';
     }
-
 }

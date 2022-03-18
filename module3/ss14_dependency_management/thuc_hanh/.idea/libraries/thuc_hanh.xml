@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="thuc_hanh">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/calculator_packaking/thuc_hanh.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

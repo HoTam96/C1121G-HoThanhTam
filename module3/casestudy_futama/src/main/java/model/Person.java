@@ -3,16 +3,14 @@ package model;
 public abstract class Person {
     private String name;
     private String birthDay;
-    private int gender ;
     private String id_card;
     private String phone;
     private String email;
     private String address;
 
-    public Person(String name, String birthDay, int gender, String id_card, String phone, String email, String address) {
+    public Person(String name, String birthDay, String id_card, String phone, String email, String address) {
         this.name = name;
         this.birthDay = birthDay;
-        this.gender = gender;
         this.id_card = id_card;
         this.phone = phone;
         this.email = email;
@@ -36,14 +34,6 @@ public abstract class Person {
 
     public void setBirthDay(String birthDay) {
         this.birthDay = birthDay;
-    }
-
-    public int getGender() {
-        return gender;
-    }
-
-    public void setGender(int gender) {
-        this.gender = gender;
     }
 
     public String getId_card() {
@@ -83,7 +73,6 @@ public abstract class Person {
         return "Person{" +
                 "name='" + name + '\'' +
                 ", birthDay='" + birthDay + '\'' +
-                ", gender=" + gender +
                 ", id_card='" + id_card + '\'' +
                 ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
