@@ -9,7 +9,7 @@
 <center>
     <h1>User Management</h1>
     <h2>
-        <a href="HomPageFurama.jsp?action=users">Back Home</a>
+        <a href="HomPageFurama.jsp?action=user">Back Home</a>
     </h2>
 </center>
 <div align="center">
@@ -71,7 +71,7 @@
             <tr>
                 <th>position</th>
                 <td>
-                    <select name="option1">
+                    <select name="position">
                         <c:forEach var="position" items="${position}">
                             <option value="${position.positionId}">${position.positionName}</option>
                         </c:forEach>
@@ -82,7 +82,7 @@
             <tr>
                 <th>Education Degree</th>
                 <td>
-                    <select name="option2">
+                    <select name="education">
                         <c:forEach items="${education}" var="i">
                             <option value="${i.educationDegreeId}">${i.educationDegreeName}</option>
                         </c:forEach>
@@ -94,7 +94,7 @@
             <tr>
                 <th>Division</th>
                 <td>
-                    <select name="option3">
+                    <select name="division">
                         <c:forEach items="${division}" var="i">
                             <option value="${i.divisionId}">${i.divisionName}</option>
                         </c:forEach>

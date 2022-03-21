@@ -28,31 +28,40 @@
             </div>
         </div>
 
-        <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Hãy tương tác với tôi</p>
+        <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0"> Bạn đang tương tác với service</p>
 
         <ul class="nav flex-column bg-white mb-0">
             <li class="nav-item">
-                <a href="HomPageFurama.jsp?" class="nav-link text-dark font-italic bg-light">
+                <a href="../HomPageFurama.jsp?" class="nav-link text-dark font-italic bg-light">
                     <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
                     Home
                 </a>
             </li>
+
+
+            <li class="nav-item dropdown nav-item">
+                <a class="fa fa-address-card text-primary mr-3 nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Create
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <c:forEach var="i" items="${serviceType}">
+                            <li><a class="dropdown-item" href="Service?action=create&id=${i.getServiceTypeId()}">${i.getServiceName()}</a></li>
+                    </c:forEach>
+
+                </ul>
+            </li>
+
+
             <li class="nav-item">
-                <a href="Employee?action=create" class="nav-link text-dark font-italic">
-                    <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-                    create
+                <a href="https://www.facebook.com/tam.hothanh.77/" target="_blank" class="nav-link text-dark font-italic">
+                    <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                    FaceBook
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link text-dark font-italic">
+                <a href="https://www.youtube.com/channel/UCqX-IRaFWD37Q8dGev2jJpA" target="_blank" class="nav-link text-dark font-italic">
                     <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
-                    Edit
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link text-dark font-italic">
-                    <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
-                    Delete
+                    Youtobe
                 </a>
             </li>
 
@@ -62,15 +71,15 @@
 
         <ul class="nav flex-column bg-white mb-0">
             <li class="nav-item">
-                <a href="#" class="nav-link text-dark font-italic">
+                <a href="https://www.facebook.com/Review-phim-111300914535483" class="nav-link text-dark font-italic">
                     <i class="fa fa-area-chart mr-3 text-primary fa-fw"></i>
-                    Tâm hồ
+                    Message
                 </a>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link text-dark font-italic">
                     <i class="fa fa-bar-chart mr-3 text-primary fa-fw"></i>
-                    chăm sóc khách hàng
+                    Zalo
                 </a>
             </li>
             <li class="nav-item">

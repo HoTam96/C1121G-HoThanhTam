@@ -16,12 +16,12 @@
 
 </head>
 <body>
-<jsp:include page="header.jsp"></jsp:include>
-<jsp:include page="menu_bar.jsp"></jsp:include>
+<jsp:include page="common/header.jsp"></jsp:include>
+<jsp:include page="common/menu_bar_employee.jsp"></jsp:include>
 <section class="main">
     <div class="container-fluid">
         <div class="row main-main">
-            <jsp:include page="vertical_nav_employee.jsp"></jsp:include>
+            <jsp:include page="common/vertical_nav_employee.jsp"></jsp:include>
 
             <div class="col-lg-9 col-md-9 col-sm-12 table-responsive">
                 <table id="example" class="table table-striped">
@@ -58,11 +58,11 @@
                             <td>${employee.divisionName}</td>
                             <td>
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal"><a
-                                        href="/users?action=edit&id=${user.id}">Edit</a>Edit
+                                        href="/Employee?action=edit&id=${employee.employeId}">edit</a>Edit
                                 </button>
 
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                        onclick="getId(${user.id})"
+                                        onclick="getId(${employee.employeId})"
                                         data-bs-target="#exampleModal">
                                     delete
                                 </button>
@@ -84,10 +84,10 @@
      aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form method="post" action="/users?action=delete">
+            <form method="post" action="Employee?action=delete">
                 <input name="id" id="idDelete">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">bạn có muốn xóa sản phẩm
+                    <h5 class="modal-title" id="exampleModalLabel">bạn có muốn người này ra khỏi danh sách
                         ? </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                             aria-label="Close"></button>
@@ -105,7 +105,7 @@
         </div>
     </div>
 </div>
-<jsp:include page="footer.jsp"></jsp:include>
+<jsp:include page="common/footer.jsp"></jsp:include>
 
 
 </body>

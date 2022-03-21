@@ -1,6 +1,7 @@
 package model;
 
 public abstract class Person {
+    private Integer id;
     private String name;
     private String birthDay;
     private String id_card;
@@ -8,7 +9,8 @@ public abstract class Person {
     private String email;
     private String address;
 
-    public Person(String name, String birthDay, String id_card, String phone, String email, String address) {
+    public Person(Integer id, String name, String birthDay, String id_card, String phone, String email, String address) {
+        this.id = id;
         this.name = name;
         this.birthDay = birthDay;
         this.id_card = id_card;
@@ -18,6 +20,14 @@ public abstract class Person {
     }
 
     public Person() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -71,7 +81,8 @@ public abstract class Person {
     @Override
     public String toString() {
         return "Person{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", birthDay='" + birthDay + '\'' +
                 ", id_card='" + id_card + '\'' +
                 ", phone='" + phone + '\'' +

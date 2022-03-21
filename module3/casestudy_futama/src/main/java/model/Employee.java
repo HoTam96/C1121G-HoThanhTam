@@ -1,16 +1,14 @@
 package model;
 
 public class Employee extends Person {
-    private Integer employeId;
     private double salary;
-    private Integer positionId;
-    private Integer educationDegreeId;
-    private Integer divisionId;
-    private String userName;
+    private Position positionId;
+    private EducationDegree educationDegreeId;
+    private Division divisionId;
+    private User userName ;
 
-    public Employee(String name, String birthDay, String id_card, String phone, String email, String address, Integer employeId, double salary, Integer positionId, Integer educationDegreeId, Integer divisionId, String userName) {
-        super(name, birthDay, id_card, phone, email, address);
-        this.employeId = employeId;
+    public Employee(Integer id, String name, String birthDay, String id_card, String phone, String email, String address, double salary, Position positionId, EducationDegree educationDegreeId, Division divisionId, User userName) {
+        super(id, name, birthDay, id_card, phone, email, address);
         this.salary = salary;
         this.positionId = positionId;
         this.educationDegreeId = educationDegreeId;
@@ -22,14 +20,6 @@ public class Employee extends Person {
     public Employee() {
     }
 
-    public Integer getEmployeId() {
-        return employeId;
-    }
-
-    public void setEmployeId(Integer employeId) {
-        this.employeId = employeId;
-    }
-
     public double getSalary() {
         return salary;
     }
@@ -38,47 +28,46 @@ public class Employee extends Person {
         this.salary = salary;
     }
 
-    public Integer getPositionId() {
+    public Position getPositionId() {
         return positionId;
     }
 
-    public void setPositionId(Integer positionId) {
+    public void setPositionId(Position positionId) {
         this.positionId = positionId;
     }
 
-    public Integer getEducationDegreeId() {
+    public EducationDegree getEducationDegreeId() {
         return educationDegreeId;
     }
 
-    public void setEducationDegreeId(Integer educationDegreeId) {
+    public void setEducationDegreeId(EducationDegree educationDegreeId) {
         this.educationDegreeId = educationDegreeId;
     }
 
-    public Integer getDivisionId() {
+    public Division getDivisionId() {
         return divisionId;
     }
 
-    public void setDivisionId(Integer divisionId) {
+    public void setDivisionId(Division divisionId) {
         this.divisionId = divisionId;
     }
 
-    public String getUserName() {
+    public User getUserName() {
         return userName;
     }
 
-    public void setUserName(String userName) {
+    public void setUserName(User userName) {
         this.userName = userName;
     }
 
     @Override
     public String toString() {
         return "Employee{" +
-                "employeId=" + employeId +
-                ", salary=" + salary +
+                "salary=" + salary +
                 ", positionId=" + positionId +
                 ", educationDegreeId=" + educationDegreeId +
                 ", divisionId=" + divisionId +
-                ", userName='" + userName + '\'' +
+                ", userName=" + userName +
                 '}';
     }
 }

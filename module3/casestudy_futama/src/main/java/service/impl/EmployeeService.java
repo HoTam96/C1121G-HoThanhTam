@@ -33,4 +33,26 @@ EmployeeService implements service.IEmployeeService {
     public List<Position> selectAllPosition() {
         return iEmployeeRepository.selectAllPosition();
     }
+
+    @Override
+    public void createEployee(Employee employee) {
+        iEmployeeRepository.createEployee(employee);
+    }
+
+    @Override
+    public Employee getEmployeeById(int id) {
+        return iEmployeeRepository.getEmployeeById(id);
+    }
+
+    @Override
+    public void delele(int id) {
+        iEmployeeRepository.delete(id);
+
+    }
+
+    @Override
+    public List<EmployeeDeto> search(String name) {
+       return iEmployeeRepository.search(name);
+
+    }
 }

@@ -17,13 +17,13 @@
             <div class="collapse navbar-collapse menu-bar-1" id="navbarTogglerDemo01 ">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 menu-bar top-bar-top ">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="HomPageFurama.jsp?">Home</a>
+                        <a class="nav-link" aria-current="page" href="../HomPageFurama.jsp?">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="Employee?">Employee</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#">Customer</a>
+                        <a class="nav-link " href="Customer?">Customer</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Service</a>
@@ -33,8 +33,9 @@
                     </li>
 
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <form method="get" action="Customer?"  class="d-flex">
+                    <input type="hidden" name="action" value="search">
+                    <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
                     <button class="btn" type="submit">Search</button>
                 </form>
             </div>

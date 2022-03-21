@@ -27,7 +27,7 @@
                                     <a class="nav-link" href="#">Customer</a>
                                 </li>
                                 <li class="nav-item top-bar-top-item">
-                                    <a class="nav-link" href="Employee?">Employee</a>
+                                    <a class="nav-link" href="#">Employee</a>
                                 </li>
                                 <li class="nav-item top-bar-top-item">
                                     <a class="nav-link" href="#">Admin</a>

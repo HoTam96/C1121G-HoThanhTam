@@ -23,12 +23,12 @@
 <body>
 
 
-<jsp:include page="header.jsp"></jsp:include>
+<jsp:include page="common/header.jsp"></jsp:include>
 <!--kết thúc header-->
 
 <!--STARY MENU BAR-->
 
-<jsp:include page="menu_bar.jsp"></jsp:include>
+<jsp:include page="common/menu_bar.jsp"></jsp:include>
 
 <!--kết thúc menu bar-->
 <!--kết thúc menu-bar-->
@@ -37,7 +37,7 @@
     <div class="container">
         <div class="row main-main">
             <!--            phần main-left-->
-           <jsp:include page="vertical_navbar.jsp"></jsp:include>
+           <jsp:include page="common/vertical_navbar.jsp"></jsp:include>
             <!--            end nav-bar-left-->
             <!--            main center-->
             <div class="col-lg-6 col-md-6 col-sm-9 carosels">
@@ -186,7 +186,7 @@
 </section>
 
 <!--        foooter-->
-<jsp:include page="footer.jsp"></jsp:include>
+<jsp:include page="common/footer.jsp"></jsp:include>
 
 <%--end foooter--%>
 </body>
