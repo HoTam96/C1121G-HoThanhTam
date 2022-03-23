@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <section>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
+        <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
                     aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,13 @@
                         <a class="nav-link" href="/Service">Service</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contract</a>
+                        <a class="nav-link" href="/Contract">Contract</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Detail">Contract Detail</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ContractUseService">UseService</a>
                     </li>
 
                 </ul>

@@ -80,6 +80,7 @@ public class CustomerServlet extends HttpServlet {
 
     public void createCustomer(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
       request.setCharacterEncoding("UTF-8");
+      response.setCharacterEncoding("UTF-8");
         Integer id = Integer.parseInt(request.getParameter("id"));
         String code = request.getParameter("code");
         TypeCustomer typeCustomer = new TypeCustomer(Integer.parseInt(request.getParameter("typeCustomer")), null);

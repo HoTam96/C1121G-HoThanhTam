@@ -21,45 +21,46 @@
             <tr>
                 <th>Service Id:</th>
                 <td>
-                    <input type="text" name="serviceId" id="name" size="45"/>
+                    <input type="text" name="serviceId" id="name"  size="45"/>
+                    <p style="color: red">${message}</p>
                 </td>
             </tr>
             <tr>
                 <th>Service Name:</th>
                 <td>
-                    <input type="text" name="serviceName" size="45"/>
+                    <input type="text" name="serviceName" value="${serviceName}" size="45"/>
                 </td>
             </tr>
             <tr>
                 <th>Area:</th>
                 <td>
-                    <input type="text" name="area" size="15"/>
+                    <input type="text" name="area" value="${area}" size="15"/>
                 </td>
             </tr>
 
             <tr>
                 <th>Rental Cost:</th>
                 <td>
-                    <input type="text" name="rentalCost" size="45"/>
+                    <input type="text" name="rentalCost" value="${rentalCost}" size="45"/>
                 </td>
             </tr>
 
             <tr>
                 <th>People Max:</th>
                 <td>
-                    <input type="text" name="peopleMax" size="45"/>
+                    <input type="text" name="peopleMax" value="${peopleMax}" size="45"/>
                 </td>
             </tr>
             <tr>
                 <th>Standard Room:</th>
                 <td>
-                    <input type="text" name="standardRoom" size="45"/>
+                    <input type="text" name="standardRoom" value="${standardRoom}" size="45"/>
                 </td>
             </tr>
             <tr>
                 <th>Description other:</th>
                 <td>
-                    <input type="text" name="description" size="45"/>
+                    <input type="text" name="description" value="${description}" size="45"/>
                 </td>
             </tr>
 
@@ -68,7 +69,7 @@
                 <tr>
                     <th>area Pool:</th>
                     <td>
-                        <input type="text" name="areaPool" size="45"/>
+                        <input type="text" name="areaPool" value="${areaPool}" size="45"/>
                     </td>
                 </tr>
             </c:if>
@@ -78,7 +79,7 @@
                 <tr>
                     <th>Number floor:</th>
                     <td>
-                        <input type="text" name="numberFloor" size="45"/>
+                        <input type="text" name="numberFloor" value="${numberFloor}" size="45"/>
                     </td>
                 </tr>
             </c:if>
@@ -87,11 +88,11 @@
             <tr>
                 <th>service Type</th>
                 <td>
-                    <c:forEach items="${serviceType}" var="i">
-                        <c:if test="${i.getServiceTypeId()==id}">
-                            <input disabled name="serviceType" value="${i.getServiceName()}" size="45"/>
-                        </c:if>
-                    </c:forEach>
+<%--                    <c:forEach items="${serviceType}" var="i">--%>
+<%--                        <c:if test="${i.getServiceTypeId()==id}">--%>
+                            <input hidden name="id" value="${id}"  size="45"/>
+<%--                        </c:if>--%>
+<%--                    </c:forEach>--%>
                 </td>
             </tr>
 
@@ -100,7 +101,15 @@
                 <td>
                     <select name="rentType">
                         <c:forEach var="i" items="${rentType}">
-                            <option value="${i.getRentTypeId()}">${i.getRentTypeName() }</option>
+                            <c:choose>
+                                <c:when test="${i.getRentTypeId()==rentType1.rentTypeId}">
+                                    <option value="${i.getRentTypeId()}" selected>${i.getRentTypeName() }</option
+                                </c:when>
+                                <c:otherwise>
+                                    <option value="${i.getRentTypeId()}">${i.getRentTypeName() }</option>
+                                </c:otherwise>
+                            </c:choose>
+
                         </c:forEach>
                     </select>
                 </td>

@@ -98,23 +98,23 @@ public class ServiceRepository implements IServiceRepository {
         String query = "insert into service values(?,?,?,?,?,?,?,?,?,?,?)";
         try {
             conn = BaseRepository.getConnection();
-            ps= conn.prepareStatement(query);
-            ps.setInt(1,service.getServiceId());
-            ps.setString(2,service.getServiceName());
-           ps.setInt(3,service.getServiceArea());
-           ps.setDouble(4,service.getRentalCost());
-           ps.setInt(5,service.getPeopleMax());
-           ps.setInt(6,service.getRenTypeId().getRentTypeId());
-           ps.setInt(7,service.getServiceTypeId().getServiceTypeId());
-           ps.setString(8,service.getStandardRoom());
-           ps.setString(9,service.getDescriptionOther());
-           ps.setDouble(10,service.getAreaPool());
-           ps.setInt(11,service.getNumberFloor());
-           ps.executeUpdate();
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, service.getServiceId());
+            ps.setString(2, service.getServiceName());
+            ps.setInt(3, service.getServiceArea());
+            ps.setDouble(4, service.getRentalCost());
+            ps.setInt(5, service.getPeopleMax());
+            ps.setInt(6, service.getRenTypeId().getRentTypeId());
+            ps.setInt(7, service.getServiceTypeId().getServiceTypeId());
+            ps.setString(8, service.getStandardRoom());
+            ps.setString(9, service.getDescriptionOther());
+            ps.setDouble(10, service.getAreaPool());
+            ps.setInt(11, service.getNumberFloor());
+            ps.executeUpdate();
 
         } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
                 conn.close();
             } catch (Exception e) {
@@ -127,15 +127,15 @@ public class ServiceRepository implements IServiceRepository {
 
     @Override
     public Service checkId(Integer serviceId) {
-String query = "   select * from service where service_id=?;";
+        String query = "   select * from service where service_id=?;";
         ServiceRepository serviceRepository = new ServiceRepository();
         Service service = null;
-conn = BaseRepository.getConnection();
+        conn = BaseRepository.getConnection();
         try {
             ps = conn.prepareStatement(query);
-            ps.setInt(1,serviceId);
-            rs=ps.executeQuery();
-            while (rs.next()){
+            ps.setInt(1, serviceId);
+            rs = ps.executeQuery();
+            while (rs.next()) {
                 service = new Service(rs.getInt(1), rs.getString(2), rs.getInt(3),
                         rs.getDouble(4), rs.getInt(5), serviceRepository.rentTypeId(rs.getInt(6)),
                         serviceRepository.serviceTypeId(rs.getInt(7)), rs.getString(8), rs.getString(9),

@@ -29,7 +29,7 @@
                         <a class="nav-link" href="/Service">Service</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contract</a>
+                        <a class="nav-link" href="/Contract">Contract</a>
                     </li>
 
                 </ul>

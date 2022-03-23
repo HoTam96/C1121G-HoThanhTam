@@ -30,6 +30,10 @@ public class Service {
     public Service() {
     }
 
+    public Service(Integer serviceId) {
+        this.serviceId = serviceId;
+    }
+
     public Integer getServiceId() {
         return serviceId;
     }

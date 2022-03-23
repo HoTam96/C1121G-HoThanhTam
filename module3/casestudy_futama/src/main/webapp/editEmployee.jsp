@@ -13,7 +13,7 @@
     </h2>
 </center>
 <div align="center">
-    <form method="post" action="Employee?action=create">
+    <form method="post" action="Employee?action=edit">
         <table border="1" cellpadding="5">
             <caption>
                 <h2>Edit Employee</h2>
@@ -59,7 +59,7 @@
             <tr>
                 <th>address:</th>
                 <td>
-                    <input type="text" name="address" value=${employee.address} size="45"/>
+                    <input type="text" name="address" value="${employee.address}" size="45"/>
                 </td>
             </tr>
             <tr>

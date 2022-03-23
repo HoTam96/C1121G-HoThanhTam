@@ -4,10 +4,8 @@ import model.Division;
 import model.EducationDegree;
 import model.Employee;
 import model.Position;
-import model.deto.EmployeeDeto;
 import reponsitory.IEmployeeRepository;
 import reponsitory.impl.EmployeeRepository;
-import service.IEmployeeService;
 
 import java.util.List;
 
@@ -15,10 +13,9 @@ public class
 EmployeeService implements service.IEmployeeService {
     private IEmployeeRepository iEmployeeRepository = new EmployeeRepository();
     @Override
-    public List<EmployeeDeto> findAllEmployee() {
+    public List<Employee> findAllEmployee() {
         return iEmployeeRepository.findAllEmployee();
     }
-
     @Override
     public List<Division> selectAllDivision() {
         return iEmployeeRepository.selectAllDivision();
@@ -51,8 +48,13 @@ EmployeeService implements service.IEmployeeService {
     }
 
     @Override
-    public List<EmployeeDeto> search(String name) {
+    public List<Employee> search(String name) {
        return iEmployeeRepository.search(name);
 
+    }
+
+    @Override
+    public void update(Employee employee) {
+        iEmployeeRepository.update(employee);
     }
 }

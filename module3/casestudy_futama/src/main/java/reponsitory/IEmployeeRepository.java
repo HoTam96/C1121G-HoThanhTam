@@ -4,14 +4,13 @@ import model.Division;
 import model.EducationDegree;
 import model.Employee;
 import model.Position;
-import model.deto.EmployeeDeto;
 
 import java.util.List;
 
 public interface IEmployeeRepository {
 
 
-    List<EmployeeDeto> findAllEmployee();
+    List<Employee> findAllEmployee();
 
     List<Division> selectAllDivision();
 
@@ -25,5 +24,7 @@ public interface IEmployeeRepository {
 
     void delete(int id);
 
-    List<EmployeeDeto> search(String name);
+    List<Employee> search(String name);
+
+    void update(Employee employee);
 }

@@ -52,8 +52,23 @@
                                 <td>${i.peopleMax}</td>
                                 <td>${i.standardRoom}</td>
                                 <td>${i.descriptionOther}</td>
-                                <td>${i.areaPool}</td>
-                                <td>${i.numberFloor}</td>
+                                <td>
+                                    <c:if test="${i.areaPool==0}">
+                                        none
+                                    </c:if>
+                                    <c:if test="${i.areaPool!=0}">
+                                        ${i.areaPool}
+                                    </c:if>
+                                </td>
+                                <td>
+                                    <c:if test="${i.numberFloor==0}">
+                                        none
+                                    </c:if>
+                                    <c:if test="${i.numberFloor!=0}">
+                                        ${i.numberFloor}
+                                    </c:if>
+                                </td>
+
                                 <td>${i.renTypeId.getRentTypeName()}</td>
                                 <td>${i.serviceTypeId.getServiceName()}</td>
                                 <td>

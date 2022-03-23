@@ -45,7 +45,7 @@
                     <tody>
                     <c:forEach var="employee" items="${list}">
                         <tr>
-                            <td>${employee.employeId}</td>
+                            <td>${employee.id}</td>
                             <td>${employee.name}</td>
                             <td>${employee.birthDay}</td>
                             <td>${employee.id_card}</td>
@@ -53,16 +53,16 @@
                             <td>${employee.email}</td>
                             <td>${employee.address}</td>
                             <td>${employee.salary}</td>
-                            <td>${employee.positionName}</td>
-                            <td>${employee.educationDegreeName}</td>
-                            <td>${employee.divisionName}</td>
+                            <td>${employee.positionId.positionName}</td>
+                            <td>${employee.educationDegreeId.educationDegreeName}</td>
+                            <td>${employee.divisionId.divisionName}</td>
                             <td>
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal"><a
-                                        href="/Employee?action=edit&id=${employee.employeId}">edit</a>Edit
+                                        href="/Employee?action=edit&id=${employee.id}">edit</a>Edit
                                 </button>
 
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                        onclick="getId(${employee.employeId})"
+                                        onclick="getId(${employee.id})"
                                         data-bs-target="#exampleModal">
                                     delete
                                 </button>

@@ -2,7 +2,6 @@ package reponsitory.impl;
 
 import Dbcontext.BaseRepository;
 import model.*;
-import model.deto.EmployeeDeto;
 import reponsitory.IEmployeeRepository;
 
 import java.sql.*;
@@ -16,23 +15,29 @@ public class EmployeeRepository implements IEmployeeRepository {
 
 
     @Override
-    public List<EmployeeDeto> findAllEmployee() {
-        List<EmployeeDeto> employees = new ArrayList<>();
-        String query = "select position_name,education_degree_name, employee_id,division_name,e_name,day_of_birth,number_cmnd,e_salary,phone_number,e_email,e_address from employee join \n" +
-                "positionn on employee.position_id = positionn.position_id\n" +
-                "join division on division.division_id = employee.division_id\n" +
-                "join education_degree on education_degree.education_degree_id = employee.education_degree_id";
+    public List<Employee> findAllEmployee() {
+        EmployeeRepository employeeRepository = new EmployeeRepository();
+        List<Employee> employees = new ArrayList<>();
+        String query = "select * from employee;";
 
         try {
             conn = BaseRepository.getConnection();
             ps = conn.prepareStatement(query);
             rs = ps.executeQuery();
             while (rs.next()) {
-                EmployeeDeto employeeDeto = new EmployeeDeto(rs.getString("e_name"), rs.getString("day_of_birth"), rs.getString("number_cmnd"),
-                        rs.getString("phone_number"), rs.getString("e_email"), rs.getString("e_address"), rs.getInt("employee_id"),
-                        rs.getDouble("e_salary"), rs.getString("position_name"), rs.getString("education_degree_name"), rs.getString("division_name"));
-                employees.add(employeeDeto);
-
+                Employee employee = new Employee(rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getDouble(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        employeeRepository.position(rs.getInt(9)),
+                        employeeRepository.educationDegree(rs.getInt(10)),
+                        employeeRepository.division(rs.getInt(11)),
+                        employeeRepository.user(rs.getString(12)));
+                employees.add(employee);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -171,11 +176,18 @@ public class EmployeeRepository implements IEmployeeRepository {
             ps.setInt(1, id);
             rs = ps.executeQuery();
             while (rs.next()) {
-                employee = new Employee(rs.getInt("employee_id"), rs.getString("e_name"), rs.getString("day_of_birth"), rs.getString("number_cmnd"),
-                        rs.getString("phone_number"), rs.getString("e_email"), rs.getString("e_address"),
-                        rs.getDouble("e_salary"), employeeRepository.position(rs.getInt("position_id")),
-                        employeeRepository.educationDegree(rs.getInt("education_degree_id")),
-                        employeeRepository.division(rs.getInt("division_id")), employeeRepository.user(rs.getString("user_name")));
+                employee = new Employee(rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getDouble(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        employeeRepository.position(rs.getInt(9)),
+                        employeeRepository.educationDegree(rs.getInt(10)),
+                        employeeRepository.division(rs.getInt(11)),
+                        employeeRepository.user(rs.getString(12)));
 
             }
         } catch (SQLException e) {
@@ -207,25 +219,30 @@ public class EmployeeRepository implements IEmployeeRepository {
     }
 
     @Override
-    public List<EmployeeDeto> search(String name) {
-        List<EmployeeDeto> employees = new ArrayList<>();
-
-        String query = "select position_name,education_degree_name, employee_id,division_name,e_name,day_of_birth,number_cmnd,e_salary,phone_number,e_email,e_address from employee\n" +
-                " join  positionn on employee.position_id = positionn.position_id\n" +
-                "                join division on division.division_id = employee.division_id\n" +
-                "                join education_degree on education_degree.education_degree_id = employee.education_degree_id where  e_name like ? ";
-
+    public List<Employee> search(String name) {
+        List<Employee> employees = new ArrayList<>();
+        String query = "   select * from employee where e_name like ?";
+        EmployeeRepository employeeRepository = new EmployeeRepository();
         try {
             conn = BaseRepository.getConnection();
             ps = conn.prepareStatement(query);
             ps.setString(1,"%"+name+"%");
             rs = ps.executeQuery();
             while (rs.next()) {
-                EmployeeDeto employeeDeto = new EmployeeDeto(rs.getString("e_name"), rs.getString("day_of_birth"), rs.getString("number_cmnd"),
-                        rs.getString("phone_number"), rs.getString("e_email"), rs.getString("e_address"), rs.getInt("employee_id"),
-                        rs.getDouble("e_salary"), rs.getString("position_name"), rs.getString("education_degree_name"), rs.getString("division_name"));
-                employees.add(employeeDeto);
 
+                Employee employee = new Employee(rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getDouble(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        employeeRepository.position(rs.getInt(9)),
+                        employeeRepository.educationDegree(rs.getInt(10)),
+                        employeeRepository.division(rs.getInt(11)),
+                        employeeRepository.user(rs.getString(12)));
+                employees.add(employee);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -238,6 +255,39 @@ public class EmployeeRepository implements IEmployeeRepository {
         }
 
         return employees;
+    }
+
+    @Override
+    public void update(Employee employee) {
+        String query = "update employee set e_name=? , day_of_birth=?,number_cmnd=?,e_salary=?,phone_number=?," +
+                "e_email=?,e_address=?,position_id=?,education_degree_id=?,division_id=?,user_name=? where employee_id=?;";
+        conn =BaseRepository.getConnection();
+        try {
+            ps=conn.prepareStatement(query);
+            ps.setString(1,employee.getName());
+            ps.setString(2,employee.getBirthDay());
+            ps.setString(3,employee.getId_card());
+            ps.setDouble(4,employee.getSalary());
+            ps.setString(5,employee.getPhone());
+            ps.setString(6,employee.getEmail());
+            ps.setString(7,employee.getAddress());
+            ps.setInt(8,employee.getPositionId().getPositionId());
+            ps.setInt(9,employee.getEducationDegreeId().getEducationDegreeId());
+            ps.setInt(10,employee.getDivisionId().getDivisionId());
+            ps.setString(11,employee.getUserName().getUserName());
+            ps.setInt(12,employee.getId());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+
     }
 
 //    lấy theo id
