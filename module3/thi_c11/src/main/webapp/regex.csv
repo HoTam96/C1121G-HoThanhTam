@@ -1,0 +1,41 @@
+RegEX tên lớp học codegym:
+^[CA]((0[1-9])|(1[0-2]))\d{2}[GI]\d{1}$
+
+
+public static final String EMAIL = "^[a-z][a-z0-9_\\.]{5,32}@[a-z0-9]{2,}(\\.[a-z0-9]{2,}){1,}$";
+
+public static final String SDT_VN = "^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$";
+
+public static final String DATE_LEAP_YEAR = "^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$";
+
+
+// tên vn
+public static final String VIETNAMESE_NAME_REGEX = "^[\p{Lu}\p{Ll}]+( [\p{Lu}\p{Ll}]+)*$";
+
+// tên không dấu
+public static final String NAME_REGEX = "^\w+( \w+)*$";
+
+// căn cước regex
+public static final String ID_CARD_REGEX = "^((\d{9})|(\d{12}))$";
+
+// số thực (tiền)
+public static final String REAL_NUMBER_REGEX = "^[0]*[1-9]+[0-9]*([\.]([0-9]+))?$";
+
+// số dương
+public static final String POSITIVE_NUMBER_REGEX = "^\d+(\.\d+)*$";
+
+// regex số thực hồ bơi > 30                                         v
+public static final String REGEX_AREA_POOL = "^([3-9]\d|[1-9]\d{2,})(.?[0-9]+)?$";
+
+// regex số nguyên dương
+public static final String INTEGER_REGEX = "^[0]?[1-9]+[0-9]*$";
+
+//vn phone number
+public static final String VIETNAM_PHONE_NUMBER_REGEX ="^(090\d{7})|(091\d{7})|(\(\+84\)90\d{7})|(\(\+84\)91\d{7})$";
+
+    public static final String REGEX_SO = "^\\d+";
+    public static final String REGEX_chu = "[^\\d]+";
+
+    // color regex  (red, Blue, Green)
+    public static final String COLOR_REGEX = "^\w+(, \w+)*$"
+    Color cannot have any extra spaces or no characters
